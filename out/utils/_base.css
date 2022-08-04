@@ -20,25 +20,24 @@ blockquote {
   margin-bottom: 0;
 }
 
+figure {
+  display: grid;
+  grid-gap: 0;
+  gap: 0;
+  align-items: center;
+  justify-items: center;
+  place-items: center;
+}
+
 * {
   font-variation-settings: "wght" var(--fontWeight);
   accent-color: var(--brand);
-}
-
-.focus-visible,
-:focus {
-  outline: var(--s-5) solid var(--brand);
-  outline-offset: 0.64ch;
 }
 
 :focus-visible,
 :focus {
   outline: var(--s-5) solid var(--brand);
   outline-offset: 0.64ch;
-}
-
-:focus:not(.focus-visible) {
-  outline: none;
 }
 
 :focus:not(:focus-visible) {

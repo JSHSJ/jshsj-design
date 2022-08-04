@@ -44,11 +44,12 @@
 
   text-decoration: unset;
   box-shadow: var(--shadow-default);
+}
 
+:where(button,button[type],input[type="button"],input[type="submit"],input[type="reset"], .CTA-button) {
   &:after {
     content: '' !important;
   }
-
 
   &:hover {
     --button-background: var(--button-background-hover) !important;
@@ -58,6 +59,17 @@
 
   &:active {
     box-shadow: none;
+  }
+
+  &[disabled] {
+    --button-background: none !important;
+    --button-background-hover: none !important;
+    --button-color: var(--text2) !important;
+    --button-color-hover: var(--button-color) !important;
+    --button-border-color-hover: var(--button-border-color);
+
+    box-shadow: none !important;
+    cursor: not-allowed;
   }
 
   &.-small {
@@ -115,6 +127,7 @@
     }
 
     @supports not (aspect-ratio: 1) {
+
       padding-inline-start: var(--button-padding-inline);
       &:before {
         display: none;
@@ -122,4 +135,19 @@
 
     }
   }
+}
+
+:where(input[type="file"]) {
+  color: var(--text1);
+  background-color: var(--surface1);
+  border: var(--border-thin) solid var(--text2);
+  height: var(--size-2xl);
+  padding-inline-end: var(--size-sm);
+}
+
+:where(input[type="file"])::-webkit-file-upload-button,
+:where(input[type="file"])::file-selector-button {
+  margin-inline-end: var(--size-sm);
+  cursor: pointer;
+  box-shadow: none;
 }

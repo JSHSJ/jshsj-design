@@ -34,7 +34,7 @@
   --text1-dark: hsl(var(--brand-hue) 96% 98%);
   --text2-dark: hsl(var(--brand-hue) 4% 88%);
   --surface1-dark: hsl(var(--brand-hue) 6% 1%);
-  --surface2-dark: hsl(var(--brand-hue) 21% 25%);
+  --surface2-dark: hsl(var(--brand-hue) 96% 12%);
 
   --shadow-strength-dark: .88;
   --shadow-color-dark: var(--brand-hue), 4%, 8%;
@@ -68,7 +68,7 @@
   --s7: clamp(5.07125rem, 19.194117647058825vw + 4.098125rem, 21.38625rem);
   --s9: clamp(7.7975rem, 45.9375vw + 4.215625rem, 46.844375rem);
   --s11: clamp(11.989375rem, 106.61029411764706vw + -0.7925rem, 102.608125rem);
-  
+
 
   --size-3xs: 0.0875em;
   --size-2xs: 0.125em;

@@ -25,11 +25,13 @@ legend {
   }
 }
 
+:where(label),
 .input-label {
   font-family: var(--fontFamilyMono);
   color: var(--text1);
   display: block;
   font-size: var(--s0);
+  cursor: pointer;
 }
 
 .input-hint {
@@ -40,24 +42,23 @@ legend {
   }
 }
 
-:where(input[type="text"], input[type="email"], input[type="password"], input[type="number"],input[type="url"], input[type="search"]),
+:where(input[type="text"], input[type="email"], input[type="password"], input[type="number"],input[type="url"], input[type="search"], input[type="date"], input[type="month"], input[type="week"], input[type="text"], input[type="datetime"], input[type="datetime-local"], input[type="time"], input[type="tel"], input[type="color"], textarea, select),
 .input {
   color: var(--text1);
   background-color: var(--surface1);
   border: var(--border-thin) solid var(--text2);
-  height: 3em;
+  height: var(--size-2xl);
   padding-inline: var(--size-sm);
 
   &:focus {
     outline: var(--s-4) solid var(--brand);
     outline-offset: 0;
   }
-
 }
 
 :where(textarea),
 .textarea {
-  min-height: var(--size-2xl);
+  min-height: var(--size-4xl);
 }
 
 .input-error {
@@ -84,6 +85,15 @@ legend {
   }
 }
 
+:where(input[type="checkbox"], input[type="radio"]) {
+  grid-area: input;
+    inline-size: var(--size-md);
+    block-size: var(--size-md);
+    aspect-ratio: 1;
+    margin: 0;
+    padding: 0;
+}
+
 .checkbox-input {
   display: grid;
   gap: var(--size-sm);
@@ -95,15 +105,15 @@ legend {
 
   & > label {
     grid-area: label;
-    cursor: pointer;
   }
 
   & > input {
     grid-area: input;
-    inline-size: calc(--size-md);
-    block-size: calc(--size-md);
-    aspect-ratio: 1;
-    margin: 0;
-    padding: 0;
   }
+}
+
+:where(input[type="color"]) {
+  aspect-ratio: 1;
+  width: auto;
+  padding: var(--size-sm);
 }

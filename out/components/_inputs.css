@@ -32,11 +32,13 @@ legend {
   }
 }
 
+:where(label),
 .input-label {
   font-family: var(--fontFamilyMono);
   color: var(--text1);
   display: block;
   font-size: var(--s0);
+  cursor: pointer;
 }
 
 .input-hint {
@@ -48,25 +50,24 @@ legend {
     content: '?';
   }
 
-:where(input[type="text"], input[type="email"], input[type="password"], input[type="number"],input[type="url"], input[type="search"]),
+:where(input[type="text"], input[type="email"], input[type="password"], input[type="number"],input[type="url"], input[type="search"], input[type="date"], input[type="month"], input[type="week"], input[type="text"], input[type="datetime"], input[type="datetime-local"], input[type="time"], input[type="tel"], input[type="color"], textarea, select),
 .input {
   color: var(--text1);
   background-color: var(--surface1);
   border: var(--border-thin) solid var(--text2);
-  height: 3em;
+  height: var(--size-2xl);
   padding-left: var(--size-sm);
   padding-right: var(--size-sm);
-
 }
 
-:where(input[type="text"], input[type="email"], input[type="password"], input[type="number"],input[type="url"], input[type="search"]):focus, .input:focus {
+:where(input[type="text"], input[type="email"], input[type="password"], input[type="number"],input[type="url"], input[type="search"], input[type="date"], input[type="month"], input[type="week"], input[type="text"], input[type="datetime"], input[type="datetime-local"], input[type="time"], input[type="tel"], input[type="color"], textarea, select):focus, .input:focus {
     outline: var(--s-4) solid var(--brand);
     outline-offset: 0;
   }
 
 :where(textarea),
 .textarea {
-  min-height: var(--size-2xl);
+  min-height: var(--size-4xl);
 }
 
 .input-error {
@@ -91,6 +92,15 @@ legend {
     margin-right: var(--size-xs);
   }
 
+:where(input[type="checkbox"], input[type="radio"]) {
+  grid-area: input;
+    width: var(--size-md);
+    height: var(--size-md);
+    aspect-ratio: 1;
+    margin: 0;
+    padding: 0;
+}
+
 .checkbox-input {
   display: grid;
   grid-gap: var(--size-sm);
@@ -108,14 +118,14 @@ legend {
 
 .checkbox-input > label {
     grid-area: label;
-    cursor: pointer;
   }
 
 .checkbox-input > input {
     grid-area: input;
-    width: calc(--size-md);
-    height: calc(--size-md);
-    aspect-ratio: 1;
-    margin: 0;
-    padding: 0;
   }
+
+:where(input[type="color"]) {
+  aspect-ratio: 1;
+  width: auto;
+  padding: var(--size-sm);
+}
