@@ -1,0 +1,121 @@
+fieldset {
+  padding: var(--size-md);
+  border: var(--border-thick) solid var(--text1);
+}
+
+legend {
+  font-family: var(--fontFamilyMono);
+  color: var(--text1);
+  display: block;
+  font-size: var(--s1);
+  padding-left: var(--size-sm);
+  padding-right: var(--size-sm);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.input-field {
+  display: grid;
+  grid-gap: var(--s-2);
+  gap: var(--s-2);
+  grid-template-columns: minmax(0, 1fr);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: start;
+  justify-items: start;
+  place-items: start;
+  font-size: var(--s0);
+
+  label {
+    --gap: var(--size-xs);
+  }
+}
+
+.input-label {
+  font-family: var(--fontFamilyMono);
+  color: var(--text1);
+  display: block;
+  font-size: var(--s0);
+}
+
+.input-hint {
+  --color-default: var(--text2);
+  display: block;
+}
+
+.input-hint:before {
+    content: '?';
+  }
+
+:where(input[type="text"], input[type="email"], input[type="password"], input[type="number"],input[type="url"], input[type="search"]),
+.input {
+  color: var(--text1);
+  background-color: var(--surface1);
+  border: var(--border-thin) solid var(--text2);
+  height: 3em;
+  padding-left: var(--size-sm);
+  padding-right: var(--size-sm);
+
+}
+
+:where(input[type="text"], input[type="email"], input[type="password"], input[type="number"],input[type="url"], input[type="search"]):focus, .input:focus {
+    outline: var(--s-4) solid var(--brand);
+    outline-offset: 0;
+  }
+
+:where(textarea),
+.textarea {
+  min-height: var(--size-2xl);
+}
+
+.input-error {
+  --color-default: red;
+  --fontWeight: var(--fontWeightMedium);
+  color: var(--color-default);
+}
+
+.input-error:before {
+    content: '!';
+  }
+
+.input-error:before, .input-hint:before {
+    font-family: var(--fontFamilyMono);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(var(--lineHeight));
+    padding: 0;
+    background-color: var(--color-default);
+    color: var(--surface1);
+    margin-right: var(--size-xs);
+  }
+
+.checkbox-input {
+  display: grid;
+  grid-gap: var(--size-sm);
+  gap: var(--size-sm);
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas: "input label";
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: start;
+  justify-items: start;
+  place-items: start;
+  font-size: var(--s0);
+}
+
+.checkbox-input > label {
+    grid-area: label;
+    cursor: pointer;
+  }
+
+.checkbox-input > input {
+    grid-area: input;
+    width: calc(--size-md);
+    height: calc(--size-md);
+    aspect-ratio: 1;
+    margin: 0;
+    padding: 0;
+  }

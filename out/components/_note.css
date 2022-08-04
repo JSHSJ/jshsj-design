@@ -1,0 +1,35 @@
+.note {
+    padding-left: var(--size-xl);
+    padding-right: var(--size-xl);
+    width: 100%;
+    padding-top: var(--defaultPadding-vertical);
+    padding-bottom: var(--defaultPadding-vertical);
+    padding-top: var(--defaultPadding-vertical);
+    padding-top: var(--gap, var(--defaultPadding-vertical));
+    padding-bottom: var(--defaultPadding-vertical);
+    padding-bottom: var(--gap, var(--defaultPadding-vertical));
+    background-color: var(--surface2);
+    color: var(--text2);
+    position: relative;
+}
+.note.-info:before, .note.-warning:before {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translate(-40%, -40%);
+      background-color: var(--text1);
+      color: var(--surface1);
+      width: 1.48em;
+      height: 1.48em;
+      line-height: 1;
+      font-size: var(--s1);
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+.note.-info:before {
+      content: "?";
+    }
+.note.-warning:before {
+      content: "!";
+    }

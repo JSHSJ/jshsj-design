@@ -1,0 +1,183 @@
+// Layout classes that handle 80% of the layout
+
+.box {
+  padding-left: var(--defaultPadding-horizontal);
+  padding-right: var(--defaultPadding-horizontal);
+  padding-left: var(--defaultPadding-horizontal);
+  padding-left: var(--gap, var(--defaultPadding-horizontal));
+  padding-right: var(--defaultPadding-horizontal);
+  padding-right: var(--gap, var(--defaultPadding-horizontal));
+  padding-top: var(--defaultPadding-vertical);
+  padding-bottom: var(--defaultPadding-vertical);
+  padding-top: var(--defaultPadding-vertical);
+  padding-top: var(--gap, var(--defaultPadding-vertical));
+  padding-bottom: var(--defaultPadding-vertical);
+  padding-bottom: var(--gap, var(--defaultPadding-vertical));
+}
+
+.stack {
+  display: grid;
+  gap: var(--size-md);
+  grid-gap: var(--size-md);
+  grid-gap: var(--gap, var(--size-md));
+  gap: var(--gap, var(--size-md));
+  grid-template-columns: minmax(0, 1fr);
+  align-items: flex-start;
+}
+
+.stack.-stretched {
+  width: 100%;
+}
+
+.flow > * + * {
+  margin-top: var(--size-md);
+  margin-top: var(--size-md);
+  margin-top: var(--gap, var(--size-md));
+}
+
+.flow > *h1 {
+  --gap: var(--size-lg);
+}
+
+.flow > *h2 {
+  --gap: var(--size-lg);
+}
+
+.flow > *h3 {
+  --gap: var(--size-lg);
+}
+
+.flow > *h4 {
+  --gap: var(--size-lg);
+}
+
+.flow > *h5 {
+  --gap: var(--size-lg);
+}
+
+.flow > *h6 {
+  --gap: var(--size-lg);
+}
+
+.flow > p + p {
+  --gap: var(--size-md);
+}
+
+.flow > figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.flow .breakAfter {
+    margin-bottom: auto;
+}
+
+.section {
+  padding-top: var(--sectionPadding);
+  padding-bottom: var(--sectionPadding);
+}
+
+.layout-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: var(--container-max-width);
+  padding-left: var(--defaultPadding-horizontal);
+  padding-right: var(--defaultPadding-horizontal);
+  display: grid;
+  grid-template-columns: minmax(10rem, var(--main-max-width)) minmax(0, 1fr);
+  justify-items: start;
+}
+
+.layout-container > *:not(figure):not(.full-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+.layout-container > figure,  .layout-container > .full-width {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.cluster {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--s1);
+  gap: var(--gap, var(--s1));
+}
+
+.with-sidebar {
+  --min-size: 50%;
+
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s3);
+  gap: var(--gap, var(--s3));
+}
+
+.with-sidebar [data-aside] {
+    flex-grow: 1;
+    min-width: -webkit-min-content;
+    min-width: -moz-min-content;
+    min-width: min-content;
+}
+
+.with-sidebar [data-grow] {
+    flex-basis: 0;
+    flex-grow: 999;
+    min-width: var(--min-size);
+}
+
+.blog-layout {
+  row-gap: var(--s3);
+  row-gap: var(--gap, var(--s3));
+  align-items: flex-start;
+}
+
+@media screen and (min-width: 1560px) {
+
+.blog-layout {
+    -moz-column-gap: var(--s3);
+         column-gap: var(--s3);
+    -moz-column-gap: var(--gap, var(--s3));
+         column-gap: var(--gap, var(--s3));
+}
+  }
+
+.-layout-2xl {
+  --gap: var(--size-2xl)
+}
+
+.-layout-xl {
+  --gap: var(--size-xl)
+}
+
+.-layout-l {
+  --gap: var(--size-lg)
+}
+
+.-layout-m {
+  --gap: var(--size-md)
+}
+
+.-layout-s {
+  --gap: var(--size-sm)
+}
+
+.-layout-xs {
+  --gap: var(--size-xs)
+}
+
+.-layout-2xs {
+  --gap: var(--size-2xs)
+}
+.-layout-3xs {
+  --gap: var(--size-3xs);
+}
+
+.-layout-reset {
+  --gap: initial;
+}

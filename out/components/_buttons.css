@@ -1,0 +1,286 @@
+.buttonReset {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+:where(input[type="file"])::-webkit-file-upload-button {
+  --button-background: var(--text1);
+  --button-color: var(--surface1);
+  --button-border-color: var(--text1);
+
+  --button-background-hover: var(--surface2);
+  --button-color-hover: var(--text1);
+  --button-border-color-hover: var(--text1);
+
+  --button-height: var(--size-2xl);
+  --button-padding-inline: var(--size-lg);
+
+
+  background-color: var(--button-background);
+  color: var(--button-color);
+  border-width: var(--border-thin);
+  border-color: var(--button-border-color);
+  border-style: solid;
+  padding-left: var(--button-padding-inline);
+  padding-right: var(--button-padding-inline);
+  min-height: var(--button-height);
+  padding-top: 0;
+  padding-bottom: 0;
+
+  font-family: var(--fontFamilyMono);
+  font-weight: 400;
+  font-size: var(--s0);
+  cursor: pointer;
+  display: inline-flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-items: center;
+  width: -webkit-max-content;
+  width: max-content;
+  position: relative;
+
+  -webkit-transition: box-shadow .15s;
+
+  transition: box-shadow .15s;
+
+  text-decoration: none;
+
+  text-decoration: initial;
+  box-shadow: var(--shadow-default);
+}
+
+:where(button,button[type],input[type="button"],input[type="submit"],input[type="reset"]),
+:where(input[type="file"])::-webkit-file-upload-button,
+:where(input[type="file"])::file-selector-button,
+.CTA-button {
+  --button-background: var(--text1);
+  --button-color: var(--surface1);
+  --button-border-color: var(--text1);
+
+  --button-background-hover: var(--surface2);
+  --button-color-hover: var(--text1);
+  --button-border-color-hover: var(--text1);
+
+  --button-height: var(--size-2xl);
+  --button-padding-inline: var(--size-lg);
+
+
+  background-color: var(--button-background);
+  color: var(--button-color);
+  border-width: var(--border-thin);
+  border-color: var(--button-border-color);
+  border-style: solid;
+  padding-left: var(--button-padding-inline);
+  padding-right: var(--button-padding-inline);
+  min-height: var(--button-height);
+  padding-top: 0;
+  padding-bottom: 0;
+
+  font-family: var(--fontFamilyMono);
+  font-weight: 400;
+  font-size: var(--s0);
+  cursor: pointer;
+  display: inline-flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-items: center;
+  width: -webkit-max-content;
+  width: max-content;
+  position: relative;
+
+  -webkit-transition: box-shadow .15s;
+
+  transition: box-shadow .15s;
+
+  text-decoration: none;
+
+  text-decoration: initial;
+  box-shadow: var(--shadow-default);
+}
+
+:where(input[type="file"])::-webkit-file-upload-button:after {
+    content: '' !important;
+  }
+
+:where(button,button[type],input[type="button"],input[type="submit"],input[type="reset"]):after, :where(input[type="file"])::-webkit-file-upload-button:after, :where(input[type="file"])::file-selector-button:after, .CTA-button:after {
+    content: '' !important;
+  }
+
+:where(input[type="file"])::-webkit-file-upload-button:hover {
+    --button-background: var(--button-background-hover) !important;
+    --button-color: var(--button-color-hover) !important;
+    --button-border-color: var(--button-border-color-hover) !important;
+  }
+
+:where(button,button[type],input[type="button"],input[type="submit"],input[type="reset"]):hover, :where(input[type="file"])::-webkit-file-upload-button:hover, :where(input[type="file"])::file-selector-button:hover, .CTA-button:hover {
+    --button-background: var(--button-background-hover) !important;
+    --button-color: var(--button-color-hover) !important;
+    --button-border-color: var(--button-border-color-hover) !important;
+  }
+
+:where(input[type="file"])::-webkit-file-upload-button:active {
+    box-shadow: none;
+  }
+
+:where(button,button[type],input[type="button"],input[type="submit"],input[type="reset"]):active, :where(input[type="file"])::-webkit-file-upload-button:active, :where(input[type="file"])::file-selector-button:active, .CTA-button:active {
+    box-shadow: none;
+  }
+
+:where(input[type="file"])::-webkit-file-upload-button.-small {
+    --button-height: var(--size-xl);
+    --button-padding-inline: var(--size-sm);
+  }
+
+.-small:where(button,button[type],input[type="button"],input[type="submit"],input[type="reset"]), :where(input[type="file"])::-webkit-file-upload-button.-small, :where(input[type="file"])::file-selector-button.-small, .CTA-button.-small {
+    --button-height: var(--size-xl);
+    --button-padding-inline: var(--size-sm);
+  }
+
+:where(input[type="file"])::-webkit-file-upload-button.-active {
+    background-color: var(--button-background-hover);
+    color: var(--button-color-hover);
+    border-color: var(--button-border-color-hover);
+
+    box-shadow: none;
+  }
+
+.-active:where(button,button[type],input[type="button"],input[type="submit"],input[type="reset"]), :where(input[type="file"])::-webkit-file-upload-button.-active, :where(input[type="file"])::file-selector-button.-active, .CTA-button.-active {
+    background-color: var(--button-background-hover);
+    color: var(--button-color-hover);
+    border-color: var(--button-border-color-hover);
+
+    box-shadow: none;
+  }
+
+:where(input[type="file"])::-webkit-file-upload-button.-secondary {
+    --button-background: var(--surface1);
+    --button-color: var(--text1);
+    --button-border-color: var(--text1);
+
+    --button-background-hover: var(--surface1);
+    --button-color-hover: var(--brand);
+    --button-border-color-hover: var(--brand);
+  }
+
+.-secondary:where(button,button[type],input[type="button"],input[type="submit"],input[type="reset"]), :where(input[type="file"])::-webkit-file-upload-button.-secondary, :where(input[type="file"])::file-selector-button.-secondary, .CTA-button.-secondary {
+    --button-background: var(--surface1);
+    --button-color: var(--text1);
+    --button-border-color: var(--text1);
+
+    --button-background-hover: var(--surface1);
+    --button-color-hover: var(--brand);
+    --button-border-color-hover: var(--brand);
+  }
+
+:where(input[type="file"])::-webkit-file-upload-button.-stealth {
+    --button-background: transparent;
+    --button-color: var(--text1);
+    --button-border-color: transparent;
+
+    --button-background-hover: transparent;
+    --button-color-hover: var(--brand);
+    --button-border-color-hover: transparent;
+
+    box-shadow: none;
+  }
+
+.-stealth:where(button,button[type],input[type="button"],input[type="submit"],input[type="reset"]), :where(input[type="file"])::-webkit-file-upload-button.-stealth, :where(input[type="file"])::file-selector-button.-stealth, .CTA-button.-stealth {
+    --button-background: transparent;
+    --button-color: var(--text1);
+    --button-border-color: transparent;
+
+    --button-background-hover: transparent;
+    --button-color-hover: var(--brand);
+    --button-border-color-hover: transparent;
+
+    box-shadow: none;
+  }
+
+[dir="ltr"] :where(input[type="file"])::-webkit-file-upload-button.-destructive {
+    padding-left: 0;
+}
+
+[dir="ltr"] .-destructive:where(button,button[type],input[type="button"],input[type="submit"],input[type="reset"]),[dir="ltr"] :where(input[type="file"])::-webkit-file-upload-button.-destructive,[dir="ltr"] :where(input[type="file"])::file-selector-button.-destructive,[dir="ltr"] .CTA-button.-destructive {
+    padding-left: 0;
+}
+
+[dir="rtl"] :where(input[type="file"])::-webkit-file-upload-button.-destructive {
+    padding-right: 0;
+}
+
+[dir="rtl"] .-destructive:where(button,button[type],input[type="button"],input[type="submit"],input[type="reset"]),[dir="rtl"] :where(input[type="file"])::-webkit-file-upload-button.-destructive,[dir="rtl"] :where(input[type="file"])::file-selector-button.-destructive,[dir="rtl"] .CTA-button.-destructive {
+    padding-right: 0;
+}
+
+[dir="ltr"] :where(input[type="file"])::-webkit-file-upload-button.-destructive:before {
+      margin-right: var(--button-padding-inline);
+}
+
+[dir="ltr"] .-destructive:where(button,button[type],input[type="button"],input[type="submit"],input[type="reset"]):before,[dir="ltr"] :where(input[type="file"])::-webkit-file-upload-button.-destructive:before,[dir="ltr"] :where(input[type="file"])::file-selector-button.-destructive:before,[dir="ltr"] .CTA-button.-destructive:before {
+      margin-right: var(--button-padding-inline);
+}
+
+[dir="rtl"] :where(input[type="file"])::-webkit-file-upload-button.-destructive:before {
+      margin-left: var(--button-padding-inline);
+}
+
+[dir="rtl"] .-destructive:where(button,button[type],input[type="button"],input[type="submit"],input[type="reset"]):before,[dir="rtl"] :where(input[type="file"])::-webkit-file-upload-button.-destructive:before,[dir="rtl"] :where(input[type="file"])::file-selector-button.-destructive:before,[dir="rtl"] .CTA-button.-destructive:before {
+      margin-left: var(--button-padding-inline);
+}
+
+:where(input[type="file"])::-webkit-file-upload-button.-destructive:before {
+      border: var(--border-thin) solid transparent;
+      content: '⨯';
+      background: var(--button-color);
+      color: var(--button-background);
+      height: calc(100% - var(--border-thin));
+
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--fontFamilyMono);
+      font-size: var(--s1);
+    }
+
+.-destructive:where(button,button[type],input[type="button"],input[type="submit"],input[type="reset"]):before, :where(input[type="file"])::-webkit-file-upload-button.-destructive:before, :where(input[type="file"])::file-selector-button.-destructive:before, .CTA-button.-destructive:before {
+      border: var(--border-thin) solid transparent;
+      content: '⨯';
+      background: var(--button-color);
+      color: var(--button-background);
+      height: calc(100% - var(--border-thin));
+
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--fontFamilyMono);
+      font-size: var(--s1);
+    }
+
+@supports not (aspect-ratio: 1) {
+
+[dir="ltr"] :where(input[type="file"])::-webkit-file-upload-button.-destructive {
+      padding-left: var(--button-padding-inline);
+  }
+
+[dir="ltr"] .-destructive:where(button,button[type],input[type="button"],input[type="submit"],input[type="reset"]),[dir="ltr"] :where(input[type="file"])::-webkit-file-upload-button.-destructive,[dir="ltr"] :where(input[type="file"])::file-selector-button.-destructive,[dir="ltr"] .CTA-button.-destructive {
+      padding-left: var(--button-padding-inline);
+  }
+
+[dir="rtl"] :where(input[type="file"])::-webkit-file-upload-button.-destructive {
+      padding-right: var(--button-padding-inline);
+  }
+
+[dir="rtl"] .-destructive:where(button,button[type],input[type="button"],input[type="submit"],input[type="reset"]),[dir="rtl"] :where(input[type="file"])::-webkit-file-upload-button.-destructive,[dir="rtl"] :where(input[type="file"])::file-selector-button.-destructive,[dir="rtl"] .CTA-button.-destructive {
+      padding-right: var(--button-padding-inline);
+  }
+      :where(input[type="file"])::-webkit-file-upload-button.-destructive:before {
+        display: none;
+      }
+      .-destructive:where(button,button[type],input[type="button"],input[type="submit"],input[type="reset"]):before, :where(input[type="file"])::-webkit-file-upload-button.-destructive:before, :where(input[type="file"])::file-selector-button.-destructive:before, .CTA-button.-destructive:before {
+        display: none;
+      }
+
+    }

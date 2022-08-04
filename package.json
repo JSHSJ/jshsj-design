@@ -1,0 +1,22 @@
+{
+  "name": "jshsj-design",
+  "version": "1.0.0",
+  "description": "Reusable design token and classes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create-bundle": "postcss src/**/*.css --base src --dir out"
+  },
+  "keywords": [
+    "CSS",
+    "Design",
+    "Token"
+  ],
+  "author": "JSHSJ",
+  "license": "ISC",
+  "devDependencies": {
+    "postcss": "^8.4.14",
+    "postcss-cli": "^10.0.0",
+    "postcss-preset-env": "^7.7.2"
+  }
+}

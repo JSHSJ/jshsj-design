@@ -1,0 +1,25 @@
+.jshsj-tag {
+  --color: currentColor;
+
+  font-family: var(--fontFamilyMono);
+  color: var(--color);
+  border: var(--border-thin) solid var(--color);
+  padding: var(--size-xs) var(--size-sm);
+  text-transform: lowercase;
+  --fontWeight: var(--fontWeightMedium);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  line-height: 1;
+
+  .-dark {
+    --color: var(--surface1);
+  }
+
+  .-light {
+    --color: var(--text1);
+  }
+}

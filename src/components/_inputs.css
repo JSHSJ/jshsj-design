@@ -1,0 +1,109 @@
+fieldset {
+  padding: var(--size-md);
+  border: var(--border-thick) solid var(--text1);
+}
+
+legend {
+  font-family: var(--fontFamilyMono);
+  color: var(--text1);
+  display: block;
+  font-size: var(--s1);
+  padding-inline: var(--size-sm);
+  padding-block: 0;
+}
+
+.input-field {
+  display: grid;
+  gap: var(--s-2);
+  grid-template-columns: minmax(0, 1fr);
+  width: fit-content;
+  place-items: start;
+  font-size: var(--s0);
+
+  label {
+    --gap: var(--size-xs);
+  }
+}
+
+.input-label {
+  font-family: var(--fontFamilyMono);
+  color: var(--text1);
+  display: block;
+  font-size: var(--s0);
+}
+
+.input-hint {
+  --color-default: var(--text2);
+  display: block;
+  &:before {
+    content: '?';
+  }
+}
+
+:where(input[type="text"], input[type="email"], input[type="password"], input[type="number"],input[type="url"], input[type="search"]),
+.input {
+  color: var(--text1);
+  background-color: var(--surface1);
+  border: var(--border-thin) solid var(--text2);
+  height: 3em;
+  padding-inline: var(--size-sm);
+
+  &:focus {
+    outline: var(--s-4) solid var(--brand);
+    outline-offset: 0;
+  }
+
+}
+
+:where(textarea),
+.textarea {
+  min-height: var(--size-2xl);
+}
+
+.input-error {
+  --color-default: red;
+  --fontWeight: var(--fontWeightMedium);
+  color: var(--color-default);
+
+  &:before {
+    content: '!';
+  }
+}
+
+.input-error, .input-hint {
+  &:before {
+    font-family: var(--fontFamilyMono);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(var(--lineHeight));
+    padding: 0;
+    background-color: var(--color-default);
+    color: var(--surface1);
+    margin-right: var(--size-xs);
+  }
+}
+
+.checkbox-input {
+  display: grid;
+  gap: var(--size-sm);
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas: "input label";
+  width: fit-content;
+  place-items: start;
+  font-size: var(--s0);
+
+  & > label {
+    grid-area: label;
+    cursor: pointer;
+  }
+
+  & > input {
+    grid-area: input;
+    inline-size: calc(--size-md);
+    block-size: calc(--size-md);
+    aspect-ratio: 1;
+    margin: 0;
+    padding: 0;
+  }
+}
