@@ -1,9 +1,6 @@
 .link-with-icon {
-  position: inline-block;
-
-  > *:first-child {
-    margin-right: var(--s-3);
-  }
+  display: inline-grid;
+  gap: var(--s-3);
 
   & svg {
     position: relative;
