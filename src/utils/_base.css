@@ -27,12 +27,12 @@ figure {
 
 * {
   font-variation-settings: "wght" var(--fontWeight);
-  accent-color: var(--brand);
+  accent-color: var(--color-brand);
 }
 
 :focus-visible,
 :focus {
-  outline: var(--s-5) solid var(--brand);
+  outline: var(--s-5) solid var(--color-brand);
   outline-offset: 0.64ch;
 }
 
@@ -110,12 +110,12 @@ dd {
 
 dt {
   --fontWeight: var(--fontWeightRegular);
-  color: var(--text2);
+  color: var(--color-text2);
 }
 
 dd {
   --fontWeight: var(--fontWeightMedium);
-  color: var(--text1);
+  color: var(--color-text1);
 }
 
 dl {
@@ -145,22 +145,22 @@ small {
 sup,
 small,
 figcaption {
-  color: var(--text2);
+  color: var(--color-text2);
 }
 
 figcaption {
   display: block;
-  color: var(--surface1);
+  color: var(--color-surface1);
   font-family: var(--fontFamilySans);
   --fontWeight: var(--fontWeightMedium);
-  color: var(--surface2);
-  background-color: var(--text1);
+  color: var(--color-surface2);
+  background-color: var(--color-text1);
   padding: var(--size-sm) var(--size-md);
 }
 
 details {
   width: 100%;
-  background-color: var(--surface2);
+  background-color: var(--color-surface2);
   padding-inline: var(--defaultPadding-horizontal);
   padding-block: var(--defaultPadding-vertical);
   border-radius: 0;
@@ -171,12 +171,12 @@ details {
 
   & > summary {
     cursor: pointer;
-    color: var(--text1);
+    color: var(--color-text1);
     width: 100%;
   }
 
   &[open=""] {
-    border: var(--border-thin) solid var(--surface2);
+    border: var(--border-thin) solid var(--color-surface2);
   }
 }
 
@@ -184,15 +184,15 @@ blockquote {
   margin-inline: 0;
   padding-inline: var(--defaultPadding-horizontal);
   padding-block: var(--defaultPadding-vertical);
-  background-color: var(--surface2);
-  border-left: var(--border-thick) solid var(--text2);
+  background-color: var(--color-surface2);
+  border-left: var(--border-thick) solid var(--color-text2);
 }
 
 hr {
   width: 100%;
   height: var(--s-5);
   border: none;
-  background-color: var(--text2);
+  background-color: var(--color-text2);
 }
 
 h1,
@@ -202,7 +202,7 @@ h4,
 h5,
 h6 {
   line-height: var(--lineHeight-small);
-  color: var(--text1);
+  color: var(--color-text1);
   overflow-wrap: break-word;
   max-width: 100%;
   hyphens: auto;
@@ -246,8 +246,8 @@ h6 {
 body {
   --fontWeight: var(--fontWeightRegular);
 
-  color: var(--text2);
-  background-color: var(--surface1);
+  color: var(--color-text2);
+  background-color: var(--color-surface1);
 
   font-family: var(--fontFamilySans);
   line-height: var(--lineHeight);
@@ -258,18 +258,18 @@ body {
 }
 
 ::marker {
-  color: var(--brand);
+  color: var(--color-brand);
 }
 
 ::selection,
 mark {
-  background-color: var(--brand);
-  color: var(--surface1);
+  background-color: var(--color-brand);
+  color: var(--color-surface1);
 }
 
 a,
 .link {
-  color: var(--text1);
+  color: var(--color-text1);
   font-family: var(--fontFamilyMono);
   text-decoration: underline;
   text-underline-offset: 0.15em;
@@ -283,7 +283,7 @@ a,
   }
 
   &:hover {
-    text-decoration-color: var(--brand);
+    text-decoration-color: var(--color-brand);
   }
 
   &[href^="https://"], &[href^="http://"], &[data-external]
@@ -347,18 +347,18 @@ dfn, var {
     z-index: 999;
     height: var(--s3);
     line-height: var(--s3);
-    background: var(--surface2);
+    background: var(--color-surface2);
     font-size: var(--s0);
     text-decoration: none;
-    color: var(--text1);
+    color: var(--color-text1);
     text-align: center;
     padding-inline: var(--size-md);
     --fontWeight: var(--fontWeightMedium);
   }
 }
 #content-start:focus {
-  background: var(--surface2);
-  color: var(--text1);
+  background: var(--color-surface2);
+  color: var(--color-text1);
 }
 
 code {
@@ -371,10 +371,10 @@ pre {
   width: 100%;
   max-width: var(--measure);
   overflow-x: auto;
-  color: var(--text2);
-  border: var(--border-thick) solid var(--text2);
+  color: var(--color-text2);
+  border: var(--border-thick) solid var(--color-text2);
 }
 
 [data-footnote-ref] {
-  color: var(--brand);
+  color: var(--color-brand);
 }

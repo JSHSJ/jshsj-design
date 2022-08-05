@@ -2,8 +2,8 @@
     padding-inline: var(--size-xl);
     width: 100%;
     padding-block: var(--gap, var(--defaultPadding-vertical));
-    background-color: var(--surface2);
-    color: var(--text2);
+    background-color: var(--color-surface2);
+    color: var(--color-text2);
     position: relative;
 
     &.-info:before, &.-warning:before {
@@ -11,8 +11,8 @@
       justify-content: center;
       align-items: center;
       transform: translate(-40%, -40%);
-      background-color: var(--text1);
-      color: var(--surface1);
+      background-color: var(--color-text1);
+      color: var(--color-surface1);
       inline-size: 1.48em;
       block-size: 1.48em;
       line-height: 1;

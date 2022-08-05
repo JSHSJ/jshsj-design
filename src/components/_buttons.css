@@ -8,13 +8,13 @@
 :where(input[type="file"])::-webkit-file-upload-button,
 :where(input[type="file"])::file-selector-button,
 .CTA-button {
-  --button-background: var(--text1);
-  --button-color: var(--surface1);
-  --button-border-color: var(--text1);
+  --button-background: var(--color-text1);
+  --button-color: var(--color-surface1);
+  --button-border-color: var(--color-text1);
 
-  --button-background-hover: var(--surface2);
-  --button-color-hover: var(--text1);
-  --button-border-color-hover: var(--text1);
+  --button-background-hover: var(--color-surface2);
+  --button-color-hover: var(--color-text1);
+  --button-border-color-hover: var(--color-text1);
 
   --button-height: var(--size-2xl);
   --button-padding-inline: var(--size-lg);
@@ -64,7 +64,7 @@
   &[disabled] {
     --button-background: none !important;
     --button-background-hover: none !important;
-    --button-color: var(--text2) !important;
+    --button-color: var(--color-text2) !important;
     --button-color-hover: var(--button-color) !important;
     --button-border-color-hover: var(--button-border-color);
 
@@ -86,22 +86,22 @@
   }
 
   &.-secondary {
-    --button-background: var(--surface1);
-    --button-color: var(--text1);
-    --button-border-color: var(--text1);
+    --button-background: var(--color-surface1);
+    --button-color: var(--color-text1);
+    --button-border-color: var(--color-text1);
 
-    --button-background-hover: var(--surface1);
-    --button-color-hover: var(--brand);
-    --button-border-color-hover: var(--brand);
+    --button-background-hover: var(--color-surface1);
+    --button-color-hover: var(--color-brand);
+    --button-border-color-hover: var(--color-brand);
   }
 
   &.-stealth {
     --button-background: transparent;
-    --button-color: var(--text1);
+    --button-color: var(--color-text1);
     --button-border-color: transparent;
 
     --button-background-hover: transparent;
-    --button-color-hover: var(--brand);
+    --button-color-hover: var(--color-brand);
     --button-border-color-hover: transparent;
 
     box-shadow: none;
@@ -138,9 +138,9 @@
 }
 
 :where(input[type="file"]) {
-  color: var(--text1);
-  background-color: var(--surface1);
-  border: var(--border-thin) solid var(--text2);
+  color: var(--color-text1);
+  background-color: var(--color-surface1);
+  border: var(--border-thin) solid var(--color-text2);
   height: var(--size-2xl);
   padding-inline-end: var(--size-sm);
 }

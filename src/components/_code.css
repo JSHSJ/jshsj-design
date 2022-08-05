@@ -1,5 +1,5 @@
 pre {
-  background-color: var(--code-background);
+  background-color: var(--color-code-background);
 }
 
 .token {
@@ -7,27 +7,27 @@ pre {
 }
 
 .keyword {
-  color: var(--code-color-keyword);
+  color: var(--color-code-keyword);
 
 }
 
 .string {
-  color: var(--code-color-string);
+  color: var(--color-code-string);
 }
 
 .punctuation {
-  color: var(--code-color-punctuation);
+  color: var(--color-code-punctuation);
 }
 
 .operator {
-  color: var(--code-color-operator);
+  color: var(--color-code-operator);
 }
 
 .tag {
-    color: var(--code-color-tag);
+    color: var(--color-code-tag);
 }
 
 .plain-text {
-  color: var(--code-color-plain-text);
+  color: var(--color-code-plain-text);
 
 }

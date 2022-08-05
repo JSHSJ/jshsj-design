@@ -1,11 +1,11 @@
 fieldset {
   padding: var(--size-md);
-  border: var(--border-thick) solid var(--text1);
+  border: var(--border-thick) solid var(--color-text1);
 }
 
 legend {
   font-family: var(--fontFamilyMono);
-  color: var(--text1);
+  color: var(--color-text1);
   display: block;
   font-size: var(--s1);
   padding-inline: var(--size-sm);
@@ -28,14 +28,14 @@ legend {
 :where(label),
 .input-label {
   font-family: var(--fontFamilyMono);
-  color: var(--text1);
+  color: var(--color-text1);
   display: block;
   font-size: var(--s0);
   cursor: pointer;
 }
 
 .input-hint {
-  --color-default: var(--text2);
+  --color-default: var(--color-text2);
   display: block;
   &:before {
     content: '?';
@@ -44,14 +44,14 @@ legend {
 
 :where(input[type="text"], input[type="email"], input[type="password"], input[type="number"],input[type="url"], input[type="search"], input[type="date"], input[type="month"], input[type="week"], input[type="text"], input[type="datetime"], input[type="datetime-local"], input[type="time"], input[type="tel"], input[type="color"], textarea, select),
 .input {
-  color: var(--text1);
-  background-color: var(--surface1);
-  border: var(--border-thin) solid var(--text2);
+  color: var(--color-text1);
+  background-color: var(--color-surface1);
+  border: var(--border-thin) solid var(--color-text2);
   height: var(--size-2xl);
   padding-inline: var(--size-sm);
 
   &:focus {
-    outline: var(--s-4) solid var(--brand);
+    outline: var(--s-4) solid var(--color-brand);
     outline-offset: 0;
   }
 }
@@ -62,7 +62,7 @@ legend {
 }
 
 .input-error {
-  --color-default: var(--error);
+  --color-default: var(--color-status-error);
   --fontWeight: var(--fontWeightMedium);
   color: var(--color-default);
 
@@ -80,7 +80,7 @@ legend {
     width: calc(var(--lineHeight));
     padding: 0;
     background-color: var(--color-default);
-    color: var(--surface1);
+    color: var(--color-surface1);
     margin-right: var(--size-xs);
   }
 }
