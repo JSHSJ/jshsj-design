@@ -1,1 +1,1 @@
-.link-with-icon{position:inline-block;>:first-child{margin-right:var(--s-3)}}.link-with-icon svg{position:relative;top:.125em}.link-with-icon span{display:inline}
+.link-with-icon{display:inline-grid;gap:var(--s-3)}.link-with-icon svg{position:relative;top:.125em}.link-with-icon span{display:inline}
