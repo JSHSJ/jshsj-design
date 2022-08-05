@@ -37,13 +37,14 @@
   box-sizing: border-box;
   align-items: center;
   justify-items: center;
-  width: max-content;
+  text-align: center;
   position: relative;
-
   transition: box-shadow .15s;
-
   text-decoration: unset;
   box-shadow: var(--shadow-default);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 }
 
 :where(button,button[type],input[type="button"],input[type="submit"],input[type="reset"], .CTA-button) {
@@ -106,35 +107,6 @@
 
     box-shadow: none;
   }
-
-  &.-destructive {
-    padding-inline-start: 0;
-
-    &:before {
-      border: var(--border-thin) solid transparent;
-      content: '⨯';
-      background: var(--button-color);
-      color: var(--button-background);
-      height: calc(100% - var(--border-thin));
-
-      aspect-ratio: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-inline-end: var(--button-padding-inline);
-      font-family: var(--fontFamilyMono);
-      font-size: var(--s1);
-    }
-
-    @supports not (aspect-ratio: 1) {
-
-      padding-inline-start: var(--button-padding-inline);
-      &:before {
-        display: none;
-      }
-
-    }
-  }
 }
 
 :where(input[type="file"]) {
@@ -150,4 +122,31 @@
   margin-inline-end: var(--size-sm);
   cursor: pointer;
   box-shadow: none;
+}
+
+:where(input[type="reset"], button[type="reset"], .CTA-button.-destructive) {
+    padding-inline-start: 0 !important;
+
+    &:before {
+      border: var(--border-thin) solid transparent;
+      content: '⨯';
+      background: var(--button-color);
+      color: var(--button-background);
+      aspect-ratio: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      align-self: stretch;
+      margin-inline-end: var(--button-padding-inline);
+      font-family: var(--fontFamilyMono);
+      font-size: var(--s1);
+    }
+
+    @supports not (aspect-ratio: 1) {
+      padding-inline-start: var(--button-padding-inline);
+
+      &:before {
+        display: none;
+      }
+    }
 }

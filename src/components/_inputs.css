@@ -21,7 +21,7 @@ legend {
   font-size: var(--s0);
 
   & > label {
-    --gap: var(--size-xs);
+    --gap: var(--size-2xs);
   }
 }
 

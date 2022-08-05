@@ -1,4 +1,4 @@
-.jshsj-tag {
+.tag {
   --color: currentColor;
 
   font-family: var(--fontFamilyMono);
@@ -11,11 +11,11 @@
   max-width: max-content;
   line-height: 1;
 
-  .-dark {
+  &.-dark {
     --color: var(--color-surface1);
   }
 
-  .-light {
+  &.-light {
     --color: var(--color-text1);
   }
 }

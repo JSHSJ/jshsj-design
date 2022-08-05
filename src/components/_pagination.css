@@ -5,12 +5,17 @@
   justify-content: center;
 }
 
-.paginationNav {
+.pagination-nav {
   align-items: center;
 }
 
-.paginationEl {
+.pagination-element {
   font-size: var(--s1);
+  display: grid;
+  place-content: center;
+  inline-size: var(--size-xl);
+  block-size: var(--size-xl);
+  padding: var(--size-xs);
 
   &[aria-current="page"] {
     color: var(--color-brand);
@@ -19,17 +24,12 @@
 }
 
 
-.paginationIcon {
-  width: var(--size-xl);
-  height: var(--size-2xl);
-  padding: var(--size-xs);
-  display: block;
-
+.pagination-icon {
   &:hover:not([aria-disabled]) {
     color: var(--color-brand);
   }
 
-  svg {
+  & > svg {
     width: 100%;
     height:100%;
     display: block;

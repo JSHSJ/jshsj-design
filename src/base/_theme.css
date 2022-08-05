@@ -37,12 +37,12 @@
   :root {
     color-scheme: dark;
 
-    --brand: var(--color-brand-dark);
-    --brand2: var(--color-brand2-dark);
-    --text1: var(--color-text1-dark);
-    --text2: var(--color-text2-dark);
-    --surface1: var(--color-surface1-dark);
-    --surface2: var(--color-surface2-dark);
+    --color-brand: var(--color-brand-dark);
+    --color-brand2: var(--color-brand2-dark);
+    --color-text1: var(--color-text1-dark);
+    --color-text2: var(--color-text2-dark);
+    --color-surface1: var(--color-surface1-dark);
+    --color-surface2: var(--color-surface2-dark);
 
     --shadow-color: var(--shadow-color-dark);
     --shadow-color-background: var(--shadow-color-background-dark);
