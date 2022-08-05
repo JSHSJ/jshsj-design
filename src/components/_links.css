@@ -1,6 +1,8 @@
 .link-with-icon {
   display: inline-grid;
   gap: var(--s-3);
+  grid-auto-flow: column;
+  place-items: center;
 
   & svg {
     position: relative;
