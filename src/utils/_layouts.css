@@ -1,4 +1,4 @@
-// Layout classes that handle 80% of the layout
+/* Layout classes that handle 80% of the layout*/
 
 .box {
   padding-inline: var(--gap, var(--defaultPadding-horizontal));

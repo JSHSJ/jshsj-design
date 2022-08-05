@@ -20,7 +20,7 @@ legend {
   place-items: start;
   font-size: var(--s0);
 
-  label {
+  & > label {
     --gap: var(--size-xs);
   }
 }
@@ -62,7 +62,7 @@ legend {
 }
 
 .input-error {
-  --color-default: red;
+  --color-default: var(--error);
   --fontWeight: var(--fontWeightMedium);
   color: var(--color-default);
 

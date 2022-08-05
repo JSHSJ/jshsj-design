@@ -141,8 +141,7 @@
   --border-thin: var(--size-3xs);
   --border-thick: var(--size-2xs);
 
-  --shadow-raised: var(--size-3xs) var(--size-3xs) 0.48em
-    var(--shadow-color-default);
+  --shadow-raised: var(--size-3xs) var(--size-3xs) 0.48em var(--shadow-color-default);
 
    /* @todo: think about splitting vertical spacing from horizontal padding */
   --defaultSpacing: var(--size-md);

@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML5 Test Page</title>
 
-    <link rel="stylesheet" href="out/complete.css">
-
+    <link rel="stylesheet" href="out/jshsj-design.css">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
   </head>
   <body>
     <div id="top" role="document">
       <header>
         <h1>HTML5 Test Page</h1>
         <p>This is a test page filled with common HTML elements to be used to provide visual feedback whilst building CSS systems and frameworks.</p>
+        <p>It's been modified to show the "components" included.</p>
       </header>
       <nav>
         <ul>
@@ -59,6 +60,21 @@
               <li><a href="#forms__html5">HTML5 inputs</a></li>
               <li><a href="#forms__action">Action buttons</a></li>
             </ul>
+          </li>
+          <li>
+            <a href="#components">Components</a>
+            <ul>
+              <li><a href="#components__headlines">Special headlines</a></li>
+              <li><a href="#components__uncategorised">Uncategorised</a></li>
+              <li><a href="#components__inputs">Inputs</a></li>
+              <li><a href="#components__buttons">Buttons</a></li>
+              <li><a href="#components__note">Note</a></li>
+              <li><a href="#components__pagination">Pagination</a></li>
+              <li><a href="#components__tags">Tags</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#layouts">Layouts</a>
           </li>
         </ul>
       </nav>
@@ -548,6 +564,46 @@
             </fieldset>
             <p><a href="#top">[Top]</a></p>
           </form>
+        </section>
+        <section>
+          <h2 id="components">Components</h2>
+          <fieldset>
+            <legend id="components__headlines">Special headlines</legend>
+            <h3 class="-with-dot">Special headline <code>-with-dot</code></h3>
+          </fieldset>
+          <fieldset>
+            <legend id="components__inputs">Inputs</legend>
+            <p>
+              <div class="input-field">
+            <label for="some-input" class="stack">
+              <span class="input-label">Label (optional)</span>
+              <span class="input-hint">I'm a hint</span>
+              <span class="input-error">I'm an error</span>
+              <div class="cluster">
+                <input class="input" id="some-input" name="some-input">
+              </div>
+            </label>
+
+          </div>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend id="components__buttons">Buttons</legend>
+          </fieldset>
+          <fieldset>
+            <legend id="components__note">Note</legend>
+          </fieldset>
+          <fieldset>
+            <legend id="components__pagination">Pagination</legend>
+          </fieldset>
+           <fieldset>
+            <legend id="components__tags">Tags</legend>
+          </fieldset>
+          <p><a href="#top">[Top]</a></p>
+        </section>
+        <section>
+          <h2 id="layouts">Layouts</h2>
+
         </section>
       </main>
       <footer>

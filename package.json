@@ -3,9 +3,41 @@
   "version": "1.0.0",
   "description": "Reusable design token and classes",
   "main": "index.js",
+  "exports": {
+    "postcss": {
+      "bundle": "./src/jshsj-design.css",
+      "variables": "./src/base/index.css",
+      "buttons": "./src/components/_buttons.css",
+      "code": "./src/components/_code.css",
+      "exceptions": "./src/components/_exceptions.css",
+      "headlines": "./src/components/_headlines.css",
+      "inputs": "./src/components/_inputs.css",
+      "links": "./src/components/_links.css",
+      "note": "./src/components/_note.css",
+      "pagination": "./src/components/_pagination.css",
+      "tags": "./src/components/_tags.css",
+      "base": "./src/utils/_base.css",
+      "layouts": "./src/utils/_layouts.css"
+    },
+    "bundle": "./out/jshsj-design.css",
+    "variables": "./out/base/index.css",
+    "buttons": "./out/components/_buttons.css",
+    "code": "./out/components/_code.css",
+    "exceptions": "./out/components/_exceptions.css",
+    "headlines": "./out/components/_headlines.css",
+    "inputs": "./out/components/_inputs.css",
+    "links": "./out/components/_links.css",
+    "note": "./out/components/_note.css",
+    "pagination": "./out/components/_pagination.css",
+    "tags": "./out/components/_tags.css",
+    "base": "./out/utils/_base.css",
+    "layouts": "./out/utils/_layouts.css"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "create-bundle": "postcss src/**/*.css --base src --dir out"
+    "lib:all": "postcss src/**/*.css --base src --dir out",
+    "lib:bundle": "postcss src/jshsj-design.css -o out/jshsj-design.css",
+    "bundle": "concurrently npm:lib:*"
   },
   "keywords": [
     "CSS",
@@ -15,8 +47,12 @@
   "author": "JSHSJ",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^7.3.0",
+    "cssnano": "^5.1.12",
     "postcss": "^8.4.14",
     "postcss-cli": "^10.0.0",
+    "postcss-combine-duplicated-selectors": "^10.0.3",
+    "postcss-import": "^14.1.0",
     "postcss-preset-env": "^7.7.2"
   },
   "browserslist": [
