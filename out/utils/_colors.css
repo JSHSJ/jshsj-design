@@ -1,0 +1,33 @@
+.bg-surface2 {
+  background-color: var(--color-surface2);
+}
+
+.bg-surface1 {
+  background-color: var(--color-surface1);
+}
+
+.fg-brand {
+  color: var(--color-brand);
+}
+
+.fg-text1 {
+  color: var(--color-text1);
+}
+
+.fg-text2 {
+  color: var(--color-text2);
+}
+
+.border-thin {
+  border: var(--border-thin) solid;
+
+}
+
+.border-thick {
+  border: var(--border-thick) solid;
+
+}
+
+.border-text1 {
+  border-color: var(--color-text1);
+}

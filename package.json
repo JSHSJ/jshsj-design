@@ -17,6 +17,9 @@
     "./postcss/badges": "./src/components/_badges.css",
     "./postcss/base": "./src/utils/_base.css",
     "./postcss/layouts": "./src/utils/_layouts.css",
+    "./postcss/utils/colors": "./src/utils/_colors.css",
+    "./postcss/utils/spacings": "./src/utils/_spacings.css",
+    "./postcss/utils/typo": "./src/utils/_typo.css",
     "./bundle": "./out/jshsj-design.css",
     "./variables": "./out/base/index.css",
     "./buttons": "./out/components/_buttons.css",
@@ -30,6 +33,9 @@
     "./badges": "./out/components/_badges.css",
     "./base": "./out/utils/_base.css",
     "./layouts": "./out/utils/_layouts.css",
+    "./utils/colors": "./out/utils/_colors.css",
+    "./utils/spacings": "./out/utils/_spacings.css",
+    "./utils/typo": "./out/utils/_typo.css",
     "./package.json": "./package.json"
   },
   "scripts": {
