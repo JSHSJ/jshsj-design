@@ -307,7 +307,7 @@ mark {
   list-style: none;
   max-inline-size: 100%;
 
-  li {
+  & li {
     margin-inline: 0;
     max-inline-size: 100%;
   }
