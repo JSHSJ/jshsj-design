@@ -1,28 +1,25 @@
 /* ELEMENT RESETS / BASE STYLES */
 
-* {
-  box-sizing: border-box;
+*, ::before, ::after { box-sizing: border-box; }
+
+:where(:not(dialog)) {
+  margin: 0;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-ol,
-dl,
-figure,
-blockquote {
-  margin-block: 0;
+:where(:not(fieldset, progress, meter)) {
+  border-width: 0;
+  border-style: solid;
+  background-origin: border-box;
+  background-repeat: no-repeat;
 }
 
-figure {
-  display: grid;
-  gap: 0;
-  place-items: center;
+@media (--motionOK) {
+  :where(:focus-visible) {
+    transition: outline-offset 145ms var(--ease-2);
+  }
+  :where(:not(:active):focus-visible) {
+    transition-duration: .25s;
+  }
 }
 
 * {
@@ -30,19 +27,21 @@ figure {
   accent-color: var(--color-brand);
 }
 
-:focus-visible,
-:focus {
+:where(:focus-visible,
+:focus) {
   outline: var(--s-5) solid var(--color-brand);
   outline-offset: 0.64ch;
 }
 
-:focus:not(:focus-visible) {
+:where(:focus:not(:focus-visible)) {
   outline: none;
 }
 
-html {
+:where(html) {
   block-size: 100%;
   inline-size: 100%;
+  -webkit-text-size-adjust: none; /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
+
 
   @media (--motionOK) {
     & {
@@ -51,104 +50,117 @@ html {
   }
 }
 
-body {
+:where(body) {
   min-block-size: 100%;
   min-inline-size: 100%;
-  box-sizing: border-box;
-  margin: 0;
+
+  --fontWeight: var(--fontWeightRegular);
+
+  color: var(--color-text2);
+  background-color: var(--color-surface1);
+
+  font-family: var(--fontFamilySans);
+  line-height: var(--lineHeight);
+  font-variation-settings: "wght" var(--fontWeight);
+  font-style: normal;
+  font-feature-settings: "calt", "liga";
+  font-size: var(--s0);
 }
 
-@media (orientation: landscape) {
-  body {
-    grid-auto-flow: column;
-  }
-}
-
-img,
-picture {
-  max-width: 100%;
+:where(img, svg, video, canvas, audio, iframe, embed, object) {
   display: block;
 }
 
-input,
-button,
-textarea,
-select {
-  font: inherit;
+:where(img, svg, video) {
+  max-inline-size: 100%;
+  block-size: auto;
 }
 
-p,
+:where(figure) {
+  display: grid;
+  gap: 0;
+  place-items: center;
+}
+
+:where(a[href], area, button, input, label[for], select, summary, textarea, [tabindex]:not([tabindex*="-"])) {
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:where(input, button, textarea, select),
+:where(input[type="file"])::-webkit-file-upload-button {
+  font: inherit;
+  font-size: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+}
+
+:where(p,
 li,
 dd,
 dt,
-summary {
+summary) {
   max-inline-size: var(--measure);
   font-size: inherit;
   line-height: var(--lineHeight);
 }
 
-ol,
+:where(ol,
 ul,
-dl {
+dl) {
   display: flex;
   flex-direction: column;
   max-inline-size: max-content;
   padding-inline: 0;
 }
 
-ol,
-ul {
+:where(ol,
+ul) {
   gap: var(--gap, var(--s1));
 }
 
-li,
-dd {
+:where(li,
+dd) {
   max-inline-size: calc(var(--measure) * 0.8);
   font-size: var(--s0);
   margin-inline: var(--s0);
 }
 
-dt {
+:where(dt) {
   --fontWeight: var(--fontWeightRegular);
   color: var(--color-text2);
 }
 
-dd {
+:where(dd) {
   --fontWeight: var(--fontWeightMedium);
   color: var(--color-text1);
 }
 
-dl {
-  * + * {
-    margin-top: var(--s-1);
+:where(dl) {
+  & * + * {
+    margin-block-start: var(--s-1);
   }
 
-  * + dt {
-    margin-top: var(--s1);
+  & * + dt {
+    margin-block-start: var(--s1);
   }
 }
 
-li > ul,
-li > ol {
-  margin-top: var(--s1);
+:where(li > ul,
+li > ol) {
+  margin-block-start: var(--s1);
 }
 
-img {
-  max-inline-size: 100%;
-  block-size: auto;
-}
-
-small {
+:where(small) {
   font-size: var(--s-1);
 }
 
-sup,
-small,
-figcaption {
+:where(sup, small) {
   color: var(--color-text2);
 }
 
-figcaption {
+:where(figcaption) {
   display: block;
   color: var(--color-surface1);
   font-family: var(--fontFamilySans);
@@ -158,7 +170,7 @@ figcaption {
   padding: var(--size-sm) var(--size-md);
 }
 
-details {
+:where(details) {
   width: 100%;
   background-color: var(--color-surface2);
   padding-inline: var(--defaultPadding-horizontal);
@@ -180,7 +192,9 @@ details {
   }
 }
 
-blockquote {
+:where(blockquote) {
+  display: grid;
+  gap: var(--size-md);
   margin-inline: 0;
   padding-inline: var(--defaultPadding-horizontal);
   padding-block: var(--defaultPadding-vertical);
@@ -188,73 +202,60 @@ blockquote {
   border-left: var(--border-thick) solid var(--color-text2);
 }
 
-hr {
+:where(hr) {
   width: 100%;
   height: var(--s-5);
   border: none;
   background-color: var(--color-text2);
 }
 
-h1,
+:where(h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+h6) {
   line-height: var(--lineHeight-small);
   color: var(--color-text1);
   overflow-wrap: break-word;
   max-width: 100%;
   hyphens: auto;
 
-  > span {
+  & > span {
     overflow-wrap: break-word;
     max-width: 100%;
     hyphens: auto;
   }
 }
 
-h1 {
+:where(h1) {
   font-size: var(--s4);
   --fontWeight: var(--fontWeightBold);
 }
 
-h2 {
+:where(h2) {
   font-size: var(--s3);
   --fontWeight: var(--fontWeightBold);
 }
 
-h3 {
+:where(h3) {
   font-size: var(--s2);
   --fontWeight: var(--fontWeightBold);
 }
 
-h4 {
+:where(h4) {
   font-size: var(--s1);
   --fontWeight: var(--fontWeightBold);
 }
-h5 {
+
+:where(h5) {
   font-size: var(--s0);
   --fontWeight: var(--fontWeightBold);
 }
 
-h6 {
+:where(h6) {
   font-size: var(--s-1);
   --fontWeight: var(--fontWeightBold);
-}
-
-body {
-  --fontWeight: var(--fontWeightRegular);
-
-  color: var(--color-text2);
-  background-color: var(--color-surface1);
-
-  font-family: var(--fontFamilySans);
-  line-height: var(--lineHeight);
-  font-variation-settings: "wght" var(--fontWeight);
-  font-style: normal;
-  font-feature-settings: "calt", "liga";
-  font-size: var(--s0);
 }
 
 ::marker {
@@ -267,8 +268,7 @@ mark {
   color: var(--color-surface1);
 }
 
-a,
-.link {
+:where(a,.link) {
   color: var(--color-text1);
   font-family: var(--fontFamilyMono);
   text-decoration: underline;
@@ -279,7 +279,7 @@ a,
   cursor: pointer;
 
   &:visited {
-    color: color(display-p3 0.5 0 1);
+    color: var(--color-text2);
   }
 
   &:hover {
@@ -303,10 +303,6 @@ a,
   }
 }
 
-.relative {
-  position: relative;
-}
-
 .list-reset {
   list-style: none;
   max-inline-size: 100%;
@@ -317,19 +313,19 @@ a,
   }
 }
 
-strong, b {
+:where(strong, b) {
   --fontWeight: var(--fontWeightMedium);
 }
 
-dfn, var {
+:where(dfn, var) {
   font-family: var(--fontFamilyMono);
 }
 
-[aria-disabled="true"],
+:where([aria-disabled="true"],
 .disabled,
-:disabled {
+:disabled) {
   color: inherit;
-  opacity: 0.48;
+  opacity: 1;
   cursor: not-allowed;
 }
 
@@ -361,11 +357,11 @@ dfn, var {
   color: var(--color-text1);
 }
 
-code {
+:where(code) {
   font-family: var(--fontFamilyMono);
 }
 
-pre {
+:where(pre) {
   font-size: var(--s0);
   padding: var(--size-md);
   width: 100%;

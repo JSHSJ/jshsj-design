@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="out/jshsj-design.css">
     <link rel="stylesheet" href="assets/fonts/fonts.css">
 </head>
-<body>
+<body class="layout-container">
 <div id="top" role="document">
     <header>
         <h1>HTML5 Test Page</h1>
@@ -695,11 +695,77 @@
         </section>
         <section>
             <h2 id="layouts">Layouts</h2>
+            <fieldset class="stack">
+                <legend>Box</legend>
+                <p class="note">A box with padding.</p>
+                    <div class="box" style="border: 1px solid var(--color-brand);">Box</div>
+            </fieldset>
+            <fieldset class="stack">
+                <legend>Stack</legend>
+                <p class="note">A vertical stack of items with spacing between.</p>
+                <div class="stack -layout-l" style="border: 1px solid var(--color-brand);">
+                    <p>element 1</p>
+                    <p>element 2</p>
+                </div>
+            </fieldset>
+            <fieldset class="stack">
+                <legend>Cluster</legend>
+                <p class="note">A automatically wrapping container</p>
+                <div class="cluster -layout-l" style="border: 1px solid var(--color-brand);">
+                    <p>element</p>
+                    <p>element</p>
+                    <p>element</p>
+                    <p>element</p>
+                    <p>element</p>
+                    <p>element</p>
+                    <p>element</p>
+                    <p>element</p>
+                    <p>element</p>
+                    <p>element</p>
+                    <p>element</p>
+                </div>
+            </fieldset>
+            <fieldset class="stack">
+                <legend>Flow</legend>
+                <p class="note">A container for rich text or blog texts. Adds spacing between the elements, that I removed
+
+                 in the reset, because I prefer it that way</p>
+                <div class="flow" style="border: 1px solid var(--color-brand);">
+                    <h1>h1 element</h1>
+                    <p>element</p>
+                    <p>element</p>
+                    <h2>h2 element</h2>
+                    <p>element</p>
+                    <p>element</p>
+                    <h3>h3 element</h3>
+                    <p>element</p>
+                    <figure>
+                        <img src="https://jooinn.com/images1280_/dogs.jpg">
+                        <figcaption>Dogs</figcaption>
+                    </figure>
+                    <p>element</p>
+                    <p>element</p>
+                </div>
+            </fieldset>
+            <fieldset class="stack">
+                <legend>With Sidebar</legend>
+                <p class="note"><a href="https://every-layout.dev/layouts/sidebar/">https://every-layout.dev/layouts/sidebar/</a></p>
+                <div class="with-sidebar" style="border: 1px solid var(--color-brand);">
+                    <div data-grow style="--min-size: 60%">
+                    <h1>h1 element</h1>
+                    <p>element</p>
+                        </div>
+                    <figure style="width: 300px">
+                        <img src="https://jooinn.com/images1280_/dogs.jpg">
+                        <figcaption>Dogs</figcaption>
+                    </figure>
+                </div>
+            </fieldset>
 
         </section>
     </main>
     <footer>
-        <p>Made by <a href="http://twitter.com/cbracco">@cbracco</a>. Code on <a
+        <p>Original HTML5 testpage by <a href="http://twitter.com/cbracco">@cbracco</a>. Code on <a
                 href="http://github.com/cbracco/html5-test-page">GitHub</a>.</p>
     </footer>
 </div>

@@ -124,7 +124,7 @@
   box-shadow: none;
 }
 
-:where(input[type="reset"], button[type="reset"], .CTA-button.-destructive) {
+:where(button[type="reset"], .CTA-button.-destructive) {
     padding-inline-start: 0 !important;
 
     &:before {

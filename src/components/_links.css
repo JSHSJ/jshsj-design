@@ -5,12 +5,12 @@
     margin-right: var(--s-3);
   }
 
-  svg {
+  & svg {
     position: relative;
     top: 0.125em;
   }
 
-  span {
+  & span {
     display: inline;
   }
 }
