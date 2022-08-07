@@ -38,11 +38,11 @@ legend {
   --color-default: var(--color-text2);
   display: block;
   &:before {
-    content: '?';
+    content: "?";
   }
 }
 
-:where(input[type="text"], input[type="email"], input[type="password"], input[type="number"],input[type="url"], input[type="search"], input[type="date"], input[type="month"], input[type="week"], input[type="text"], input[type="datetime"], input[type="datetime-local"], input[type="time"], input[type="tel"], input[type="color"], textarea, select),
+:where(input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="url"], input[type="search"], input[type="date"], input[type="month"], input[type="week"], input[type="text"], input[type="datetime"], input[type="datetime-local"], input[type="time"], input[type="tel"], input[type="color"], textarea, select),
 .input {
   color: var(--color-text1);
   background-color: var(--color-surface1);
@@ -67,11 +67,12 @@ legend {
   color: var(--color-default);
 
   &:before {
-    content: '!';
+    content: "!";
   }
 }
 
-.input-error, .input-hint {
+.input-error,
+.input-hint {
   &:before {
     font-family: var(--fontFamilyMono);
     display: inline-flex;
@@ -87,11 +88,11 @@ legend {
 
 :where(input[type="checkbox"], input[type="radio"]) {
   grid-area: input;
-    inline-size: var(--size-md);
-    block-size: var(--size-md);
-    aspect-ratio: 1;
-    margin: 0;
-    padding: 0;
+  inline-size: calc(var(--s0) * 1.48);
+  block-size: calc(var(--s0) * 1.48);
+  aspect-ratio: 1;
+  margin: 0;
+  padding: 0;
 }
 
 .checkbox-input {
