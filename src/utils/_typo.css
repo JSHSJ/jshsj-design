@@ -39,9 +39,9 @@
 }
 
 .-bold {
-  --fontWeight: var(--font-weight-bold);
+  --font-weight: var(--font-weight-bold);
 }
 
 .-medium {
-  --fontWeight: var(--font-weight-medium);
+  --font-weight: var(--font-weight-medium);
 }
