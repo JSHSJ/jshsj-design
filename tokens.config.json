@@ -1,0 +1,22 @@
+{
+  "transforms": [
+    {
+    "name": "bundle",
+    "from": "tokens",
+    "to": [
+      {
+        "as": "css",
+        "to": "src/atoms"
+      }
+    ]
+  },
+  {
+    "from": "tokens",
+    "to": [
+      {
+        "as": "css",
+        "to": "src/atoms"
+      }
+    ]
+  }]
+}

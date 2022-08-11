@@ -1,5 +1,5 @@
 fieldset {
-  padding: var(--size-md);
+  padding: var(--size-relative-md);
   border: var(--border-thick) solid var(--color-text1);
 }
 
@@ -7,21 +7,21 @@ legend {
   font-family: var(--fontFamilyMono);
   color: var(--color-text1);
   display: block;
-  font-size: var(--s1);
-  padding-inline: var(--size-sm);
+  font-size: var(--scale-1);
+  padding-inline: var(--size-relative-sm);
   padding-block: 0;
 }
 
 .input-field {
   display: grid;
-  gap: var(--s-2);
+  gap: var(--scale--2);
   grid-template-columns: minmax(0, 1fr);
   width: fit-content;
   place-items: start;
   font-size: var(--s0);
 
   & > label {
-    --gap: var(--size-2xs);
+    --gap: var(--size-relative-2xs);
   }
 }
 
@@ -47,18 +47,18 @@ legend {
   color: var(--color-text1);
   background-color: var(--color-surface1);
   border: var(--border-thin) solid var(--color-text2);
-  height: var(--size-2xl);
-  padding-inline: var(--size-sm);
+  height: var(--size-relative-2xl);
+  padding-inline: var(--size-relative-sm);
 
   &:focus {
-    outline: var(--s-4) solid var(--color-brand);
+    outline: var(--scale--4) solid var(--color-brand);
     outline-offset: 0;
   }
 }
 
 :where(textarea),
 .textarea {
-  min-height: var(--size-4xl);
+  min-height: var(--size-relative-4xl);
 }
 
 .input-error {
@@ -82,7 +82,7 @@ legend {
     padding: 0;
     background-color: var(--color-default);
     color: var(--color-surface1);
-    margin-right: var(--size-xs);
+    margin-right: var(--size-relative-xs);
   }
 }
 
@@ -97,7 +97,7 @@ legend {
 
 .checkbox-input {
   display: grid;
-  gap: var(--size-sm);
+  gap: var(--size-relative-sm);
   grid-template-columns: auto minmax(0, 1fr);
   grid-template-areas: "input label";
   width: fit-content;
@@ -116,5 +116,5 @@ legend {
 :where(input[type="color"]) {
   aspect-ratio: 1;
   width: auto;
-  padding: var(--size-sm);
+  padding: var(--size-relative-sm);
 }

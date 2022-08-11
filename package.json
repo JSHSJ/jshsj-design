@@ -5,7 +5,13 @@
   "main": "index.js",
   "exports": {
     "./postcss/bundle": "./src/jshsj-design.css",
-    "./postcss/variables": "./src/base/index.css",
+    "./postcss/atoms/borders": "./src/atoms/borders.tokens.css",
+    "./postcss/atoms/colors": "./src/atoms/colors.tokens.css",
+    "./postcss/atoms/layout": "./src/atoms/layout.tokens.css",
+    "./postcss/atoms/scale": "./src/atoms/scale.tokens.css",
+    "./postcss/atoms/size": "./src/atoms/size.tokens.css",
+    "./postcss/atoms/bundle": "./src/atoms/bundle.tokens.css",
+    "./postcss/theme": "./src/theme/index.css",
     "./postcss/buttons": "./src/components/_buttons.css",
     "./postcss/code": "./src/components/_code.css",
     "./postcss/exceptions": "./src/components/_exceptions.css",
@@ -21,7 +27,13 @@
     "./postcss/utils/spacings": "./src/utils/_spacings.css",
     "./postcss/utils/typo": "./src/utils/_typo.css",
     "./bundle": "./out/jshsj-design.css",
-    "./variables": "./out/base/index.css",
+    "./atoms": "./out/atoms/bundle.css",
+    "./atoms/borders": "./out/atoms/borders.css",
+    "./atoms/colors": "./out/atoms/colors.css",
+    "./atoms/layout": "./out/atoms/layout.css",
+    "./atoms/scale": "./out/atoms/scale.css",
+    "./atoms/size": "./out/atoms/size.css",
+    "./theme": "./out/theme/index.css",
     "./buttons": "./out/components/_buttons.css",
     "./code": "./out/components/_code.css",
     "./exceptions": "./out/components/_exceptions.css",
@@ -40,9 +52,11 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "transform-token": "designTokens transform ./tokens.config.json",
     "lib:all": "postcss src/**/*.css --base src --dir out",
     "lib:bundle": "postcss src/jshsj-design.css -o out/jshsj-design.css",
-    "bundle": "concurrently npm:lib:*"
+    "bundle": "concurrently npm:lib:*",
+    "build": "pnpm transform-token && pnpm bundle"
   },
   "keywords": [
     "CSS",
@@ -54,6 +68,7 @@
   "devDependencies": {
     "concurrently": "^7.3.0",
     "cssnano": "^5.1.12",
+    "design-tokens-cli": "^0.0.6",
     "postcss": "^8.4.14",
     "postcss-cli": "^10.0.0",
     "postcss-combine-duplicated-selectors": "^10.0.3",

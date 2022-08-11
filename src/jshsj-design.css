@@ -1,4 +1,6 @@
-@import "./base/index.css";
+@import "./atoms/bundle.tokens.css";
+
+@import "./theme/index.css";
 
 @import "./utils/_base.css";
 @import "./utils/_layouts.css";

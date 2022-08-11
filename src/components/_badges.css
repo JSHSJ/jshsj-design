@@ -4,7 +4,7 @@
   font-family: var(--fontFamilyMono);
   color: var(--color);
   border: var(--border-thin) solid var(--color);
-  padding: var(--size-xs) var(--size-sm);
+  padding: var(--size-relative-xs) var(--size-relative-sm);
   text-transform: lowercase;
   --fontWeight: var(--fontWeightMedium);
   width: max-content;

@@ -16,8 +16,8 @@
   --button-color-hover: var(--color-text1);
   --button-border-color-hover: var(--color-text1);
 
-  --button-height: var(--size-2xl);
-  --button-padding-inline: var(--size-lg);
+  --button-height: var(--size-relative-2xl);
+  --button-padding-inline: var(--size-relative-lg);
 
 
   background-color: var(--button-background);
@@ -74,8 +74,8 @@
   }
 
   &.-small {
-    --button-height: var(--size-xl);
-    --button-padding-inline: var(--size-sm);
+    --button-height: var(--size-relative-xl);
+    --button-padding-inline: var(--size-relative-sm);
   }
 
   &.-active {
@@ -113,13 +113,13 @@
   color: var(--color-text1);
   background-color: var(--color-surface1);
   border: var(--border-thin) solid var(--color-text2);
-  height: var(--size-2xl);
-  padding-inline-end: var(--size-sm);
+  height: var(--size-relative-2xl);
+  padding-inline-end: var(--size-relative-sm);
 }
 
 :where(input[type="file"])::-webkit-file-upload-button,
 :where(input[type="file"])::file-selector-button {
-  margin-inline-end: var(--size-sm);
+  margin-inline-end: var(--size-relative-sm);
   cursor: pointer;
   box-shadow: none;
 }
@@ -139,7 +139,7 @@
       align-self: stretch;
       margin-inline-end: var(--button-padding-inline);
       font-family: var(--fontFamilyMono);
-      font-size: var(--s1);
+      font-size: var(--scale-1);
     }
 
     @supports not (aspect-ratio: 1) {
