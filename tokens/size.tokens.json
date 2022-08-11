@@ -87,11 +87,11 @@
     "max": {
       "main": {
         "name": "main",
-        "$value": "48rem"
+        "$value": "48em"
       },
       "container": {
         "name": "container",
-        "$value": "70rem"
+        "$value": "70em"
       }
     }
   }
