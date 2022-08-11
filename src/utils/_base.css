@@ -1,6 +1,10 @@
 /* ELEMENT RESETS / BASE STYLES */
 
-*, ::before, ::after { box-sizing: border-box; }
+*, ::before, ::after { 
+  box-sizing: border-box;
+font-variation-settings: "wght" var(--font-weight);
+  accent-color: var(--color-brand-1);
+}
 
 :where(:not(dialog)) {
   margin: 0;
@@ -21,12 +25,6 @@
     transition-duration: .25s;
   }
 }
-
-* {
-  font-variation-settings: "wght" var(--font-weight);
-  accent-color: var(--color-brand-1);
-}
-
 :where(:focus-visible,
 :focus) {
   outline: var(--scale--5) solid var(--color-brand-1);
@@ -40,7 +38,7 @@
 :where(html) {
   block-size: 100%;
   inline-size: 100%;
-  -webkit-text-size-adjust: none; /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
+   -webkit-text-size-adjust: none; /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
 
 
   @media (--motionOK) {
