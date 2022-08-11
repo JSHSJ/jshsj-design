@@ -3,6 +3,7 @@
 @import "./theme/index.css";
 
 @import "./utils/_base.css";
+@import "./utils/_media.css";
 @import "./utils/_layouts.css";
 
 @import "./components/_buttons.css";

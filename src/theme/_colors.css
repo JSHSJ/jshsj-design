@@ -1,5 +1,3 @@
-/* COLORS */
-
 :root {
   color-scheme: light;
 
@@ -18,8 +16,7 @@
   --color-code-tag: var(--color-code-tag-light);
   --color-code-plain-text: var(--color-code-plain-text-light);
 
-  --shadow-default: var(--size-relative-xs) var(--size-relative-xs) 0
-    var(--color-brand-1);
+  --shadow-default: var(--size-relative-xs) var(--size-relative-xs) 0 var(--color-brand-1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -86,4 +83,4 @@
   --color-code-plain-text: var(--color-code-plain-text-dark);
 
   --shadow-default: var(--size-relative-xs) var(--size-relative-xs) 0 var(--color-brand-1);
-};
+}

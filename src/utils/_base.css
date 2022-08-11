@@ -1,8 +1,6 @@
-/* ELEMENT RESETS / BASE STYLES */
-
-*, ::before, ::after { 
+*, :after, :before {
   box-sizing: border-box;
-font-variation-settings: "wght" var(--font-weight);
+  font-variation-settings: "wght" var(--font-weight);
   accent-color: var(--color-brand-1);
 }
 

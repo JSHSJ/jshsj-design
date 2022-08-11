@@ -79,5 +79,8 @@
   },
   "browserslist": [
     "defaults"
-  ]
+  ],
+  "volta": {
+    "node": "18.7.0"
+  }
 }
