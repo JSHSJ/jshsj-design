@@ -1,6 +1,6 @@
 :root {
- 	--space-default-base: var(--size-base-md);
- 	--space-default-horizontal: var(--size-base-md);
+ 	--space-default-base: var(--size-relative-md);
+ 	--space-default-horizontal: var(--size-relative-md);
  	--space-default-section: var(--size-base-2xl);
- 	--space-default-vertical: var(--size-base-md);
+ 	--space-default-vertical: var(--size-relative-md);
 }

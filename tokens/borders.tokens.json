@@ -2,11 +2,11 @@
   "border": {
       "thin": {
         "name": "thin",
-        "$value": "var(--size-base-3xs)"
+        "$value": "var(--size-relative-3xs)"
       },
       "thick": {
         "name": "thick",
-        "$value": "var(--size-base-2xs)"
+        "$value": "var(--size-relative-2xs)"
       }
     }
 }

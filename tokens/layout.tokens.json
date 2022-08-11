@@ -3,15 +3,15 @@
     "default": {
       "base": {
         "name": "base",
-        "$value": "var(--size-base-md)"
+        "$value": "var(--size-relative-md)"
       },
       "horizontal": {
         "name": "horizontal",
-        "$value": "var(--size-base-md)"
+        "$value": "var(--size-relative-md)"
       },
       "vertical": {
         "name": "vertical",
-        "$value": "var(--size-base-md)"
+        "$value": "var(--size-relative-md)"
       },
       "section": {
         "name": "section",

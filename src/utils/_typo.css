@@ -1,0 +1,47 @@
+.typo-hollow {
+    & > span {
+      color: var(--color-surface-1);
+      background: var(--color-text-1);
+      box-decoration-break: clone;
+      padding: var(--size-relative-2xs) var(--size-relative-3xs);
+      max-width: max-content;
+      display: inline;
+  }
+}
+
+.section-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.font-headline {
+  font-family: var(--font-family-sans);
+}
+
+.typo-3xl {
+  font-size: var(--font-size-3xl);
+}
+
+.typo-2xl {
+  font-size: var(--font-size-2xl);
+}
+
+.typo-xl {
+  font-size: var(--font-size-xl);
+}
+
+.typo-lg {
+  font-size: var(--font-size-lg);
+}
+
+.typo-s {
+  font-size: var(--font-size-sm);
+}
+
+.-bold {
+  --fontWeight: var(--font-weight-bold);
+}
+
+.-medium {
+  --fontWeight: var(--font-weight-medium);
+}

@@ -5,6 +5,7 @@
 @import "./utils/_base.css";
 @import "./utils/_media.css";
 @import "./utils/_layouts.css";
+@import "./utils/_typo.css";
 
 @import "./components/_buttons.css";
 @import "./components/_code.css";
