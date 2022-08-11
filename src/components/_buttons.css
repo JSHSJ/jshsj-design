@@ -8,13 +8,13 @@
 :where(input[type="file"])::-webkit-file-upload-button,
 :where(input[type="file"])::file-selector-button,
 .CTA-button {
-  --button-background: var(--color-text1);
-  --button-color: var(--color-surface1);
-  --button-border-color: var(--color-text1);
+  --button-background: var(--color-text-1);
+  --button-color: var(--color-surface-1);
+  --button-border-color: var(--color-text-1);
 
-  --button-background-hover: var(--color-surface2);
-  --button-color-hover: var(--color-text1);
-  --button-border-color-hover: var(--color-text1);
+  --button-background-hover: var(--color-surface-2);
+  --button-color-hover: var(--color-text-1);
+  --button-border-color-hover: var(--color-text-1);
 
   --button-height: var(--size-relative-2xl);
   --button-padding-inline: var(--size-relative-lg);
@@ -29,9 +29,9 @@
   min-height: var(--button-height);
   padding-block: 0;
 
-  font-family: var(--fontFamilyMono);
+  font-family: var(--font-family-mono);
   font-weight: 400;
-  font-size: var(--s0);
+  font-size: var(--font-size-base);
   cursor: pointer;
   display: inline-flex;
   box-sizing: border-box;
@@ -65,7 +65,7 @@
   &[disabled] {
     --button-background: none !important;
     --button-background-hover: none !important;
-    --button-color: var(--color-text2) !important;
+    --button-color: var(--color-text-2) !important;
     --button-color-hover: var(--button-color) !important;
     --button-border-color-hover: var(--button-border-color);
 
@@ -87,22 +87,22 @@
   }
 
   &.-secondary {
-    --button-background: var(--color-surface1);
-    --button-color: var(--color-text1);
-    --button-border-color: var(--color-text1);
+    --button-background: var(--color-surface-1);
+    --button-color: var(--color-text-1);
+    --button-border-color: var(--color-text-1);
 
-    --button-background-hover: var(--color-surface1);
-    --button-color-hover: var(--color-brand);
-    --button-border-color-hover: var(--color-brand);
+    --button-background-hover: var(--color-surface-1);
+    --button-color-hover: var(--color-brand-1);
+    --button-border-color-hover: var(--color-brand-1);
   }
 
   &.-stealth {
     --button-background: transparent;
-    --button-color: var(--color-text1);
+    --button-color: var(--color-text-1);
     --button-border-color: transparent;
 
     --button-background-hover: transparent;
-    --button-color-hover: var(--color-brand);
+    --button-color-hover: var(--color-brand-1);
     --button-border-color-hover: transparent;
 
     box-shadow: none;
@@ -110,9 +110,9 @@
 }
 
 :where(input[type="file"]) {
-  color: var(--color-text1);
-  background-color: var(--color-surface1);
-  border: var(--border-thin) solid var(--color-text2);
+  color: var(--color-text-1);
+  background-color: var(--color-surface-1);
+  border: var(--border-thin) solid var(--color-text-2);
   height: var(--size-relative-2xl);
   padding-inline-end: var(--size-relative-sm);
 }
@@ -138,8 +138,9 @@
       justify-content: center;
       align-self: stretch;
       margin-inline-end: var(--button-padding-inline);
-      font-family: var(--fontFamilyMono);
-      font-size: var(--scale-1);
+      font-family: var(--font-family-mono);
+      font-size: var(--font-size-lg);
+      padding-inline: var(--size-relative-sm) ;
     }
 
     @supports not (aspect-ratio: 1) {

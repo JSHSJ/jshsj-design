@@ -1,5 +1,5 @@
 .pagination {
-  border-top: var(--border-thin) solid var(--color-text1);
+  border-top: var(--border-thin) solid var(--color-text-1);
   padding-top: var(--size-relative-2xl);
   display: flex;
   justify-content: center;
@@ -10,7 +10,7 @@
 }
 
 .pagination-element {
-  font-size: var(--scale-1);
+  font-size: var(--font-size-lg);
   display: grid;
   place-content: center;
   inline-size: var(--size-relative-xl);
@@ -18,15 +18,15 @@
   padding: var(--size-relative-xs);
 
   &[aria-current="page"] {
-    color: var(--color-brand);
-    --fontWeight: var(--fontWeightBold)
+    color: var(--color-brand-1);
+    --font-weight: var(--font-weight-bold);
   }
 }
 
 
 .pagination-icon {
   &:hover:not([aria-disabled]) {
-    color: var(--color-brand);
+    color: var(--color-brand-1);
   }
 
   & > svg {

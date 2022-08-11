@@ -19,7 +19,7 @@
   --color-code-plain-text: var(--color-code-plain-text-light);
 
   --shadow-default: var(--size-relative-xs) var(--size-relative-xs) 0
-    var(--color-brand);
+    var(--color-brand-1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,7 +41,7 @@
     --color-code-tag: var(--color-code-tag-dark);
     --color-code-plain-text: var(--color-code-plain-text-dark);
 
-    --shadow-default: var(--size-relative-xs) var(--size-relative-xs) 0 var(--color-brand);
+    --shadow-default: var(--size-relative-xs) var(--size-relative-xs) 0 var(--color-brand-1);
   }
 }
 
@@ -64,7 +64,7 @@
   --color-code-plain-text: var(--color-code-plain-text-light);
 
   --shadow-default: var(--size-relative-xs) var(--size-relative-xs) 0
-    var(--color-brand);
+    var(--color-brand-1);
 }
 
 [color-scheme="dark"] {
@@ -85,22 +85,5 @@
   --color-code-tag: var(--color-code-tag-dark);
   --color-code-plain-text: var(--color-code-plain-text-dark);
 
-  --shadow-default: var(--size-relative-xs) var(--size-relative-xs) 0 var(--color-brand);
-}
-
-/* SOME OTHER APPLIED DEFAULTS */
-
-:root {
-  --shadow-raised: var(--size-3xs) var(--size-3xs) 0.48em
-    var(--shadow-color-default);
-
-  /* @todo: think about splitting vertical spacing from horizontal padding */
-  --defaultPadding-horizontal: var(--size-md);
-  --defaultPadding-vertical: var(--size-md);
-
-  --sectionPadding: var(--size-2xl);
-  --contentPadding: var(--defaultPadding-vertical)
-    var(--defaultPadding-horizontal);
-
-  --headerHeight: calc(var(--scale-5));
-}
+  --shadow-default: var(--size-relative-xs) var(--size-relative-xs) 0 var(--color-brand-1);
+};

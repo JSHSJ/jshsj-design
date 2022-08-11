@@ -9,7 +9,7 @@
     width: 2em;
     height: 2em;
     border-radius: 50%;
-    background-color: var(--color-brand);
+    background-color: var(--color-brand-1);
     z-index: -1;
   }
 

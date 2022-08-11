@@ -1,13 +1,13 @@
 fieldset {
   padding: var(--size-relative-md);
-  border: var(--border-thick) solid var(--color-text1);
+  border: var(--border-thick) solid var(--color-text-1);
 }
 
 legend {
-  font-family: var(--fontFamilyMono);
-  color: var(--color-text1);
+  font-family: var(--font-family-mono);
+  color: var(--color-text-1);
   display: block;
-  font-size: var(--scale-1);
+  font-size: var(--font-size-lg);
   padding-inline: var(--size-relative-sm);
   padding-block: 0;
 }
@@ -18,7 +18,7 @@ legend {
   grid-template-columns: minmax(0, 1fr);
   width: fit-content;
   place-items: start;
-  font-size: var(--s0);
+  font-size: var(--font-size-base);
 
   & > label {
     --gap: var(--size-relative-2xs);
@@ -27,15 +27,15 @@ legend {
 
 :where(label),
 .input-label {
-  font-family: var(--fontFamilyMono);
-  color: var(--color-text1);
+  font-family: var(--font-family-mono);
+  color: var(--color-text-1);
   display: block;
-  font-size: var(--s0);
+  font-size: var(--font-size-base);
   cursor: pointer;
 }
 
 .input-hint {
-  --color-default: var(--color-text2);
+  --color-default: var(--color-text-2);
   display: block;
   &:before {
     content: "?";
@@ -44,14 +44,14 @@ legend {
 
 :where(input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="url"], input[type="search"], input[type="date"], input[type="month"], input[type="week"], input[type="text"], input[type="datetime"], input[type="datetime-local"], input[type="time"], input[type="tel"], input[type="color"], textarea, select),
 .input {
-  color: var(--color-text1);
-  background-color: var(--color-surface1);
-  border: var(--border-thin) solid var(--color-text2);
+  color: var(--color-text-1);
+  background-color: var(--color-surface-1);
+  border: var(--border-thin) solid var(--color-text-2);
   height: var(--size-relative-2xl);
   padding-inline: var(--size-relative-sm);
 
   &:focus {
-    outline: var(--scale--4) solid var(--color-brand);
+    outline: var(--scale--4) solid var(--color-brand-1);
     outline-offset: 0;
   }
 }
@@ -63,7 +63,7 @@ legend {
 
 .input-error {
   --color-default: var(--color-status-error);
-  --fontWeight: var(--fontWeightMedium);
+  --font-weight: var(--font-weight-medium);
   color: var(--color-default);
 
   &:before {
@@ -74,22 +74,22 @@ legend {
 .input-error,
 .input-hint {
   &:before {
-    font-family: var(--fontFamilyMono);
+    font-family: var(--font-family-mono);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: calc(var(--lineHeight));
+    width: var(--line-height-base);
     padding: 0;
     background-color: var(--color-default);
-    color: var(--color-surface1);
+    color: var(--color-surface-1);
     margin-right: var(--size-relative-xs);
   }
 }
 
 :where(input[type="checkbox"], input[type="radio"]) {
   grid-area: input;
-  inline-size: calc(var(--s0) * 1.48);
-  block-size: calc(var(--s0) * 1.48);
+  inline-size: calc(var(--scale-0) * var(--line-height-base));
+  block-size: calc(var(--scale-0) * var(--line-height-base));
   aspect-ratio: 1;
   margin: 0;
   padding: 0;
@@ -102,7 +102,7 @@ legend {
   grid-template-areas: "input label";
   width: fit-content;
   place-items: start;
-  font-size: var(--s0);
+  font-size: var(--font-size-base);
 
   & > label {
     grid-area: label;

@@ -23,13 +23,13 @@
 }
 
 * {
-  font-variation-settings: "wght" var(--fontWeight);
-  accent-color: var(--color-brand);
+  font-variation-settings: "wght" var(--font-weight);
+  accent-color: var(--color-brand-1);
 }
 
 :where(:focus-visible,
 :focus) {
-  outline: var(--scale--5) solid var(--color-brand);
+  outline: var(--scale--5) solid var(--color-brand-1);
   outline-offset: 0.64ch;
 }
 
@@ -54,17 +54,17 @@
   min-block-size: 100%;
   min-inline-size: 100%;
 
-  --fontWeight: var(--fontWeightRegular);
+  --font-weight: var(--font-weight-regular);
 
-  color: var(--color-text2);
-  background-color: var(--color-surface1);
+  color: var(--color-text-2);
+  background-color: var(--color-surface-1);
 
-  font-family: var(--fontFamilySans);
-  line-height: var(--lineHeight);
-  font-variation-settings: "wght" var(--fontWeight);
+  font-family: var(--font-family-sans);
+  line-height: var(--line-height-base);
+  font-variation-settings: "wght" var(--font-weight);
   font-style: normal;
   font-feature-settings: "calt", "liga";
-  font-size: var(--s0);
+  font-size: var(--font-size-base);
 }
 
 :where(img, svg, video, canvas, audio, iframe, embed, object) {
@@ -101,9 +101,9 @@ li,
 dd,
 dt,
 summary) {
-  max-inline-size: var(--measure);
+  max-inline-size: var(--measure-base);
   font-size: inherit;
-  line-height: var(--lineHeight);
+  line-height: var(--line-height-base);
 }
 
 :where(ol,
@@ -122,19 +122,19 @@ ul) {
 
 :where(li,
 dd) {
-  max-inline-size: calc(var(--measure) * 0.8);
-  font-size: var(--s0);
-  margin-inline: var(--s0);
+  max-inline-size: var(--measure-small);
+  font-size: var(--font-size-base);
+  margin-inline: var(--size-relative-md);
 }
 
 :where(dt) {
-  --fontWeight: var(--fontWeightRegular);
-  color: var(--color-text2);
+  --font-weight: var(--font-weight-regular);
+  color: var(--color-text-2);
 }
 
 :where(dd) {
-  --fontWeight: var(--fontWeightMedium);
-  color: var(--color-text1);
+  --font-weight: var(--font-weight-medium);
+  color: var(--color-text-1);
 }
 
 :where(dl) {
@@ -153,42 +153,42 @@ li > ol) {
 }
 
 :where(small) {
-  font-size: var(--scale--1);
+  font-size: var(--font-size-sm);
 }
 
 :where(sup, small) {
-  color: var(--color-text2);
+  color: var(--color-text-2);
 }
 
 :where(figcaption) {
   display: block;
-  color: var(--color-surface1);
-  font-family: var(--fontFamilySans);
-  --fontWeight: var(--fontWeightMedium);
-  color: var(--color-surface2);
-  background-color: var(--color-text1);
+  color: var(--color-surface-1);
+  font-family: var(--font-family-sans);
+  --font-weight: var(--font-weight-medium);
+  color: var(--color-surface-2);
+  background-color: var(--color-text-1);
   padding: var(--size-relative-sm) var(--size-relative-md);
 }
 
 :where(details) {
   width: 100%;
-  background-color: var(--color-surface2);
+  background-color: var(--color-surface-2);
   padding-inline: var(--space-default-horizontal);
   padding-block: var(--space-default-vertical);
   border-radius: 0;
 
   & > *:not(summary):first-of-type {
-    margin-block-start: var(--s0);
+    margin-block-start: var(--scale-0);
   }
 
   & > summary {
     cursor: pointer;
-    color: var(--color-text1);
+    color: var(--color-text-1);
     width: 100%;
   }
 
   &[open=""] {
-    border: var(--border-thin) solid var(--color-surface2);
+    border: var(--border-thin) solid var(--color-surface-2);
   }
 }
 
@@ -198,15 +198,15 @@ li > ol) {
   margin-inline: 0;
   padding-inline: var(--space-default-horizontal);
   padding-block: var(--space-default-vertical);
-  background-color: var(--color-surface2);
-  border-left: var(--border-thick) solid var(--color-text2);
+  background-color: var(--color-surface-2);
+  border-left: var(--border-thick) solid var(--color-text-2);
 }
 
 :where(hr) {
   width: 100%;
   height: var(--scale--5);
   border: none;
-  background-color: var(--color-text2);
+  background-color: var(--color-text-2);
 }
 
 :where(h1,
@@ -215,8 +215,8 @@ h3,
 h4,
 h5,
 h6) {
-  line-height: var(--lineHeight-small);
-  color: var(--color-text1);
+  line-height: var(--line-height-small);
+  color: var(--color-text-1);
   overflow-wrap: break-word;
   max-width: 100%;
   hyphens: auto;
@@ -229,61 +229,61 @@ h6) {
 }
 
 :where(h1) {
-  font-size: var(--scale-4);
-  --fontWeight: var(--fontWeightBold);
+  font-size: var(--font-size-3xl);
+  --font-weight: var(--font-weight-bold);
 }
 
 :where(h2) {
-  font-size: var(--scale-3);
-  --fontWeight: var(--fontWeightBold);
+  font-size: var(--font-size-2xl);
+  --font-weight: var(--font-weight-bold);
 }
 
 :where(h3) {
-  font-size: var(--scale-2);
-  --fontWeight: var(--fontWeightBold);
+  font-size: var(--font-size-xl);
+  --font-weight: var(--font-weight-bold);
 }
 
 :where(h4) {
-  font-size: var(--scale-1);
-  --fontWeight: var(--fontWeightBold);
+  font-size: var(--font-size-lg);
+  --font-weight: var(--font-weight-bold);
 }
 
 :where(h5) {
-  font-size: var(--s0);
-  --fontWeight: var(--fontWeightBold);
+  font-size: var(--font-size-base);
+  --font-weight: var(--font-weight-bold);
 }
 
 :where(h6) {
-  font-size: var(--scale--1);
-  --fontWeight: var(--fontWeightBold);
+  font-size: var(--font-size-small);
+  --font-weight: var(--font-weight-bold);
 }
 
 ::marker {
-  color: var(--color-brand);
+  color: var(--color-brand-1);
 }
 
 ::selection,
 mark {
-  background-color: var(--color-brand);
-  color: var(--color-surface1);
+  background-color: var(--color-brand-1);
+  color: var(--color-surface-1);
 }
 
 :where(a,.link) {
-  color: var(--color-text1);
-  font-family: var(--fontFamilyMono);
+  color: var(--color-text-1);
+  font-family: var(--font-family-mono);
   text-decoration: underline;
   text-underline-offset: 0.15em;
   text-decoration-thickness: 0.1em;
-  --fontWeight: var(--fontWeightMedium);
+  --font-weight: var(--font-weight-medium);
   text-decoration-color: currentColor;
   cursor: pointer;
 
   &:visited {
-    color: var(--color-text2);
+    color: var(--color-text-2);
   }
 
   &:hover {
-    text-decoration-color: var(--color-brand);
+    text-decoration-color: var(--color-brand-1);
   }
 
   &[href^="https://"], &[href^="http://"], &[data-external]
@@ -292,9 +292,9 @@ mark {
       content: "(Extern)";
       display: inline-block;
       font-size: calc(100% / var(--ratio));
-      font-variation-settings: "wght" var(--fontWeightRegular);
-      margin-left: var(--scale--5);
-      margin-right: var(--scale--5);
+      font-variation-settings: "wght" var(--font-weight-regular);
+      margin-left: var(--size-relative-3xs);
+      margin-right: var(--size-relative-3xs);
       transform: translateY(-0.125em);
       text-decoration: none;
       color: inherit;
@@ -314,11 +314,11 @@ mark {
 }
 
 :where(strong, b) {
-  --fontWeight: var(--fontWeightMedium);
+  --font-weight: var(--font-weight-medium);
 }
 
 :where(dfn, var) {
-  font-family: var(--fontFamilyMono);
+  font-family: var(--font-family-mono);
 }
 
 :where([aria-disabled="true"],
@@ -343,34 +343,34 @@ mark {
     z-index: 999;
     height: var(--scale-3);
     line-height: var(--scale-3);
-    background: var(--color-surface2);
-    font-size: var(--s0);
+    background: var(--color-surface-2);
+    font-size: var(--font-size-base);
     text-decoration: none;
-    color: var(--color-text1);
+    color: var(--color-text-1);
     text-align: center;
     padding-inline: var(--size-relative-md);
-    --fontWeight: var(--fontWeightMedium);
+    --font-weight: var(--font-weight-medium);
   }
 }
 #content-start:focus {
-  background: var(--color-surface2);
-  color: var(--color-text1);
+  background: var(--color-surface-2);
+  color: var(--color-text-1);
 }
 
 :where(code) {
-  font-family: var(--fontFamilyMono);
+  font-family: var(--font-family-mono);
 }
 
 :where(pre) {
-  font-size: var(--s0);
+  font-size: var(--font-size-base);
   padding: var(--size-relative-md);
   width: 100%;
-  max-width: var(--measure);
+  max-width: var(--measure-base);
   overflow-x: auto;
-  color: var(--color-text2);
-  border: var(--border-thick) solid var(--color-text2);
+  color: var(--color-text-2);
+  border: var(--border-thick) solid var(--color-text-2);
 }
 
 [data-footnote-ref] {
-  color: var(--color-brand);
+  color: var(--color-brand-1);
 }

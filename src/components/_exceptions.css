@@ -9,8 +9,8 @@
 .standout-box {
   padding-block: var(--size-relative-md);
   padding-inline: var(--size-relative-md);
-  background: var(--color-text1);
-  color: var(--color-surface1);
+  background: var(--color-text-1);
+  color: var(--color-surface-1);
 }
 
 .standout-box a {

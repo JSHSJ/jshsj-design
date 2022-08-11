@@ -1,0 +1,82 @@
+{
+  "font": {
+    "family": {
+      "sans": {
+          "name": "sans",
+          "$value": "\"Work Sans\", system-ui, sans-serif"
+      },
+       "serif": {
+          "name": "serif",
+          "$value": "serif"
+      },
+       "mono": {
+          "name": "mono",
+          "$value": "\"MD IO\", monospace"
+      }
+    },
+  "weight": {
+      "regular": {
+          "name": "regular",
+          "$value": "400"
+      },
+       "medium": {
+          "name": "medium",
+          "$value": "592"
+      },
+       "bold": {
+          "name": "bold",
+          "$value": "876"
+      }
+    },
+    "size": {
+      "sm": {
+          "name": "sm",
+          "$value": "var(--scale--1)"
+      },
+      "base": {
+          "name": "base",
+          "$value": "var(--scale-0)"
+      },
+       "button": {
+          "name": "button",
+          "$value": "var(--scale-0)"
+      },
+       "lg": {
+          "name": "lg",
+          "$value": "var(--scale-1)"
+      },
+       "xl": {
+          "name": "xl",
+          "$value": "var(--scale-2)"
+      },
+       "2xl": {
+          "name": "2xl",
+          "$value": "var(--scale-3)"
+      },
+      "3xl": {
+          "name": "3xl",
+          "$value": "var(--scale-4)"
+      }
+    }
+  },
+  "line-height": {
+    "base": {
+      "name": "base",
+      "$value": "1.48"
+    },
+    "small": {
+      "name": "small",
+      "$value": "1.24"
+    }
+  },
+  "measure": {
+    "base": {
+      "name": "base",
+      "$value": "64ch"
+    },
+    "small": {
+      "name": "small",
+      "$value": "48ch"
+    }
+  }
+}
