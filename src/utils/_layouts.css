@@ -14,7 +14,6 @@
     & > * {
         min-width: 0;
     }
-
 }
 
 .stack.-stretched {
@@ -118,15 +117,15 @@
     --gap: var(--size-relative-xl)
 }
 
-.-layout-l {
+.-layout-lg {
     --gap: var(--size-relative-lg)
 }
 
-.-layout-m {
+.-layout-md {
     --gap: var(--size-relative-md)
 }
 
-.-layout-s {
+.-layout-sm {
     --gap: var(--size-relative-sm)
 }
 
