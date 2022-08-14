@@ -9,14 +9,14 @@
   }
 }
 
-.section-title {
-  font-size: var(--font-size-3xl);
-  font-weight: var(--font-weight-bold);
-}
-
 .font-headline {
   font-family: var(--font-family-sans);
 }
+
+.font-mono {
+  font-family: var(--font-family-mono);
+}
+
 
 .typo-3xl {
   font-size: var(--font-size-3xl);
@@ -34,7 +34,11 @@
   font-size: var(--font-size-lg);
 }
 
-.typo-s {
+.typo-md {
+  font-size: var(--font-size-base);
+}
+
+.typo-sm {
   font-size: var(--font-size-sm);
 }
 
@@ -44,4 +48,8 @@
 
 .-medium {
   --font-weight: var(--font-weight-medium);
+}
+
+.-regular {
+  --font-weight: var(--font-weight-regular);
 }

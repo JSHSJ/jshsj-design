@@ -225,33 +225,33 @@ h6) {
 }
 
 :where(h1) {
-  font-size: var(--font-size-3xl);
-  --font-weight: var(--font-weight-bold);
-}
-
-:where(h2) {
   font-size: var(--font-size-2xl);
   --font-weight: var(--font-weight-bold);
 }
 
-:where(h3) {
+:where(h2) {
   font-size: var(--font-size-xl);
   --font-weight: var(--font-weight-bold);
 }
 
-:where(h4) {
+:where(h3) {
   font-size: var(--font-size-lg);
+  --font-weight: var(--font-weight-bold);
+}
+
+:where(h4) {
+  font-size: var(--font-size-base);
   --font-weight: var(--font-weight-bold);
 }
 
 :where(h5) {
   font-size: var(--font-size-base);
-  --font-weight: var(--font-weight-bold);
+  --font-weight: var(--font-weight-medium);
 }
 
 :where(h6) {
-  font-size: var(--font-size-small);
-  --font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  --font-weight: var(--font-weight-medium);
 }
 
 ::marker {
