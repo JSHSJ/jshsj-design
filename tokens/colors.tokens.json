@@ -102,37 +102,37 @@
           "$value": "hsl(calc(var(--config-brand-hue)) 100% 16%)"
         },
         "plain": {
-          "name": "light-operator",
+          "name": "light-plain",
           "$value": "var(--color-text-1)"
         }
       },
       "dark": {
         "background": {
-          "name": "light-background",
+          "name": "dark-background",
           "$value": "hsl(var(--config-brand-hue) 16% 5%)"
         },
         "keyword": {
-          "name": "light-keyword",
+          "name": "dark-keyword",
           "$value": "hsl(calc(var(--config-brand-hue) + 60) 100% 64%)"
         },
         "string": {
-          "name": "light-string",
+          "name": "dark-string",
           "$value": "hsl(calc(var(--config-brand-hue) + 280) 100% 64%)"
         },
         "punctuation": {
-          "name": "light-punctuation",
+          "name": "dark-punctuation",
           "$value": "var(--color-brand-1)"
         },
         "operator": {
-          "name": "light-operator",
+          "name": "dark-operator",
           "$value": "hsl(calc(var(--config-brand-hue) + 230) 100% 64%)"
         },
         "tag": {
-          "name": "light-tag",
+          "name": "dark-tag",
           "$value": "hsl(calc(var(--config-brand-hue)) 100% 64%)"
         },
         "plain": {
-          "name": "light-operator",
+          "name": "dark-plain",
           "$value": "var(--color-text-1)"
         }
       }
