@@ -99,7 +99,7 @@
         },
         "tag": {
           "name": "light-tag",
-          "$value": "hsl(calc(var(--config-brand-hue)) 100% 16%)"
+          "$value": "var(--color-brand-light-2)"
         },
         "plain": {
           "name": "light-plain",
@@ -129,7 +129,7 @@
         },
         "tag": {
           "name": "dark-tag",
-          "$value": "hsl(calc(var(--config-brand-hue)) 100% 64%)"
+          "$value": "var(--color-brand-light-2)"
         },
         "plain": {
           "name": "dark-plain",
