@@ -19,7 +19,7 @@
     --shadow-default: var(--size-relative-xs) var(--size-relative-xs) 0 var(--color-brand-1);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (--OSdark) {
     :root {
         color-scheme: dark;
 

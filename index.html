@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="out/jshsj-design.css">
     <link rel="stylesheet" href="assets/fonts/fonts.css">
 </head>
-<body class="layout-container">
-<div id="top" role="document">
+<body>
+<div id="top" role="document" class="layout-container stack -layout-2xl">
     <header>
         <h1>HTML5 Test Page</h1>
         <p>This is a test page filled with common HTML elements to be used to provide visual feedback whilst building
@@ -17,7 +17,7 @@
         <p>It's been modified to show the "components" included.</p>
     </header>
     <nav>
-        <ul>
+        <ul class="-layout-reset">
             <li>
                 <a href="#text">Text</a>
                 <ul>
@@ -79,8 +79,8 @@
             </li>
         </ul>
     </nav>
-    <main>
-        <section id="text">
+    <main class="stack -layout-2xl">
+        <section id="text" class="stack -layout-lg">
             <header><h1>Text</h1></header>
             <article id="text__headings">
                 <header>
@@ -119,9 +119,9 @@
                 </div>
                 <footer><p><a href="#top">[Top]</a></p></footer>
             </article>
-            <article id="text__lists">
+            <article id="text__lists" class="stack -layout-lg">
                 <header><h2>Lists</h2></header>
-                <div>
+                <div class="stack -layout-lg">
                     <h3>Definition list</h3>
                     <dl>
                         <dt>Definition List Title</dt>
@@ -307,7 +307,7 @@
   @ A B C D E F G H I J K L M N O
   P Q R S T U V W X Y Z [ \ ] ^ _
   ` a b c d e f g h i j k l m n o
-  p q r s t u v w x y z { | } ~ </pre>
+  p q r s t u v w x y z ~ </pre>
                 </div>
                 <footer><p><a href="#top">[Top]</a></p></footer>
             </article>
@@ -360,11 +360,11 @@
                 <footer><p><a href="#top">[Top]</a></p></footer>
             </article>
         </section>
-        <section id="embedded">
+        <section id="embedded" class="stack -layout-lg">
             <header><h2>Embedded content</h2></header>
-            <article id="embedded__images">
+            <article id="embedded__images" class="stack -layout-lg">
                 <header><h2>Images</h2></header>
-                <div>
+                <div class="stack -layout-lg">
                     <h3>Plain <code>&lt;img&gt;</code> element</h3>
                     <p><img src="https://placekitten.com/480/480" alt="Photo of a kitten"></p>
                     <h3><code>&lt;figure&gt;</code> element with <code>&lt;img&gt;</code> element</h3>
@@ -457,10 +457,10 @@
                 <footer><p><a href="#top">[Top]</a></p></footer>
             </article>
         </section>
-        <section id="forms">
+        <section id="forms" class="stack -layout-lg">
             <header><h2>Form elements</h2></header>
-            <form>
-                <fieldset id="forms__input">
+            <form class="stack -layout-lg">
+                <fieldset id="forms__input" class="stack -layout-md">
                     <legend>Input fields</legend>
                     <p>
                         <label for="input__text">Text Input</label>
@@ -496,7 +496,7 @@
                     </p>
                 </fieldset>
                 <p><a href="#top">[Top]</a></p>
-                <fieldset id="forms__select">
+                <fieldset id="forms__select" class="stack -layout-md">
                     <legend>Select menus</legend>
                     <p>
                         <label for="select">Select</label>
@@ -550,7 +550,7 @@
                     </p>
                 </fieldset>
                 <p><a href="#top">[Top]</a></p>
-                <fieldset id="forms__html5">
+                <fieldset id="forms__html5" class="stack -layout-md">
                     <legend>HTML5 inputs</legend>
                     <p>
                         <label for="ic">Color input</label>
@@ -613,7 +613,7 @@
                 <p><a href="#top">[Top]</a></p>
             </form>
         </section>
-        <section>
+        <section class="stack -layout-lg">
             <h2 id="components">Components</h2>
               <p class="note">
                 Inspect the HTML in your browser for implementation details
@@ -622,9 +622,8 @@
                 <legend id="components__headlines">Special headlines</legend>
                 <h3 class="-with-dot">Special headline <code>-with-dot</code></h3>
             </fieldset>
-            <fieldset class="stack">
+            <fieldset class="stack -layout-md">
                 <legend id="components__inputs">Inputs</legend>
-                <p>
                 <div class="input-field">
                     <label for="some-input" class="stack">
                         <span class="input-label">Label (optional)</span>
@@ -651,24 +650,18 @@
                         </div>
                     </label>
                 </div>
-                </p>
-                <p>
                     <div class="input-field | cluster | checkbox-input">
                       <label for="checkbox-input" class="stack">
                         <span class="input-label">Checkbox</span>
                       </label>
                     <input id="checkbox-input" name="checkbox" type="checkbox">
                     </div>
-                </p>
-                <p>
                     <div class="input-field | cluster | checkbox-input">
                       <label for="checkbox-input-disabled" class="stack">
                         <span class="input-label">Checkbox</span>
                       </label>
                     <input id="checkbox-input-disabled" name="checkbox" type="checkbox" disabled>
                     </div>
-                </p>
-                <p>
                     <div class="input-field | cluster | checkbox-input">
                       <label for="radio-input" class="stack">
                         <span class="input-label">Radio</span>
@@ -676,8 +669,6 @@
                     <input id="radio-input" name="radio" type="radio">
                     <input id="radio-input-2" name="radio" type="radio">
                     </div>
-                </p>
-                <p>
                     <div class="input-field | cluster | checkbox-input">
                       <label for="radio-input-disabled" class="stack">
                         <span class="input-label">Radio</span>
@@ -685,23 +676,18 @@
                     <input id="radio-input-disabled" name="radio" type="radio" disabled>
                     <input id="radio-input-disabled-2" name="radio" type="radio" disabled>
                     </div>
-                </p>
-                <p>
                     <div class="input-field | cluster | checkbox-input">
                       <label for="switch-input" class="stack">
                         <span class="input-label">Switch</span>
                       </label>
                     <input id="switch-input" name="switch" type="checkbox" class="switch">
                     </div>
-                </p>
-                <p>
                     <div class="input-field | cluster | checkbox-input">
                       <label for="switch-input-disabled" class="stack">
                         <span class="input-label">Switch</span>
                       </label>
                     <input id="switch-input-disabled" name="switch" type="checkbox" class="switch" disabled>
                     </div>
-                </p>
             </fieldset>
             <fieldset class="stack">
                 <legend id="components__buttons">Buttons</legend>
@@ -747,11 +733,11 @@
                 </div>
             </fieldset>
             <fieldset>
-                <legend id="components__tags">Tags</legend>
+                <legend id="components__tags">Badges</legend>
                 <div class="cluster">
-                    <span class="tag">Tag</span>
-                    <span class="tag -light">Tag</span>
-                    <span class="tag -dark">Tag</span>
+                    <span class="badge">Tag</span>
+                    <span class="badge -light">Tag</span>
+                    <span class="badge -dark">Tag</span>
                 </div>
             </fieldset>
             <p><a href="#top">[Top]</a></p>
@@ -761,12 +747,12 @@
             <fieldset class="stack">
                 <legend>Box</legend>
                 <p class="note">A box with padding.</p>
-                    <div class="box" style="border: 1px solid var(--color-brand);">Box</div>
+                    <div class="box" style="border: 1px solid var(--color-brand-2);">Box</div>
             </fieldset>
             <fieldset class="stack">
                 <legend>Stack</legend>
                 <p class="note">A vertical stack of items with spacing between.</p>
-                <div class="stack -layout-l" style="border: 1px solid var(--color-brand);">
+                <div class="stack -layout-l" style="border: 1px solid var(--color-brand-2);">
                     <p>element 1</p>
                     <p>element 2</p>
                 </div>
@@ -774,7 +760,7 @@
             <fieldset class="stack">
                 <legend>Cluster</legend>
                 <p class="note">A automatically wrapping container</p>
-                <div class="cluster -layout-l" style="border: 1px solid var(--color-brand);">
+                <div class="cluster -layout-l" style="border: 1px solid var(--color-brand-2);">
                     <p>element</p>
                     <p>element</p>
                     <p>element</p>
@@ -793,7 +779,7 @@
                 <p class="note">A container for rich text or blog texts. Adds spacing between the elements, that I removed
 
                  in the reset, because I prefer it that way</p>
-                <div class="flow" style="border: 1px solid var(--color-brand);">
+                <div class="flow" style="border: 1px solid var(--color-brand-2);">
                     <h1>h1 element</h1>
                     <p>element</p>
                     <p>element</p>
@@ -813,7 +799,7 @@
             <fieldset class="stack">
                 <legend>With Sidebar</legend>
                 <p class="note"><a href="https://every-layout.dev/layouts/sidebar/">https://every-layout.dev/layouts/sidebar/</a></p>
-                <div class="with-sidebar" style="border: 1px solid var(--color-brand);">
+                <div class="with-sidebar" style="border: 1px solid var(--color-brand-2);">
                     <div data-grow style="--min-size: 60%">
                     <h1>h1 element</h1>
                     <p>element</p>
