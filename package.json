@@ -5,7 +5,11 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/JSHSJ/jshsj-design"
+    "url": "https://github.com/JSHSJ/jshsj-design.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry":"https://npm.pkg.github.com"
   },
   "exports": {
     "./postcss/bundle": "./src/jshsj-design.css",
