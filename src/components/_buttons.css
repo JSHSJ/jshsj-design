@@ -67,9 +67,11 @@
     --button-background-hover: none !important;
     --button-color: var(--color-text-2) !important;
     --button-color-hover: var(--button-color) !important;
+    --button-border-color: var(--color-text-2) !important;
     --button-border-color-hover: var(--button-border-color);
 
     box-shadow: none !important;
+    filter: contrast(0.64) opacity(0.64);
     cursor: not-allowed;
   }
 

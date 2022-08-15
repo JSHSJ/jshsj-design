@@ -1,6 +1,6 @@
 :root {
- 	--border-thick: var(--size-relative-2xs);
- 	--border-thin: var(--size-relative-3xs);
+ 	--border-thick: 4px;
+ 	--border-thin: 2px;
  	--color-brand-dark-1: hsl(var(--config-brand-hue) 100% 48%);
  	--color-brand-dark-2: hsl(var(--config-brand-hue) 100% 72%);
  	--color-brand-light-1: hsl(var(--config-brand-hue) 100% 48%);

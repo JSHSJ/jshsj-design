@@ -595,20 +595,20 @@
                     </p>
                 </fieldset>
                 <p><a href="#top">[Top]</a></p>
-                <fieldset id="forms__action">
+                <fieldset id="forms__action" class="stack">
                     <legend>Action buttons</legend>
-                    <p>
+                    <div class="cluster">
                         <input type="submit" value="<input type=submit>">
                         <input type="button" value="<input type=button>">
                         <input type="reset" value="<input type=reset>">
                         <input type="submit" value="<input disabled>" disabled>
-                    </p>
-                    <p>
+                    </div>
+                    <div class="cluster">
                         <button type="submit">&lt;button type=submit&gt;</button>
                         <button type="button">&lt;button type=button&gt;</button>
                         <button type="reset">&lt;button type=reset&gt;</button>
                         <button type="button" disabled>&lt;button disabled&gt;</button>
-                    </p>
+                    </div>
                 </fieldset>
                 <p><a href="#top">[Top]</a></p>
             </form>
@@ -622,7 +622,7 @@
                 <legend id="components__headlines">Special headlines</legend>
                 <h3 class="-with-dot">Special headline <code>-with-dot</code></h3>
             </fieldset>
-            <fieldset>
+            <fieldset class="stack">
                 <legend id="components__inputs">Inputs</legend>
                 <p>
                 <div class="input-field">
@@ -638,9 +638,72 @@
                         </div>
                     </label>
                 </div>
+                <div class="input-field">
+                    <label for="some-input-disabled" class="stack">
+                        <span class="input-label">Label (optional)</span>
+                        <span class="input-hint">I'm a hint</span>
+                        <span class="input-error">I'm an error</span>
+                        <div class="cluster">
+                            <input class="input" id="some-input-disabled" name="some-input" disabled />
+                            <button type="button" class="CTA-button">
+                                Slot for content
+                            </button>
+                        </div>
+                    </label>
+                </div>
+                </p>
+                <p>
+                    <div class="input-field | cluster | checkbox-input">
+                      <label for="checkbox-input" class="stack">
+                        <span class="input-label">Checkbox</span>
+                      </label>
+                    <input id="checkbox-input" name="checkbox" type="checkbox">
+                    </div>
+                </p>
+                <p>
+                    <div class="input-field | cluster | checkbox-input">
+                      <label for="checkbox-input-disabled" class="stack">
+                        <span class="input-label">Checkbox</span>
+                      </label>
+                    <input id="checkbox-input-disabled" name="checkbox" type="checkbox" disabled>
+                    </div>
+                </p>
+                <p>
+                    <div class="input-field | cluster | checkbox-input">
+                      <label for="radio-input" class="stack">
+                        <span class="input-label">Radio</span>
+                      </label>
+                    <input id="radio-input" name="radio" type="radio">
+                    <input id="radio-input-2" name="radio" type="radio">
+                    </div>
+                </p>
+                <p>
+                    <div class="input-field | cluster | checkbox-input">
+                      <label for="radio-input-disabled" class="stack">
+                        <span class="input-label">Radio</span>
+                      </label>
+                    <input id="radio-input-disabled" name="radio" type="radio" disabled>
+                    <input id="radio-input-disabled-2" name="radio" type="radio" disabled>
+                    </div>
+                </p>
+                <p>
+                    <div class="input-field | cluster | checkbox-input">
+                      <label for="switch-input" class="stack">
+                        <span class="input-label">Switch</span>
+                      </label>
+                    <input id="switch-input" name="switch" type="checkbox" class="switch">
+                    </div>
+                </p>
+                <p>
+                    <div class="input-field | cluster | checkbox-input">
+                      <label for="switch-input-disabled" class="stack">
+                        <span class="input-label">Switch</span>
+                      </label>
+                    <input id="switch-input-disabled" name="switch" type="checkbox" class="switch" disabled>
+                    </div>
                 </p>
             </fieldset>
-            <fieldset>
+            <fieldset class="stack">
                 <legend id="components__buttons">Buttons</legend>
               <h4>Variants</h4>
               <p class="cluster">
