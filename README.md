@@ -11,7 +11,7 @@ Made for better reusability accross my projects. Contains my commonly used thing
 
 ### Copy assets
 
-    cp -r node_modules/jshsj-design/assets public/assets
+    cp -r node_modules/@jshsj/design/assets public/assets
 
 There is also a fonts.css file included, you might need to move and edit that.
 
