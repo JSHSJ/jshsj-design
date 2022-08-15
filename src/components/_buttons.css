@@ -26,7 +26,7 @@
   border-color: var(--button-border-color);
   border-style: solid;
   padding-inline: var(--button-padding-inline);
-  min-height: var(--button-height);
+  min-block-size: var(--button-height);
   padding-block: 0;
 
   font-family: var(--font-family-mono);
@@ -124,6 +124,7 @@
   margin-inline-end: var(--size-relative-sm);
   cursor: pointer;
   box-shadow: none;
+  min-block-size: calc(var(--button-height) - var(--border-thin));
 }
 
 :where(button[type="reset"], .CTA-button.-destructive) {
