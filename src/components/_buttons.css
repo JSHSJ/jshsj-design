@@ -143,8 +143,13 @@
       margin-inline-end: var(--button-padding-inline);
       font-family: var(--font-family-mono);
       font-size: var(--font-size-lg);
-      padding-inline: var(--size-relative-sm) ;
+      padding-inline: var(--size-relative-sm);
     }
+
+     &:hover:before {
+        background: var(--button-color);
+        color: var(--color-brand-1);
+      }
 
     @supports not (aspect-ratio: 1) {
       padding-inline-start: var(--button-padding-inline);
