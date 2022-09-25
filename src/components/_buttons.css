@@ -28,9 +28,9 @@
   padding-inline: var(--button-padding-inline);
   min-block-size: var(--button-height);
   padding-block: 0;
-
-  font-family: var(--font-family-mono);
-  font-weight: 400;
+font-family: var(--font-family-mono);
+  letter-spacing: var(--tracking-tight);
+  font-weight: var(--font-weight-regular);
   font-size: var(--font-size-base);
   cursor: pointer;
   display: inline-flex;

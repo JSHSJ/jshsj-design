@@ -76,7 +76,7 @@
  	--size-relative-xl: 2em;
  	--size-relative-xs: 0.25em;
  	--font-family-mono: "MD IO", monospace;
- 	--font-family-sans: "Work Sans", system-ui, sans-serif;
+ 	--font-family-sans: "Greycliff CF", system-ui, sans-serif;
  	--font-family-serif: serif;
  	--font-size-2xl: var(--scale-3);
  	--font-size-3xl: var(--scale-4);
@@ -85,11 +85,14 @@
  	--font-size-lg: var(--scale-1);
  	--font-size-sm: var(--scale--1);
  	--font-size-xl: var(--scale-2);
- 	--font-weight-bold: 876;
- 	--font-weight-medium: 592;
+ 	--font-weight-bold: 900;
+ 	--font-weight-medium: 600;
  	--font-weight-regular: 400;
  	--line-height-base: 1.48;
  	--line-height-small: 1.24;
  	--measure-base: 64ch;
  	--measure-small: 48ch;
+ 	--tracking-standard: normal;
+ 	--tracking-tight: -0.04em;
+ 	--tracking-wide: 0.06em;
 }

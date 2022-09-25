@@ -2,11 +2,12 @@
   --color: currentColor;
 
   font-family: var(--font-family-mono);
+  letter-spacing: var(--tracking-tight);
+  font-weight: var(--font-weight-regular);
   color: var(--color);
   border: var(--border-thin) solid var(--color);
   padding: var(--size-relative-xs) var(--size-relative-sm);
   text-transform: lowercase;
-  --font-weight: var(--font-weight-medium);
   width: max-content;
   max-width: max-content;
   line-height: 1;

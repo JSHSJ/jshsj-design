@@ -1,6 +1,5 @@
 *, :after, :before {
   box-sizing: border-box;
-  font-variation-settings: "wght" var(--font-weight);
   accent-color: var(--color-brand-1);
 }
 
@@ -50,14 +49,13 @@
   min-block-size: 100%;
   min-inline-size: 100%;
 
-  --font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-regular);
 
   color: var(--color-text-2);
   background-color: var(--color-surface-1);
 
   font-family: var(--font-family-sans);
   line-height: var(--line-height-base);
-  font-variation-settings: "wght" var(--font-weight);
   font-style: normal;
   font-feature-settings: "calt", "liga";
   font-size: var(--font-size-base);
@@ -87,7 +85,6 @@
 :where(input, button, textarea, select),
 :where(input[type="file"])::-webkit-file-upload-button {
   font: inherit;
-  font-size: inherit;
   color: inherit;
   letter-spacing: inherit;
 }
@@ -124,12 +121,12 @@ dd) {
 }
 
 :where(dt) {
-  --font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-regular);
   color: var(--color-text-2);
 }
 
 :where(dd) {
-  --font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium);
   color: var(--color-text-1);
 }
 
@@ -159,7 +156,7 @@ li > ol) {
 :where(figcaption) {
   display: block;
   font-family: var(--font-family-sans);
-  --font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium);
   color: var(--color-surface-2);
   background-color: var(--color-text-1);
   padding: var(--size-relative-sm) var(--size-relative-md);
@@ -225,32 +222,32 @@ h6) {
 
 :where(h1) {
   font-size: var(--font-size-2xl);
-  --font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
 }
 
 :where(h2) {
   font-size: var(--font-size-xl);
-  --font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
 }
 
 :where(h3) {
   font-size: var(--font-size-lg);
-  --font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
 }
 
 :where(h4) {
   font-size: var(--font-size-base);
-  --font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
 }
 
 :where(h5) {
   font-size: var(--font-size-base);
-  --font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium);
 }
 
 :where(h6) {
   font-size: var(--font-size-sm);
-  --font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium);
 }
 
 ::marker {
@@ -269,9 +266,10 @@ mark {
   text-decoration: underline;
   text-underline-offset: 0.15em;
   text-decoration-thickness: 0.1em;
-  --font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-regular);
   text-decoration-color: currentColor;
   cursor: pointer;
+  letter-spacing: var(--tracking-tight);
 
   &:visited {
     color: var(--color-text-2);
@@ -287,7 +285,6 @@ mark {
       content: "(Extern)";
       display: inline-block;
       font-size: calc(100% / var(--ratio));
-      font-variation-settings: "wght" var(--font-weight-regular);
       margin-left: var(--size-relative-3xs);
       margin-right: var(--size-relative-3xs);
       transform: translateY(-0.125em);
@@ -309,11 +306,13 @@ mark {
 }
 
 :where(strong, b) {
-  --font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium);
 }
 
 :where(dfn, var) {
   font-family: var(--font-family-mono);
+  letter-spacing: var(--tracking-tight);
+  font-weight: var(--font-weight-regular);
 }
 
 :where([aria-disabled="true"],
@@ -345,7 +344,7 @@ mark {
     color: var(--color-text-1);
     text-align: center;
     padding-inline: var(--size-relative-md);
-    --font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
   }
 }
 #content-start:focus {
@@ -355,6 +354,8 @@ mark {
 
 :where(code) {
   font-family: var(--font-family-mono);
+  letter-spacing: var(--tracking-tight);
+  font-weight: var(--font-weight-regular);
 }
 
 :where(pre) {

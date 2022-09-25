@@ -14,6 +14,8 @@ fieldset {
 
 legend {
     font-family: var(--font-family-mono);
+    letter-spacing: var(--tracking-tight);
+    font-weight: var(--font-weight-regular);
     color: var(--color-text-1);
     display: block;
     font-size: var(--font-size-lg);
@@ -37,6 +39,8 @@ legend {
 :where(label),
 .input-label {
     font-family: var(--font-family-mono);
+  letter-spacing: var(--tracking-tight);
+  font-weight: var(--font-weight-regular);
     color: var(--color-text-1);
     display: inline-flex;
     font-size: var(--font-size-base);
@@ -61,7 +65,7 @@ legend {
     background-color: var(--_input-background);
     border: var(--_input-border);
     border-radius: 0;
-    height: var(--size-relative-2xl);
+    block-size: var(--size-relative-2xl);
     padding-inline: var(--size-relative-sm);
 
     &:focus {
@@ -100,7 +104,6 @@ legend {
 
 .input-error {
     --color-default: var(--color-status-error);
-    --font-weight: var(--font-weight-medium);
     color: var(--color-default);
 
     &:before {
@@ -112,6 +115,8 @@ legend {
 .input-hint {
     &:before {
         font-family: var(--font-family-mono);
+  letter-spacing: var(--tracking-tight);
+  font-weight: var(--font-weight-regular);
         display: inline-flex;
         align-items: center;
         justify-content: center;

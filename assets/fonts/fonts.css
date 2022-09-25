@@ -1,8 +1,20 @@
 @font-face {
-  font-family: 'Work Sans';
-  src: url('/assets/fonts/WorkSans[wght].ttf') format('truetype');
+  font-family: 'Greycliff CF';
+  src: url('/assets/fonts/GreycliffCF-Regular.woff2') format("woff2"), url('/assets/fonts/GreycliffCF-Regular.woff') format("woff");
   font-display: optional;
-  font-weight: 100 900;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Greycliff CF';
+  src: url('/assets/fonts/GreycliffCF-DemiBold.woff2') format("woff2"), url('/assets/fonts/GreycliffCF-DemiBold.woff') format("woff");
+  font-display: optional;
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Greycliff CF';
+  src: url('/assets/fonts/GreycliffCF-Heavy.woff2') format("woff2"), url('/assets/fonts/GreycliffCF-Heavy.woff') format("woff");
+  font-display: optional;
+  font-weight: 900;
 }
 @font-face {
   font-family: 'MD IO';
