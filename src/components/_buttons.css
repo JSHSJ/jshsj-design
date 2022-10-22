@@ -36,7 +36,7 @@ font-family: var(--font-family-mono);
   display: inline-flex;
   box-sizing: border-box;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
   text-align: center;
   position: relative;
   transition: box-shadow .15s;

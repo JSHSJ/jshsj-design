@@ -79,27 +79,10 @@ legend {
     }
 }
 
-:where(select) {
-    display: grid;
-    appearance: none;
-    grid-template-areas: "select";
-    grid-area: select;
-    padding-inline-end: var(--size-relative-md);
-
-    &:after {
-        content: "V";
-        justify-self: end;
-        width: 0.8em;
-        height: 0.5em;
-        background-color: white;
-        clip-path: polygon(100% 0%, 0 0%, 50% 100%);
-    }
-
-}
-
 :where(textarea),
 .textarea {
     min-height: var(--size-relative-4xl);
+    max-inline-size: 100%;
 }
 
 .input-error {
@@ -271,4 +254,33 @@ input[type=checkbox].switch {
         outline: var(--_input-outline);
         outline-offset: 0;
     }
+}
+
+
+:where(select) {
+    appearance: none;
+}
+
+.select-wrapper {
+    display: grid;
+    grid-template: "select" 1fr / 1fr;
+    padding-inline-end: var(--size-relative-md);
+    color: var(--_input-color);
+
+    &:after {
+        grid-area: select;
+        content: "V";
+        justify-self: end;
+        align-self: center;
+        width: 0.71em;
+        height: 0.48em;
+        background-color: var(--_input-color);
+        clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+        margin-inline-end: var(--size-relative-md);
+    }
+}
+
+select.select {
+    grid-area: select;
+    padding-inline-end: var(--size-relative-lg);
 }
