@@ -281,5 +281,5 @@ input[type=checkbox].switch {
 
 select.select {
     grid-area: select;
-    padding-inline-end: var(--size-relative-lg);
+    padding-inline-end: var(--size-relative-2xl);
 }
