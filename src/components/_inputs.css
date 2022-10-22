@@ -264,7 +264,6 @@ input[type=checkbox].switch {
 .select-wrapper {
     display: grid;
     grid-template: "select" 1fr / 1fr;
-    padding-inline-end: var(--size-relative-md);
     color: var(--_input-color);
 
     &:after {
