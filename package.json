@@ -1,6 +1,6 @@
 {
   "name": "@jshsj/design",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Reusable design token and classes",
   "main": "index.js",
   "repository": {
@@ -32,6 +32,7 @@
     "./postcss/utils/spacings": "./src/utils/_spacings.css",
     "./postcss/utils/typo": "./src/utils/_typo.css",
     "./bundle": "./out/jshsj-design.css",
+    "./minimal": "./out/jshsj-design.minimal.css",
     "./atoms": "./out/atoms/bundle.css",
     "./atoms/borders": "./out/atoms/borders.css",
     "./atoms/colors": "./out/atoms/colors.css",
@@ -57,10 +58,10 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "transform-token": "designTokens transform ./tokens.config.json",
     "lib:all": "postcss src/**/*.css --base src --dir out",
     "lib:bundle": "postcss src/jshsj-design.css -o out/jshsj-design.css",
+    "lib:minimal": "postcss src/jshsj-minimal.css -o out/jshsj-minimal.css",
     "bundle": "concurrently npm:lib:*",
     "build": "npm run transform-token && npm run bundle"
   },
