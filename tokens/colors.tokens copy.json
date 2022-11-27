@@ -13,21 +13,21 @@
       "light": {
         "1": {
           "name": "light-1",
-          "$value": "oklch(13.82% 0.06 10.48)"
+          "$value": "hsl(var(--config-brand-hue) 0% 8%)"
         },
         "2": {
           "name": "light-2",
-          "$value": "oklch(40.88% 0.013 10.48)"
+          "$value": "hsl(var(--config-brand-hue) 3% 24%)"
         }
       },
       "dark": {
         "1": {
           "name": "dark-1",
-          "$value": "oklch(97.65% 0.013 10.48)"
+          "$value": "hsl(var(--config-brand-hue) 96% 98%)"
         },
         "2": {
           "name": "dark-2",
-          "$value": "oklch(90.06% 0.008 10.48)"
+          "$value": "hsl(var(--config-brand-hue) 4% 88%)"
         }
       }
     },
@@ -35,21 +35,21 @@
       "light": {
         "1": {
           "name": "light-1",
-          "$value": "oklch(98.0% 0.002 10.48)"
+          "$value": "hsl(var(--config-brand-hue) 0% 97%)"
         },
         "2": {
           "name": "light-2",
-          "$value": "oklch(100% 0.006 10.48)"
+          "$value": "hsl(var(--config-brand-hue) 16% 92%)"
         }
       },
       "dark": {
         "1": {
           "name": "dark-1",
-          "$value": "oklch(12.00% 0.012 10.48)"
+          "$value": "hsl(var(--config-brand-hue) 6% 1%)"
         },
         "2": {
           "name": "dark-2",
-          "$value": "oklch(0% 0.006 10.48)"
+          "$value": "hsl(var(--config-brand-hue) 96% 12%)"
         }
       }
     },
@@ -57,21 +57,21 @@
       "light": {
         "1": {
           "name": "light-1",
-          "$value": "oklch(60% 0.289 10.48)"
+          "$value": "hsl(var(--config-brand-hue) 100% 48%)"
         },
         "2": {
           "name": "light-2",
-          "$value": "oklch(48% 0.289 10.48)"
+          "$value": "hsl(var(--config-brand-hue) 100% 24%)"
         }
       },
       "dark": {
         "1": {
           "name": "dark-1",
-          "$value": "oklch(60% 0.289 10.48)"
+          "$value": "hsl(var(--config-brand-hue) 100% 48%)"
         },
         "2": {
           "name": "dark-2",
-          "$value": "oklch(72% 0.289 10.48)"
+          "$value": "hsl(var(--config-brand-hue) 100% 72%)"
         }
       }
     },
@@ -79,15 +79,15 @@
       "light": {
         "background": {
           "name": "light-background",
-          "$value": "var(--color-surface-light-2)"
+          "$value": "hsl(var(--config-brand-hue) 20% 99%)"
         },
         "keyword": {
           "name": "light-keyword",
-          "$value": "oklch(50.67% 0.289 303.88)"
+          "$value": "hsl(calc(var(--config-brand-hue) + 60) 100% 48%)"
         },
         "string": {
           "name": "light-string",
-          "$value": "oklch(64% 0.289 10.48)"
+          "$value": "hsl(calc(var(--config-brand-hue) + 280) 100% 48%)"
         },
         "punctuation": {
           "name": "light-punctuation",
@@ -95,7 +95,7 @@
         },
         "operator": {
           "name": "light-operator",
-          "$value": "oklch(82.67% 0.289 173.65)"
+          "$value": "hsl(calc(var(--config-brand-hue) + 230) 100% 48%)"
         },
         "tag": {
           "name": "light-tag",
@@ -109,15 +109,15 @@
       "dark": {
         "background": {
           "name": "dark-background",
-          "$value": "var(--color-surface-dark-2)"
+          "$value": "hsl(var(--config-brand-hue) 16% 5%)"
         },
         "keyword": {
           "name": "dark-keyword",
-          "$value": "oklch(50.67% 0.289 303.88)"
+          "$value": "hsl(calc(var(--config-brand-hue) + 60) 100% 64%)"
         },
         "string": {
           "name": "dark-string",
-          "$value": "klch(64% 0.289 10.48)"
+          "$value": "hsl(calc(var(--config-brand-hue) + 280) 100% 64%)"
         },
         "punctuation": {
           "name": "dark-punctuation",
@@ -125,7 +125,7 @@
         },
         "operator": {
           "name": "dark-operator",
-          "$value": "oklch(82.67% 0.289 173.65)"
+          "$value": "hsl(calc(var(--config-brand-hue) + 230) 100% 64%)"
         },
         "tag": {
           "name": "dark-tag",
@@ -138,9 +138,9 @@
       }
     },
     "status": {
-      "error": {
-        "name": "error",
-        "$value": "oklch(62.67% 0.289 25.41)"
+        "error": {
+          "name": "error",
+          "$value": "hsl(12 100% 48%)"
       }
     }
   }

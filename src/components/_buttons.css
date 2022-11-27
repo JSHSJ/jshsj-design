@@ -4,21 +4,29 @@
   background: none;
 }
 
-:where(button,button[type],input[type="button"],input[type="submit"],input[type="reset"]),
+:where(button, button[type], input[type="button"], input[type="submit"], input[type="reset"]),
 :where(input[type="file"])::-webkit-file-upload-button,
 :where(input[type="file"])::file-selector-button,
 .CTA-button {
   --button-background: var(--color-text-1);
-  --button-color: var(--color-surface-1);
+  --button-color: var(--color-surface-2);
   --button-border-color: var(--color-text-1);
+  --button-transform: none;
+  --button-box-shadow: none;
+  --transition-duration: 0.2s;
 
-  --button-background-hover: var(--color-surface-2);
-  --button-color-hover: var(--color-text-1);
+  --button-background-hover: var(--color-brand-1);
+  --button-color-hover: var(--color-surface-1);
   --button-border-color-hover: var(--color-text-1);
+  --button-hover-transform: translate(
+    calc(-1 * var(--size-relative-xs)),
+    calc(-1 * var(--size-relative-xs))
+  );
+  --button-hover-shadow: var(--size-relative-xs) var(--size-relative-xs) 0
+    var(--color-text-1);
 
   --button-height: var(--size-relative-2xl);
   --button-padding-inline: var(--size-relative-lg);
-
 
   background-color: var(--button-background);
   color: var(--button-color);
@@ -28,7 +36,7 @@
   padding-inline: var(--button-padding-inline);
   min-block-size: var(--button-height);
   padding-block: 0;
-font-family: var(--font-family-mono);
+  font-family: var(--font-family-mono);
   letter-spacing: var(--tracking-tight);
   font-weight: var(--font-weight-regular);
   font-size: var(--font-size-base);
@@ -39,23 +47,41 @@ font-family: var(--font-family-mono);
   justify-content: center;
   text-align: center;
   position: relative;
-  transition: box-shadow .15s;
+  transition: box-shadow var(--transition-duration) var(--ease-2);
   text-decoration: unset;
-  box-shadow: var(--shadow-default);
+  box-shadow: var(--button-box-shadow);
+  transform: var(--button-transform);
+  will-change: transform;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
 }
 
-:where(button,button[type],input[type="button"],input[type="submit"],input[type="reset"], .CTA-button) {
+:where(button, button[type], input[type="button"], input[type="submit"], input[type="reset"], .CTA-button) {
   &:after {
-    content: '' !important;
+    content: "" !important;
   }
 
   &:hover {
     --button-background: var(--button-background-hover) !important;
     --button-color: var(--button-color-hover) !important;
     --button-border-color: var(--button-border-color-hover) !important;
+    --button-box-shadow: var(--button-hover-shadow) !important;
+    --button-transform: var(--button-hover-transform) !important;
+  }
+
+  &:hover:after {
+    inline-size: calc(100% + var(--size-relative-xs)) !important;
+    block-size: calc(100% + var(--size-relative-xs)) !important;
+    z-index: -1 !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    pointer-events: none !important;
   }
 
   &:active {
@@ -71,6 +97,7 @@ font-family: var(--font-family-mono);
     --button-border-color-hover: var(--button-border-color);
 
     box-shadow: none !important;
+    transform: none !important;
     filter: contrast(0.64) opacity(0.64);
     cursor: not-allowed;
   }
@@ -78,6 +105,8 @@ font-family: var(--font-family-mono);
   &.-small {
     --button-height: var(--size-relative-xl);
     --button-padding-inline: var(--size-relative-sm);
+    flex-grow: 0;
+    max-height: var(--button-height);
   }
 
   &.-active {
@@ -86,16 +115,17 @@ font-family: var(--font-family-mono);
     border-color: var(--button-border-color-hover);
 
     box-shadow: none;
+    transform: none;
   }
 
   &.-secondary {
-    --button-background: var(--color-surface-1);
-    --button-color: var(--color-text-1);
+    --button-background: var(--color-surface-2);
+    --button-color: var(--color-text-2);
     --button-border-color: var(--color-text-1);
 
-    --button-background-hover: var(--color-surface-1);
-    --button-color-hover: var(--color-brand-1);
-    --button-border-color-hover: var(--color-brand-1);
+    --button-background-hover: var(--color-surface-2);
+    --button-color-hover: var(--color-text-1);
+    --button-border-color-hover: var(--color-text-1);
   }
 
   &.-stealth {
@@ -107,14 +137,15 @@ font-family: var(--font-family-mono);
     --button-color-hover: var(--color-brand-1);
     --button-border-color-hover: transparent;
 
-    box-shadow: none;
+    box-shadow: none !important;
+    transform: none !important;
   }
 }
 
 :where(input[type="file"]) {
   color: var(--color-text-1);
   background-color: var(--color-surface-1);
-  border: var(--border-thin) solid var(--color-text-2);
+  border: var(--border-thin) solid var(--color-text-1);
   height: var(--size-relative-2xl);
   padding-inline-end: var(--size-relative-sm);
 }
@@ -125,37 +156,41 @@ font-family: var(--font-family-mono);
   cursor: pointer;
   box-shadow: none;
   min-block-size: calc(var(--button-height) - var(--border-thin));
+  border: none;
+  border-inline-end: var(--border-thin) solid var(--color-text-1);
 }
 
 :where(button[type="reset"], .CTA-button.-destructive) {
-    padding-inline-start: 0 !important;
+  padding-inline-start: 0 !important;
+  --button-background-hover: var(--color-status-error) !important;
+
+  &:before {
+    border: var(--border-thin) solid transparent;
+    content: "⨯";
+    background: var(--button-color);
+    color: var(--button-background);
+    aspect-ratio: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline-end: var(--button-padding-inline);
+    block-size: 100%;
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-lg);
+    padding-inline: var(--size-relative-sm);
+    position: relative;
+  }
+
+  &:hover:before {
+    background: var(--button-color);
+    color: var(--color-status-error);
+  }
+
+  @supports not (aspect-ratio: 1) {
+    padding-inline-start: var(--button-padding-inline);
 
     &:before {
-      border: var(--border-thin) solid transparent;
-      content: '⨯';
-      background: var(--button-color);
-      color: var(--button-background);
-      aspect-ratio: 1;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      align-self: stretch;
-      margin-inline-end: var(--button-padding-inline);
-      font-family: var(--font-family-mono);
-      font-size: var(--font-size-lg);
-      padding-inline: var(--size-relative-sm);
+      display: none;
     }
-
-     &:hover:before {
-        background: var(--button-color);
-        color: var(--color-brand-1);
-      }
-
-    @supports not (aspect-ratio: 1) {
-      padding-inline-start: var(--button-padding-inline);
-
-      &:before {
-        display: none;
-      }
-    }
+  }
 }

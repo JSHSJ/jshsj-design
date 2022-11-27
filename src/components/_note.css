@@ -1,32 +1,34 @@
 .note {
-    padding-inline: var(--size-relative-xl);
-    width: 100%;
-    padding-block: var(--gap, var(--space-default-vertical));
-    background-color: var(--color-surface-2);
-    color: var(--color-text-2);
-    position: relative;
+  padding-inline: var(--size-relative-xl);
+  width: 100%;
+  padding-block: var(--gap, var(--space-default-vertical));
+  background-color: var(--color-surface-2);
+  color: var(--color-text-2);
+  position: relative;
+  border: var(--border-thin) solid var(--color-text-1);
 
-    &.-info:before, &.-warning:before {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transform: translate(-40%, -40%);
-      background-color: var(--color-text-1);
-      color: var(--color-surface-1);
-      inline-size: 1.48em;
-      block-size: 1.48em;
-      line-height: 1;
-      font-size: var(--font-size-lg);
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
+  &.-info:before,
+  &.-warning:before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-40%, -40%);
+    background-color: var(--color-text-1);
+    color: var(--color-surface-1);
+    inline-size: 1.48em;
+    block-size: 1.48em;
+    line-height: 1;
+    font-size: var(--font-size-lg);
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 
-    &.-info:before {
-      content: "?";
-    }
+  &.-info:before {
+    content: "?";
+  }
 
-    &.-warning:before {
-      content: "!";
-    }
+  &.-warning:before {
+    content: "!";
+  }
 }

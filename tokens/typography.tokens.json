@@ -2,67 +2,67 @@
   "font": {
     "family": {
       "sans": {
-          "name": "sans",
-          "$value": "\"Greycliff CF\", system-ui, sans-serif"
+        "name": "sans",
+        "$value": "\"Greycliff CF\", system-ui, sans-serif"
       },
-       "serif": {
-          "name": "serif",
-          "$value": "serif"
+      "serif": {
+        "name": "serif",
+        "$value": "serif"
       },
-       "mono": {
-          "name": "mono",
-          "$value": "\"MD IO\", monospace"
+      "mono": {
+        "name": "mono",
+        "$value": "\"MD IO\", monospace"
       }
     },
-  "weight": {
+    "weight": {
       "regular": {
-          "name": "regular",
-          "$value": "400"
+        "name": "regular",
+        "$value": "400"
       },
-       "medium": {
-          "name": "medium",
-          "$value": "600"
+      "medium": {
+        "name": "medium",
+        "$value": "600"
       },
-       "bold": {
-          "name": "bold",
-          "$value": "900"
+      "bold": {
+        "name": "bold",
+        "$value": "900"
       }
     },
     "size": {
       "sm": {
-          "name": "sm",
-          "$value": "var(--scale--1)"
+        "name": "sm",
+        "$value": "var(--scale--1)"
       },
       "base": {
-          "name": "base",
-          "$value": "var(--scale-0)"
+        "name": "base",
+        "$value": "var(--scale-0)"
       },
-       "button": {
-          "name": "button",
-          "$value": "var(--scale-0)"
+      "button": {
+        "name": "button",
+        "$value": "var(--scale-0)"
       },
-       "lg": {
-          "name": "lg",
-          "$value": "var(--scale-1)"
+      "lg": {
+        "name": "lg",
+        "$value": "var(--scale-1)"
       },
-       "xl": {
-          "name": "xl",
-          "$value": "var(--scale-2)"
+      "xl": {
+        "name": "xl",
+        "$value": "var(--scale-2)"
       },
-       "2xl": {
-          "name": "2xl",
-          "$value": "var(--scale-3)"
+      "2xl": {
+        "name": "2xl",
+        "$value": "var(--scale-3)"
       },
       "3xl": {
-          "name": "3xl",
-          "$value": "var(--scale-4)"
+        "name": "3xl",
+        "$value": "var(--scale-4)"
       }
     }
   },
   "line-height": {
     "base": {
       "name": "base",
-      "$value": "1.48"
+      "$value": "1.64"
     },
     "small": {
       "name": "small",
@@ -84,13 +84,13 @@
       "name": "tight",
       "$value": "-0.04em"
     },
-     "standard": {
-       "name": "default",
-       "$value": "normal"
-     },
+    "standard": {
+      "name": "default",
+      "$value": "normal"
+    },
     "wide": {
-       "name": "wide",
-       "$value": "0.06em"
-     }
+      "name": "wide",
+      "$value": "0.06em"
+    }
   }
 }

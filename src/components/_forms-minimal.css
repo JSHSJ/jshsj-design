@@ -1,5 +1,5 @@
 :root {
-  --_input-background: var(--input-background, var(--color-surface-2));
+  --_input-background: var(--input-background, var(--color-surface-1));
   --_input-color: var(--input-color, var(--color-text-1));
   --_input-border: var(
     --input-border,
@@ -13,12 +13,13 @@
     --input-disabled-filter,
     contrast(0.64) opacity(0.64)
   );
+  --_input-size: var(--size-relative-xl);
+  --_input-padding-inline: var(--size-relative-sm);
 }
 
 fieldset {
   padding: var(--size-relative-md);
   border: var(--border-thick) solid var(--color-text-1);
-  background-color: var(--color-surface-2);
 }
 
 legend {
@@ -28,29 +29,11 @@ legend {
   color: var(--color-text-1);
   display: block;
   font-size: var(--font-size-lg);
-  padding-inline: var(--size-relative-sm);
+  padding-inline: var(--_input-padding-inline);
   padding-block: 0;
-  background-color: var(--color-surface-2);
-  border: var(--border-thin) solid var(--color-text-1);
-  box-shadow: var(--size-relative-2xs) var(--size-relative-2xs) 0
-    var(--color-text-1);
 }
 
-.input-field {
-  display: grid;
-  gap: var(--scale--2);
-  grid-template-columns: minmax(0, 1fr);
-  width: fit-content;
-  place-items: start;
-  font-size: var(--font-size-base);
-
-  & > label {
-    --gap: var(--size-relative-2xs);
-  }
-}
-
-:where(label),
-.input-label {
+:where(label) {
   font-family: var(--font-family-mono);
   letter-spacing: var(--tracking-tight);
   font-weight: var(--font-weight-regular);
@@ -58,17 +41,8 @@ legend {
   display: inline-flex;
   font-size: var(--font-size-base);
   cursor: pointer;
-  gap: var(--size-relative-sm);
+  gap: var(--_input-padding-inline);
   align-items: center;
-}
-
-.input-hint {
-  --color-default: var(--color-text-2);
-  display: block;
-
-  &:before {
-    content: "?";
-  }
 }
 
 :where(input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="url"], input[type="search"], input[type="date"], input[type="month"], input[type="week"], input[type="text"], input[type="datetime"], input[type="datetime-local"], input[type="time"], input[type="tel"], input[type="color"], textarea, select),
@@ -78,8 +52,8 @@ legend {
   background-color: var(--_input-background);
   border: var(--_input-border);
   border-radius: 0;
-  block-size: var(--size-relative-2xl);
-  padding-inline: var(--size-relative-sm);
+  block-size: var(--_input-size);
+  padding-inline: var(--_input-padding-inline);
 
   &:focus {
     outline: var(--_input-outline);
@@ -92,36 +66,9 @@ legend {
   }
 }
 
-:where(textarea),
-.textarea {
+:where(textarea) {
   min-height: var(--size-relative-4xl);
   max-inline-size: 100%;
-}
-
-.input-error {
-  --color-default: var(--color-status-error);
-  color: var(--color-default);
-
-  &:before {
-    content: "!";
-  }
-}
-
-.input-error,
-.input-hint {
-  &:before {
-    font-family: var(--font-family-mono);
-    letter-spacing: var(--tracking-tight);
-    font-weight: var(--font-weight-regular);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: var(--line-height-base);
-    padding: 0 var(--size-relative-2xs);
-    background-color: var(--color-default);
-    color: var(--color-surface-1);
-    margin-right: var(--size-relative-xs);
-  }
 }
 
 :where(input[type="checkbox"], input[type="radio"]) {
@@ -152,7 +99,7 @@ legend {
   }
 }
 
-:where(input[type="checkbox"]:not(.switch)) {
+:where(input[type="checkbox"]) {
   &:before {
     content: "X";
     display: inline-flex;
@@ -202,99 +149,101 @@ legend {
   }
 }
 
-.checkbox-input {
-  display: flex;
-  flex-flow: row nowrap;
-  gap: var(--size-relative-sm);
-  width: fit-content;
-  place-items: start;
-  font-size: var(--font-size-base);
-}
-
 :where(input[type="color"]) {
   aspect-ratio: 1;
   width: auto;
   padding: var(--size-relative-sm);
 }
 
-input[type="checkbox"].switch {
-  --_switch-width: var(
-    --switch-width,
-    calc(var(--scale-0) * var(--line-height-base) * 2)
-  );
-  --_switch-height: var(--switch-height, calc(var(--_switch-width) / 2));
-  --_switch-color: var(--switch-color, var(--_input-background));
-  --_switch-color-checked: var(--switch-color-checked, var(--color-brand-1));
-  --_thumb-margin: var(--thumb-margin, var(--size-relative-2xs));
-  --_thumb-color: var(--thumb-color, var(--_input-color));
+:where(button, button[type], input[type="button"], input[type="submit"], input[type="reset"]),
+:where(input[type="file"])::-webkit-file-upload-button,
+:where(input[type="file"])::file-selector-button {
+  --button-background: var(--color-text-1);
+  --button-color: var(--color-surface-1);
+  --button-border-color: var(--color-text-1);
 
-  vertical-align: var(--_thumb-margin);
-  inline-size: var(--_switch-width);
-  block-size: var(--_switch-height);
+  --button-background-hover: var(--color-surface-2);
+  --button-color-hover: var(--color-text-1);
+  --button-border-color-hover: var(--color-text-1);
+
+  background-color: var(--button-background);
+  color: var(--button-color);
+  border-width: var(--border-thin);
+  border-color: var(--button-border-color);
+  border-style: solid;
+  padding-inline: var(--_input-padding-inline);
+  min-block-size: var(--_input-size);
+  padding-block: 0;
+  font-family: var(--font-family-mono);
+  letter-spacing: var(--tracking-tight);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  display: inline-flex;
   box-sizing: border-box;
-  border-radius: 0;
-  --current-background: var(--_switch-color);
-  justify-content: flex-start;
-
-  @media (--motionOK) {
-    transition-duration: 250ms;
-  }
-
-  &:before {
-    content: "";
-    display: block;
-    aspect-ratio: 1;
-    margin: var(--_thumb-margin);
-    block-size: calc(100% - 2 * var(--_thumb-margin));
-    background: var(--_thumb-color);
-    border-radius: 0;
-    transition: margin;
-    transition-duration: inherit;
-  }
-
-  &:checked {
-    --current-background: var(--_switch-color-checked);
-  }
-
-  &:checked:before {
-    margin-inline-start: calc(
-      var(--_switch-width) - var(--_switch-height) + var(--_thumb-margin)
-    );
-  }
-
-  &:focus {
-    outline: none;
-  }
-
-  &:focus:before {
-    outline: var(--_input-outline);
-    outline-offset: 0;
-  }
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  transition: box-shadow 0.15s;
+  text-decoration: unset;
+  box-shadow: var(--shadow-default);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 }
 
-:where(select) {
-  appearance: none;
-}
-
-.select-wrapper {
-  display: grid;
-  grid-template: "select" 1fr / 1fr;
-  color: var(--_input-color);
-
+:where(button, button[type], input[type="button"], input[type="submit"], input[type="reset"]) {
   &:after {
-    grid-area: select;
-    content: "V";
-    justify-self: end;
-    align-self: center;
-    width: 0.71em;
-    height: 0.48em;
-    background-color: var(--_input-color);
-    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
-    margin-inline-end: var(--size-relative-md);
+    content: "" !important;
+  }
+
+  &:hover {
+    --button-background: var(--button-background-hover) !important;
+    --button-color: var(--button-color-hover) !important;
+    --button-border-color: var(--button-border-color-hover) !important;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+
+  &[disabled] {
+    --button-background: none !important;
+    --button-background-hover: none !important;
+    --button-color: var(--color-text-2) !important;
+    --button-color-hover: var(--button-color) !important;
+    --button-border-color: var(--color-text-2) !important;
+    --button-border-color-hover: var(--button-border-color);
+
+    box-shadow: none !important;
+    filter: contrast(0.64) opacity(0.64);
+    cursor: not-allowed;
+  }
+
+  &.-secondary {
+    --button-background: var(--color-surface-1);
+    --button-color: var(--color-text-1);
+    --button-border-color: var(--color-text-1);
+
+    --button-background-hover: var(--color-surface-1);
+    --button-color-hover: var(--color-brand-1);
+    --button-border-color-hover: var(--color-brand-1);
   }
 }
 
-select.select {
-  grid-area: select;
-  padding-inline-end: var(--size-relative-2xl);
+:where(input[type="file"]) {
+  color: var(--color-text-1);
+  background-color: var(--color-surface-1);
+  border: var(--border-thin) solid var(--color-text-2);
+  height: var(--size-relative-2xl);
+  padding-inline-end: var(--size-relative-sm);
+}
+
+:where(input[type="file"])::-webkit-file-upload-button,
+:where(input[type="file"])::file-selector-button {
+  margin-inline-end: var(--size-relative-sm);
+  cursor: pointer;
+  box-shadow: none;
+  min-block-size: calc(var(--button-height) - var(--border-thin));
 }
