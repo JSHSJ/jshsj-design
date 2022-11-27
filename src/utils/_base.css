@@ -1,4 +1,6 @@
-*, :after, :before {
+*,
+:after,
+:before {
   box-sizing: border-box;
   accent-color: var(--color-brand-1);
 }
@@ -19,11 +21,10 @@
     transition: outline-offset 145ms var(--ease-2);
   }
   :where(:not(:active):focus-visible) {
-    transition-duration: .25s;
+    transition-duration: 0.25s;
   }
 }
-:where(:focus-visible,
-:focus) {
+:where(:focus-visible, :focus) {
   outline: var(--scale--5) solid var(--color-brand-1);
   outline-offset: 0.64ch;
 }
@@ -35,8 +36,7 @@
 :where(html) {
   block-size: 100%;
   inline-size: 100%;
-   -webkit-text-size-adjust: none; /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
-
+  -webkit-text-size-adjust: none; /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
 
   @media (--motionOK) {
     & {
@@ -89,32 +89,24 @@
   letter-spacing: inherit;
 }
 
-:where(p,
-li,
-dd,
-dt,
-summary) {
+:where(p, li, dd, dt, summary) {
   max-inline-size: var(--measure-base);
   font-size: inherit;
   line-height: var(--line-height-base);
 }
 
-:where(ol,
-ul,
-dl) {
+:where(ol, ul, dl) {
   display: flex;
   flex-direction: column;
   max-inline-size: max-content;
   padding-inline: 0;
 }
 
-:where(ol,
-ul) {
+:where(ol, ul) {
   gap: var(--size-relative-md);
 }
 
-:where(li,
-dd) {
+:where(li, dd) {
   max-inline-size: var(--measure-small);
   font-size: var(--font-size-base);
   margin-inline: var(--size-relative-md);
@@ -132,7 +124,7 @@ dd) {
 
 :where(dl) {
   & * + * {
-    margin-block-start: var(--size-relative-md);
+    margin-block-start: var(--size-relative-sm);
   }
 
   & * + dt {
@@ -140,8 +132,7 @@ dd) {
   }
 }
 
-:where(li > ul,
-li > ol) {
+:where(li > ul, li > ol) {
   margin-block-start: var(--size-relative-lg);
 }
 
@@ -191,7 +182,8 @@ li > ol) {
   padding-inline: var(--space-default-horizontal);
   padding-block: var(--space-default-vertical);
   background-color: var(--color-surface-2);
-  border-left: var(--border-thick) solid var(--color-text-2);
+  border: var(--border-thin) solid var(--color-text-1);
+  border-left: var(--size-relative-sm) solid var(--color-text-1);
 }
 
 :where(hr) {
@@ -201,12 +193,7 @@ li > ol) {
   background-color: var(--color-text-2);
 }
 
-:where(h1,
-h2,
-h3,
-h4,
-h5,
-h6) {
+:where(h1, h2, h3, h4, h5, h6) {
   line-height: var(--line-height-small);
   color: var(--color-text-1);
   overflow-wrap: break-word;
@@ -260,7 +247,7 @@ mark {
   color: var(--color-surface-1);
 }
 
-:where(a,.link) {
+:where(a, .link) {
   color: var(--color-text-1);
   font-family: var(--font-family-mono);
   text-decoration: underline;
@@ -315,9 +302,7 @@ mark {
   font-weight: var(--font-weight-regular);
 }
 
-:where([aria-disabled="true"],
-.disabled,
-:disabled) {
+:where([aria-disabled="true"], .disabled, :disabled) {
   color: inherit;
   opacity: 1;
   cursor: not-allowed;
