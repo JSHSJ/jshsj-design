@@ -1,5 +1,5 @@
 :root {
-  --_input-background: var(--input-background, var(--color-surface-1));
+  --_input-background: var(--input-background, var(--color-surface-2));
   --_input-color: var(--input-color, var(--color-text-1));
   --_input-border: var(
     --input-border,
@@ -13,13 +13,12 @@
     --input-disabled-filter,
     contrast(0.64) opacity(0.64)
   );
-  --_input-size: var(--size-relative-xl);
-  --_input-padding-inline: var(--size-relative-sm);
 }
 
 fieldset {
   padding: var(--size-relative-md);
   border: var(--border-thick) solid var(--color-text-1);
+  background-color: var(--color-surface-2);
 }
 
 legend {
@@ -29,8 +28,12 @@ legend {
   color: var(--color-text-1);
   display: block;
   font-size: var(--font-size-lg);
-  padding-inline: var(--_input-padding-inline);
+  padding-inline: var(--size-relative-sm);
   padding-block: 0;
+  background-color: var(--color-surface-2);
+  border: var(--border-thin) solid var(--color-text-1);
+  box-shadow: var(--size-relative-2xs) var(--size-relative-2xs) 0
+    var(--color-text-1);
 }
 
 :where(label) {
@@ -41,19 +44,18 @@ legend {
   display: inline-flex;
   font-size: var(--font-size-base);
   cursor: pointer;
-  gap: var(--_input-padding-inline);
+  gap: var(--size-relative-sm);
   align-items: center;
 }
 
-:where(input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="url"], input[type="search"], input[type="date"], input[type="month"], input[type="week"], input[type="text"], input[type="datetime"], input[type="datetime-local"], input[type="time"], input[type="tel"], input[type="color"], textarea, select),
-.input {
+:where(input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="url"], input[type="search"], input[type="date"], input[type="month"], input[type="week"], input[type="text"], input[type="datetime"], input[type="datetime-local"], input[type="time"], input[type="tel"], input[type="color"], textarea, select) {
   -webkit-appearance: none;
   color: var(--_input-color);
   background-color: var(--_input-background);
   border: var(--_input-border);
   border-radius: 0;
-  block-size: var(--_input-size);
-  padding-inline: var(--_input-padding-inline);
+  block-size: var(--size-relative-2xl);
+  padding-inline: var(--size-relative-sm);
 
   &:focus {
     outline: var(--_input-outline);
@@ -99,7 +101,7 @@ legend {
   }
 }
 
-:where(input[type="checkbox"]) {
+:where(input[type="checkbox"]:not(.switch)) {
   &:before {
     content: "X";
     display: inline-flex;
@@ -148,7 +150,6 @@ legend {
     }
   }
 }
-
 :where(input[type="color"]) {
   aspect-ratio: 1;
   width: auto;
@@ -157,22 +158,35 @@ legend {
 
 :where(button, button[type], input[type="button"], input[type="submit"], input[type="reset"]),
 :where(input[type="file"])::-webkit-file-upload-button,
-:where(input[type="file"])::file-selector-button {
+:where(input[type="file"])::file-selector-button,
+.CTA-button {
   --button-background: var(--color-text-1);
-  --button-color: var(--color-surface-1);
+  --button-color: var(--color-surface-2);
   --button-border-color: var(--color-text-1);
+  --button-transform: none;
+  --button-box-shadow: none;
+  --transition-duration: 0.2s;
 
-  --button-background-hover: var(--color-surface-2);
-  --button-color-hover: var(--color-text-1);
+  --button-background-hover: var(--color-brand-1);
+  --button-color-hover: var(--color-surface-1);
   --button-border-color-hover: var(--color-text-1);
+  --button-hover-transform: translate(
+    calc(-1 * var(--size-relative-xs)),
+    calc(-1 * var(--size-relative-xs))
+  );
+  --button-hover-shadow: var(--size-relative-xs) var(--size-relative-xs) 0
+    var(--color-text-1);
+
+  --button-height: var(--size-relative-2xl);
+  --button-padding-inline: var(--size-relative-lg);
 
   background-color: var(--button-background);
   color: var(--button-color);
   border-width: var(--border-thin);
   border-color: var(--button-border-color);
   border-style: solid;
-  padding-inline: var(--_input-padding-inline);
-  min-block-size: var(--_input-size);
+  padding-inline: var(--button-padding-inline);
+  min-block-size: var(--button-height);
   padding-block: 0;
   font-family: var(--font-family-mono);
   letter-spacing: var(--tracking-tight);
@@ -185,15 +199,21 @@ legend {
   justify-content: center;
   text-align: center;
   position: relative;
-  transition: box-shadow 0.15s;
+  transition: box-shadow var(--transition-duration) var(--ease-2);
   text-decoration: unset;
-  box-shadow: var(--shadow-default);
+  box-shadow: var(--button-box-shadow);
+  transform: var(--button-transform);
+  will-change: transform;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
 }
 
-:where(button, button[type], input[type="button"], input[type="submit"], input[type="reset"]) {
+:where(button, button[type], input[type="button"], input[type="submit"], input[type="reset"], .CTA-button) {
   &:after {
     content: "" !important;
   }
@@ -202,6 +222,18 @@ legend {
     --button-background: var(--button-background-hover) !important;
     --button-color: var(--button-color-hover) !important;
     --button-border-color: var(--button-border-color-hover) !important;
+    --button-box-shadow: var(--button-hover-shadow) !important;
+    --button-transform: var(--button-hover-transform) !important;
+  }
+
+  &:hover:after {
+    inline-size: calc(100% + var(--size-relative-xs)) !important;
+    block-size: calc(100% + var(--size-relative-xs)) !important;
+    z-index: -1 !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    pointer-events: none !important;
   }
 
   &:active {
@@ -217,33 +249,8 @@ legend {
     --button-border-color-hover: var(--button-border-color);
 
     box-shadow: none !important;
+    transform: none !important;
     filter: contrast(0.64) opacity(0.64);
     cursor: not-allowed;
   }
-
-  &.-secondary {
-    --button-background: var(--color-surface-1);
-    --button-color: var(--color-text-1);
-    --button-border-color: var(--color-text-1);
-
-    --button-background-hover: var(--color-surface-1);
-    --button-color-hover: var(--color-brand-1);
-    --button-border-color-hover: var(--color-brand-1);
-  }
-}
-
-:where(input[type="file"]) {
-  color: var(--color-text-1);
-  background-color: var(--color-surface-1);
-  border: var(--border-thin) solid var(--color-text-2);
-  height: var(--size-relative-2xl);
-  padding-inline-end: var(--size-relative-sm);
-}
-
-:where(input[type="file"])::-webkit-file-upload-button,
-:where(input[type="file"])::file-selector-button {
-  margin-inline-end: var(--size-relative-sm);
-  cursor: pointer;
-  box-shadow: none;
-  min-block-size: calc(var(--button-height) - var(--border-thin));
 }

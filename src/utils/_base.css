@@ -159,6 +159,7 @@
   padding-inline: var(--space-default-horizontal);
   padding-block: var(--space-default-vertical);
   border-radius: 0;
+  border: var(--border-thin) solid var(--color-text-1);
 
   & > *:not(summary):first-of-type {
     margin-block-start: var(--size-relative-md);
@@ -168,10 +169,6 @@
     cursor: pointer;
     color: var(--color-text-1);
     width: 100%;
-  }
-
-  &[open=""] {
-    border: var(--border-thin) solid var(--color-surface-2);
   }
 }
 
