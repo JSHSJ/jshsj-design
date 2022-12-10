@@ -13,7 +13,7 @@
   --button-border-color: var(--color-text-1);
   --button-transform: none;
   --button-box-shadow: none;
-  --transition-duration: 0.2s;
+  --transition-duration: 0.16s;
 
   --button-background-hover: var(--color-brand-1);
   --button-color-hover: var(--color-surface-1);
@@ -47,7 +47,7 @@
   justify-content: center;
   text-align: center;
   position: relative;
-  transition: box-shadow var(--transition-duration) var(--ease-2);
+  transition: box-shadow var(--transition-duration) var(--ease-2), transform var(--transition-duration) var(--ease-2);
   text-decoration: unset;
   box-shadow: var(--button-box-shadow);
   transform: var(--button-transform);
