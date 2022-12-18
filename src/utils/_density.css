@@ -35,7 +35,7 @@ body [data-density-shift] [data-density-shift] {
     --space-away: calc(var(--density) * var(--ratio));
     --button-height: calc(var(--space-near) * 2);
     --shadow-near: calc(var(--density) * 0.2);
-    font-size: var(--density / var(--ratio));
+    font-size: calc(var(--density) / var(--ratio));
 }
 
 body [data-density-shift] [data-density-shift] [data-density-shift] {
@@ -43,5 +43,5 @@ body [data-density-shift] [data-density-shift] [data-density-shift] {
     --space-away: calc(var(--density) * var(--ratio) * 0.5);
     --button-height: calc(var(--space-near) * 2);
     --shadow-near: calc(var(--density) * 0.2);
-    font-size: var(--density / var(--ratio) / var(--ratio));
+    font-size: calc(var(--density) / var(--ratio) / var(--ratio));
 }

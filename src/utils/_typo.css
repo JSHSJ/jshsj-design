@@ -5,7 +5,7 @@
       box-decoration-break: clone;
       padding: var(--space-tiny);
       max-width: max-content;
-      display: inline;
+      display: inline-block;
   }
 }
 
