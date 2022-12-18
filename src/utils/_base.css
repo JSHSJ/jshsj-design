@@ -57,8 +57,6 @@
   font-family: var(--font-family-sans);
   line-height: var(--line-height-base);
   font-style: normal;
-  font-feature-settings: "calt", "liga";
-  font-size: var(--font-size-base);
 }
 
 :where(img, svg, video, canvas, audio, iframe, embed, object) {
@@ -103,13 +101,13 @@
 }
 
 :where(ol, ul) {
-  gap: var(--size-relative-md);
+  gap: var(--space-near);
 }
 
 :where(li, dd) {
   max-inline-size: var(--measure-small);
-  font-size: var(--font-size-base);
-  margin-inline: var(--size-relative-md);
+  font-size: var(--font-size-md);
+  margin-inline: var(--space-near);
 }
 
 :where(dt) {
@@ -124,16 +122,16 @@
 
 :where(dl) {
   & * + * {
-    margin-block-start: var(--size-relative-sm);
+    margin-block-start: var(--space-near);
   }
 
   & * + dt {
-    margin-block-start: var(--size-relative-lg);
+    margin-block-start: var(--space-away)
   }
 }
 
 :where(li > ul, li > ol) {
-  margin-block-start: var(--size-relative-lg);
+  margin-block-start: var(--space-away);
 }
 
 :where(small) {
@@ -150,19 +148,18 @@
   font-weight: var(--font-weight-medium);
   color: var(--color-surface-2);
   background-color: var(--color-text-1);
-  padding: var(--size-relative-sm) var(--size-relative-md);
+  padding: var(--space-near) var(--space-away);
 }
 
 :where(details) {
   width: 100%;
   background-color: var(--color-surface-2);
-  padding-inline: var(--space-default-horizontal);
-  padding-block: var(--space-default-vertical);
+  padding: var(--space-near);
   border-radius: 0;
   border: var(--border-thin) solid var(--color-text-1);
 
   & > *:not(summary):first-of-type {
-    margin-block-start: var(--size-relative-md);
+    margin-block-start: var(--space-away);
   }
 
   & > summary {
@@ -174,13 +171,13 @@
 
 :where(blockquote) {
   display: grid;
-  gap: var(--size-relative-md);
+  gap: var(--space-near);
   margin-inline: 0;
-  padding-inline: var(--space-default-horizontal);
-  padding-block: var(--space-default-vertical);
+  padding-inline: var(--space-near);
+  padding-block: var(--space-away);
   background-color: var(--color-surface-2);
   border: var(--border-thin) solid var(--color-text-1);
-  border-left: var(--size-relative-sm) solid var(--color-text-1);
+  border-left: var(--space-near) solid var(--color-text-1);
 }
 
 :where(hr) {
@@ -220,12 +217,12 @@
 }
 
 :where(h4) {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-md);
   font-weight: var(--font-weight-bold);
 }
 
 :where(h5) {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-md);
   font-weight: var(--font-weight-medium);
 }
 
@@ -268,9 +265,9 @@ mark {
     &:after {
       content: "(Extern)";
       display: inline-block;
-      font-size: calc(100% / var(--ratio));
-      margin-left: var(--size-relative-3xs);
-      margin-right: var(--size-relative-3xs);
+      font-size: var(--font-size-sm);
+      margin-left: var(--space-near);
+      margin-right: var(--space-near);
       transform: translateY(-0.125em);
       text-decoration: none;
       color: inherit;
@@ -321,11 +318,11 @@ mark {
     height: var(--size-relative-xl);
     line-height: var(--size-relative-xl);
     background: var(--color-surface-2);
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-md);
     text-decoration: none;
     color: var(--color-text-1);
     text-align: center;
-    padding-inline: var(--size-relative-md);
+    padding-inline: var(--space-near);
     font-weight: var(--font-weight-medium);
   }
 }
@@ -341,8 +338,8 @@ mark {
 }
 
 :where(pre) {
-  font-size: var(--font-size-base);
-  padding: var(--size-relative-md);
+  font-size: var(--font-size-md);
+  padding: var(--space-near);
   width: 100%;
   max-width: var(--measure-base);
   overflow-x: auto;

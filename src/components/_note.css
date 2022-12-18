@@ -1,7 +1,7 @@
 .note {
-  padding-inline: var(--size-relative-xl);
+  padding-inline: var(--space-away);
   width: 100%;
-  padding-block: var(--gap, var(--space-default-vertical));
+  padding-block: var(--gap, var(--space-near));
   background-color: var(--color-surface-2);
   color: var(--color-text-2);
   position: relative;

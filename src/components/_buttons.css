@@ -19,14 +19,13 @@
   --button-color-hover: var(--color-surface-1);
   --button-border-color-hover: var(--color-text-1);
   --button-hover-transform: translate(
-    calc(-1 * var(--size-relative-xs)),
-    calc(-1 * var(--size-relative-xs))
+    calc(-1 * var(--shadow-near)),
+    calc(-1 * var(--shadow-near))
   );
-  --button-hover-shadow: var(--size-relative-xs) var(--size-relative-xs) 0
+  --button-hover-shadow: var(--shadow-near) var(--shadow-near) 0
     var(--color-text-1);
 
-  --button-height: var(--size-relative-2xl);
-  --button-padding-inline: var(--size-relative-lg);
+  --button-padding-inline: var(--space-near);
 
   background-color: var(--button-background);
   color: var(--button-color);
@@ -39,7 +38,7 @@
   font-family: var(--font-family-mono);
   letter-spacing: var(--tracking-tight);
   font-weight: var(--font-weight-regular);
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-md);
   cursor: pointer;
   display: inline-flex;
   box-sizing: border-box;
@@ -75,8 +74,8 @@
   }
 
   &:hover:after {
-    inline-size: calc(100% + var(--size-relative-xs)) !important;
-    block-size: calc(100% + var(--size-relative-xs)) !important;
+    inline-size: calc(100% + var(--space-near)) !important;
+    block-size: calc(100% + var(--space-near)) !important;
     z-index: -1 !important;
     position: absolute !important;
     top: 0 !important;
@@ -102,12 +101,6 @@
     cursor: not-allowed;
   }
 
-  &.-small {
-    --button-height: var(--size-relative-xl);
-    --button-padding-inline: var(--size-relative-sm);
-    flex-grow: 0;
-    max-height: var(--button-height);
-  }
 
   &.-active {
     background-color: var(--button-background-hover);
@@ -146,13 +139,13 @@
   color: var(--color-text-1);
   background-color: var(--color-surface-1);
   border: var(--border-thin) solid var(--color-text-1);
-  height: var(--size-relative-2xl);
-  padding-inline-end: var(--size-relative-sm);
+  height: var(--button-height);
+  padding-inline-end: var(--space-near);
 }
 
 :where(input[type="file"])::-webkit-file-upload-button,
 :where(input[type="file"])::file-selector-button {
-  margin-inline-end: var(--size-relative-sm);
+  margin-inline-end: var(--space-near);
   cursor: pointer;
   box-shadow: none;
   min-block-size: calc(var(--button-height) - var(--border-thin));
@@ -174,11 +167,12 @@
     align-items: center;
     justify-content: center;
     margin-inline-end: var(--button-padding-inline);
-    block-size: 100%;
+    block-size: 1em;
+    inline-size: 1em;
     font-family: var(--font-family-mono);
     font-size: var(--font-size-lg);
-    padding-inline: var(--size-relative-sm);
     position: relative;
+    transform: translateX(25%);
   }
 
   &:hover:before {

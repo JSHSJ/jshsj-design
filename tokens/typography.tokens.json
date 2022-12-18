@@ -27,36 +27,6 @@
         "name": "bold",
         "$value": "900"
       }
-    },
-    "size": {
-      "sm": {
-        "name": "sm",
-        "$value": "var(--scale--1)"
-      },
-      "base": {
-        "name": "base",
-        "$value": "var(--scale-0)"
-      },
-      "button": {
-        "name": "button",
-        "$value": "var(--scale-0)"
-      },
-      "lg": {
-        "name": "lg",
-        "$value": "var(--scale-1)"
-      },
-      "xl": {
-        "name": "xl",
-        "$value": "var(--scale-2)"
-      },
-      "2xl": {
-        "name": "2xl",
-        "$value": "var(--scale-3)"
-      },
-      "3xl": {
-        "name": "3xl",
-        "$value": "var(--scale-4)"
-      }
     }
   },
   "line-height": {

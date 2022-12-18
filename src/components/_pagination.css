@@ -1,6 +1,6 @@
 .pagination {
   border-top: var(--border-thin) solid var(--color-text-1);
-  padding-top: var(--size-relative-2xl);
+  padding-top: var(--space-away);
   display: flex;
   justify-content: center;
 }
@@ -13,9 +13,9 @@
   font-size: var(--font-size-lg);
   display: grid;
   place-content: center;
-  inline-size: var(--size-relative-xl);
-  block-size: var(--size-relative-xl);
-  padding: var(--size-relative-xs);
+  inline-size: var(--font-size-xl);
+  block-size: var(--font-size-xl);
+  padding: calc(1em / 12);
 
   &[aria-current="page"] {
     color: var(--color-brand-1);

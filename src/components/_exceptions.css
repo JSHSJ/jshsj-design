@@ -7,8 +7,7 @@
 }
 
 .standout-box {
-  padding-block: var(--size-relative-md);
-  padding-inline: var(--size-relative-md);
+  padding: var(--space-near);
   background: var(--color-text-1);
   color: var(--color-surface-1);
 }
@@ -22,6 +21,6 @@
 }
 
 .footnotes {
-  margin-top: var(--scale-3);
-  padding-block: var(--space-default-vertical);
+  margin-top: var(--space-away);
+  padding-block: var(--space-near);
 }
