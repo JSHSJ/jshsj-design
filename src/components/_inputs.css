@@ -38,14 +38,14 @@ legend {
 
 .input-field {
   display: grid;
-  gap: var(--space-near);
+  gap: var(--space-small);
   grid-template-columns: minmax(0, 1fr);
   width: fit-content;
   place-items: start;
   font-size: var(--font-size-md);
 
   & > label {
-    --gap: var(--space-near);
+    --gap: var(--space-tiny);
   }
 }
 
