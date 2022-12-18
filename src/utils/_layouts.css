@@ -1,13 +1,12 @@
 /* Layout classes that handle 80% of the layout*/
 
 .box {
-    padding-inline: var(--gap, var(--space-default-horizontal));
-    padding-block: var(--gap, var(--space-default-vertical));
+    padding: var(--space-near);
 }
 
 .stack {
     display: grid;
-    gap: var(--gap, var(--size-relative-md));
+    gap: var(--gap, var(--space-near));
     grid-template-columns: minmax(0, 1fr);
     align-items: flex-start;
 
