@@ -1,13 +1,7 @@
 .link-with-icon {
-  display: inline-grid;
-  gap: var(--space-near);
-  grid-auto-flow: column;
-  place-items: center;
-
-  & svg {
-    position: relative;
-    top: 0.125em;
-  }
+  display: inline-flex;
+  gap: var(--space-small);
+  align-items: center;
 
   & span {
     display: inline;

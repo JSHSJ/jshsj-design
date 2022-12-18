@@ -2,6 +2,8 @@
     --density: clamp(1.125rem, 0.125vw + 1.12375rem, 1.25rem);
     --ratio: 1.4;
     --font-ratio: 1.4;
+    --space-tiny: calc(1em / 12);
+    --space-small: calc(1em / 4);
 
     --font-size-sm: calc(1em / var(--font-ratio));
     --font-size-md: 1em;
@@ -34,4 +36,12 @@ body [data-density-shift] [data-density-shift] {
     --button-height: calc(var(--space-near) * 2);
     --shadow-near: calc(var(--density) * 0.2);
     font-size: var(--density / var(--ratio));
+}
+
+body [data-density-shift] [data-density-shift] [data-density-shift] {
+    --space-near: calc(var(--density) * var(--ratio) * 0.25);
+    --space-away: calc(var(--density) * var(--ratio) * 0.5);
+    --button-height: calc(var(--space-near) * 2);
+    --shadow-near: calc(var(--density) * 0.2);
+    font-size: var(--density / var(--ratio) / var(--ratio));
 }

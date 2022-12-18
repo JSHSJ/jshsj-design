@@ -1,1 +1,1 @@
-.link-with-icon{display:inline-grid;gap:var(--space-near);grid-auto-flow:column;place-items:center}.link-with-icon svg{position:relative;top:.125em}.link-with-icon span{display:inline}
+.link-with-icon{align-items:center;display:inline-flex;gap:var(--space-small)}.link-with-icon span{display:inline}

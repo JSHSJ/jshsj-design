@@ -15,7 +15,7 @@
   place-content: center;
   inline-size: var(--font-size-xl);
   block-size: var(--font-size-xl);
-  padding: calc(1em / 12);
+  padding: var(--space-tiny);
 
   &[aria-current="page"] {
     color: var(--color-brand-1);

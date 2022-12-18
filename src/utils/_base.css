@@ -266,8 +266,8 @@ mark {
       content: "(External)";
       display: inline-block;
       font-size: var(--font-size-sm);
-      margin-left: calc(1em / 12);
-      margin-right: calc(1em / 12);
+      margin-left: var(--space-tiny);
+      margin-right: var(--space-tiny);
       transform: translateY(calc(-1em / 12));
       text-decoration: none;
       color: inherit;
