@@ -3,7 +3,7 @@
       color: var(--color-surface-1);
       background: var(--color-text-1);
       box-decoration-break: clone;
-      padding: var(--space-near);
+      padding: calc(1em / 4);
       max-width: max-content;
       display: inline;
   }

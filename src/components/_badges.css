@@ -6,7 +6,7 @@
   font-weight: var(--font-weight-regular);
   color: var(--color);
   border: var(--border-thin) solid var(--color);
-  padding: var(--space-near) var(--space-away);
+  padding: calc(1em / 4);
   text-transform: lowercase;
   width: max-content;
   max-width: max-content;
