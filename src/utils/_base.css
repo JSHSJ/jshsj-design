@@ -263,12 +263,12 @@ mark {
   &[href^="https://"], &[href^="http://"], &[data-external]
   {
     &:after {
-      content: "(Extern)";
+      content: "(External)";
       display: inline-block;
       font-size: var(--font-size-sm);
-      margin-left: var(--space-near);
-      margin-right: var(--space-near);
-      transform: translateY(-0.125em);
+      margin-left: calc(1em / 12);
+      margin-right: calc(1em / 12);
+      transform: translateY(calc(-1em / 12));
       text-decoration: none;
       color: inherit;
       opacity: 0.8;

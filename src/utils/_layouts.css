@@ -24,7 +24,7 @@
 }
 
 .flow > * + * {
-    margin-block-start: var(--gap, var(--space-away));
+    margin-block-start: var(--gap, var(--space-near));
 }
 
 .flow > *:is(h1,h2,h3,h4,h5,h6) {

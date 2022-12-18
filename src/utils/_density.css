@@ -1,13 +1,14 @@
 :root {
     --density: clamp(1.125rem, 0.125vw + 1.12375rem, 1.25rem);
     --ratio: 1.4;
-    --font-ratio: 1.2;
+    --font-ratio: 1.4;
 
     --font-size-sm: calc(1em / var(--font-ratio));
     --font-size-md: 1em;
     --font-size-lg: calc(1em * var(--font-ratio));
     --font-size-xl: calc(1em * var(--font-ratio) * var(--font-ratio));
     --font-size-2xl: calc(1em * var(--font-ratio) * var(--font-ratio) * var(--font-ratio));
+    --font-size-3xl: calc(1em * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio));
 }
 
 body {
