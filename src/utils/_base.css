@@ -87,6 +87,12 @@
   letter-spacing: inherit;
 }
 
+:where(label:not(class) + input, label:not(class) + select, label:not(class) + textarea) {
+  display: block;
+  margin-top: var(--space-small);
+}
+
+
 :where(p, li, dd, dt, summary) {
   max-inline-size: var(--measure-base);
   font-size: inherit;
@@ -126,13 +132,19 @@
   }
 
   & * + dt {
-    margin-block-start: var(--space-away)
+    margin-block-start: calc(var(--space-near) + var(--space-small));
   }
 }
 
 :where(li > ul, li > ol) {
-  margin-block-start: var(--space-away);
+  margin-block-start: var(--space-near);
 }
+
+li:has(ul) + li, li:has(ol) + li {
+    margin-block-start: calc(var(--space-near) + var(--space-small));
+}
+
+
 
 :where(small) {
   font-size: var(--font-size-sm);
@@ -148,7 +160,7 @@
   font-weight: var(--font-weight-medium);
   color: var(--color-surface-2);
   background-color: var(--color-text-1);
-  padding: var(--space-near) var(--space-away);
+  padding: var(--space-small) var(--space-near);
 }
 
 :where(details) {
@@ -173,8 +185,7 @@
   display: grid;
   gap: var(--space-near);
   margin-inline: 0;
-  padding-inline: var(--space-near);
-  padding-block: var(--space-away);
+  padding: var(--space-near);
   background-color: var(--color-surface-2);
   border: var(--border-thin) solid var(--color-text-1);
   border-left: var(--space-near) solid var(--color-text-1);

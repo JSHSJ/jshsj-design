@@ -1,5 +1,5 @@
 .note {
-  padding-inline: var(--space-away);
+  padding-inline: var(--space-near);
   width: 100%;
   padding-block: var(--gap, var(--space-near));
   background-color: var(--color-surface-2);
