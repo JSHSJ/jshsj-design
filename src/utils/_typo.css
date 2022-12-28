@@ -1,11 +1,11 @@
 .typo-hollow {
-    & > span {
-      color: var(--color-surface-1);
-      background: var(--color-text-1);
-      box-decoration-break: clone;
-      padding: var(--space-tiny);
-      max-width: max-content;
-      display: inline-block;
+  & > span {
+    color: var(--color-surface-strong);
+    background: var(--color-text-strong);
+    box-decoration-break: clone;
+    padding: var(--space-tiny);
+    max-width: max-content;
+    display: inline-block;
   }
 }
 
@@ -16,7 +16,6 @@
 .font-mono {
   font-family: var(--font-family-mono);
 }
-
 
 .typo-2xl {
   font-size: var(--font-size-2xl);

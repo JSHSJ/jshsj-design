@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/fonts/fonts.css" />
   </head>
   <body>
-    <div id="top" role="document" class="layout-container stack -layout-2xl" data-density-shift>
+    <div id="top" role="document" class="layout-container stack -layout-away" data-density-shift>
       <header>
         <h1>HTML5 Test Page</h1>
         <p>
@@ -81,8 +81,8 @@
           </li>
         </ul>
       </nav>
-      <main class="stack -layout-2xl">
-        <section id="text" class="stack -layout-lg">
+      <main class="stack -layout-away">
+        <section id="text" class="stack -layout-away">
           <header><h1>Text</h1></header>
           <article id="text__headings">
             <header>
@@ -137,9 +137,9 @@
               <p><a href="#top">[Top]</a></p>
             </footer>
           </article>
-          <article id="text__lists" class="stack -layout-lg">
+          <article id="text__lists" class="stack -layout-away">
             <header><h2>Lists</h2></header>
-            <div class="stack -layout-lg">
+            <div class="stack -layout-away">
               <h3>Definition list</h3>
               <dl>
                 <dt>Definition List Title</dt>
@@ -444,11 +444,11 @@ P R E F O R M A T T E D T E X T
             </footer>
           </article>
         </section>
-        <section id="embedded" class="stack -layout-lg">
+        <section id="embedded" class="stack -layout-away">
           <header><h2>Embedded content</h2></header>
-          <article id="embedded__images" class="stack -layout-lg">
+          <article id="embedded__images" class="stack -layout-away">
             <header><h2>Images</h2></header>
-            <div class="stack -layout-lg">
+            <div class="stack -layout-away">
               <h3>Plain <code>&lt;img&gt;</code> element</h3>
               <p>
                 <img
@@ -476,7 +476,7 @@ P R E F O R M A T T E D T E X T
                   src="https://placekitten.com/420/420"
                   alt="Photo of a kitten"
                 />
-                <figcaption>Here is a caption for this image.</figcaption>
+                <figcaption>Here is a caption for this image with <a href="#">Link</a>.</figcaption>
               </figure>
               <h3>
                 <code>&lt;figure&gt;</code> element with a
@@ -596,10 +596,10 @@ P R E F O R M A T T E D T E X T
             </footer>
           </article>
         </section>
-        <section id="forms" class="stack -layout-lg">
+        <section id="forms" class="stack -layout-away">
           <header><h2>Form elements</h2></header>
-          <form class="stack -layout-lg">
-            <fieldset id="forms__input" class="stack -layout-md">
+          <form class="stack -layout-away">
+            <fieldset id="forms__input" class="stack -layout-near">
               <legend>Input fields</legend>
               <p>
                 <label for="input__text">Text Input</label>
@@ -659,7 +659,7 @@ P R E F O R M A T T E D T E X T
               </p>
             </fieldset>
             <p><a href="#top">[Top]</a></p>
-            <fieldset id="forms__select" class="stack -layout-md">
+            <fieldset id="forms__select" class="stack -layout-near">
               <legend>Select menus</legend>
               <p>
                 <label for="select">Select</label>
@@ -754,7 +754,7 @@ P R E F O R M A T T E D T E X T
               </p>
             </fieldset>
             <p><a href="#top">[Top]</a></p>
-            <fieldset id="forms__html5" class="stack -layout-md">
+            <fieldset id="forms__html5" class="stack -layout-near">
               <legend>HTML5 inputs</legend>
               <p>
                 <label for="ic">Color input</label>
@@ -821,16 +821,16 @@ P R E F O R M A T T E D T E X T
             <p><a href="#top">[Top]</a></p>
           </form>
         </section>
-        <section class="stack -layout-lg">
+        <section class="stack -layout-away">
           <h2 id="components">Components</h2>
-          <p class="note">
+          <p class="note -layout-reset">
             Inspect the HTML in your browser for implementation details
           </p>
           <fieldset>
             <legend id="components__headlines">Special headlines</legend>
             <h3 class="-with-dot">Special headline <code>-with-dot</code></h3>
           </fieldset>
-          <fieldset class="stack -layout-md">
+          <fieldset class="stack -layout-near">
             <legend id="components__inputs">Inputs</legend>
             <div class="input-field">
               <label for="some-input" class="stack">
@@ -958,7 +958,7 @@ P R E F O R M A T T E D T E X T
           </fieldset>
           <fieldset>
             <legend id="components__note">Note</legend>
-            <div class="stack -layout-m">
+            <div class="stack -layout-near">
               <div class="note -info">Info note</div>
               <div class="note -warning">Warning note</div>
             </div>
@@ -966,7 +966,7 @@ P R E F O R M A T T E D T E X T
           <fieldset>
             <legend id="components__pagination">Pagination</legend>
             <div class="pagination">
-              <nav class="cluster -layout-xs | pagination-nav">
+              <nav class="cluster | pagination-nav">
                 <a
                   href="#"
                   class="pagination-element pagination-icon"
@@ -1053,7 +1053,7 @@ P R E F O R M A T T E D T E X T
             <legend>Stack</legend>
             <p class="note">A vertical stack of items with spacing between.</p>
             <div
-              class="stack -layout-l"
+              class="stack -layout-near"
               style="border: 1px solid var(--color-brand-2)"
             >
               <p>element 1</p>
@@ -1064,7 +1064,7 @@ P R E F O R M A T T E D T E X T
             <legend>Cluster</legend>
             <p class="note">A automatically wrapping container</p>
             <div
-              class="cluster -layout-l"
+              class="cluster -layout-near"
               style="border: 1px solid var(--color-brand-2)"
             >
               <p>element</p>
@@ -1088,7 +1088,7 @@ P R E F O R M A T T E D T E X T
               way
             </p>
             <div
-              class="-layout-reset flow"
+              class="flow"
               style="border: 1px solid var(--color-brand-2)"
             >
               <h1>h1 element</h1>
@@ -1116,7 +1116,7 @@ P R E F O R M A T T E D T E X T
             </p>
             <div
               class="with-sidebar"
-              style="border: 1px solid var(--color-brand-2)"
+              style="border: 1px solid var(--color-brand-strong)"
             >
               <div data-grow style="--min-size: 60%">
                 <h1>h1 element</h1>
@@ -1126,6 +1126,22 @@ P R E F O R M A T T E D T E X T
                 <img src="https://jooinn.com/images1280_/dogs.jpg" />
                 <figcaption>Dogs</figcaption>
               </figure>
+            </div>
+          </fieldset>
+        </section>
+        <section>
+          <fieldset>
+            <legend>Density</legend>
+            <p class="note">
+              The density of the elements can be changed with the
+            </p>
+            <p class="note" data-density-shift>
+              The density of the elements can be changed with the
+            </p>
+            <div data-density-shift>
+            <p class="note" data-density-shift>
+              The density of the elements can be changed with the
+            </p>
             </div>
           </fieldset>
         </section>

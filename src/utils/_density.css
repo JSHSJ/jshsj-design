@@ -1,47 +1,55 @@
 :root {
-    --density: clamp(1.125rem, 0.125vw + 1.12375rem, 1.25rem);
-    --ratio: 1.4;
-    --font-ratio: 1.4;
+    --density: 1em;
     --space-tiny: calc(1em / 12);
     --space-small: calc(1em / 4);
 
-    --font-size-sm: calc(1em / var(--font-ratio));
-    --font-size-md: 1em;
-    --font-size-lg: calc(1em * var(--font-ratio));
-    --font-size-xl: calc(1em * var(--font-ratio) * var(--font-ratio));
-    --font-size-2xl: calc(1em * var(--font-ratio) * var(--font-ratio) * var(--font-ratio));
-    --font-size-3xl: calc(1em * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio));
+    --scale--2: clamp(0.78125rem, -0.17812499999999998vw + 0.7825rem, 0.603125rem);
+    --scale--1: clamp(0.9375rem, -0.06937499999999996vw + 0.938125rem, 0.868125rem);
+    --scale-0: clamp(1.125rem, 0.125vw + 1.12375rem, 1.25rem);
+    --scale-1: clamp(1.35rem, 0.44999999999999996vw + 1.34375rem, 1.8rem);
+    --scale-2: clamp(1.62rem, 0.9718749999999998vw + 1.604375rem, 2.591875rem);
+    --scale-3: clamp(1.94375rem, 1.7887499999999996vw + 1.90875rem, 3.7325rem);
+    --scale-4: clamp(2.3325rem, 3.0425vw + 2.26125rem, 5.375rem);
+    --scale-5: clamp(2.799375rem, 4.9399999999999995vw + 2.66125rem, 7.739375rem);
+
+    --font-size-xs: var(--scale--2);
+    --font-size-sm: var(--scale--1);
+    --font-size-md: var(--scale-0);
+    --font-size-lg: var(--scale-1);
+    --font-size-xl: var(--scale-2);
+    --font-size-2xl: var(--scale-3);
+    --font-size-3xl: var(--scale-4);
 }
 
 body {
-    --space-near: calc(var(--density)* var(--ratio) * 2);
-    --space-away: calc(var(--density) * var(--ratio) * 3);
-    --button-height: calc(var(--space-near) * 2);
+    --space-near: calc(var(--density) * 2);
+    --space-away: calc(var(--density) * 3);
+    --button-height: calc(var(--space-near) * 2 + 2 * var(--space-small));
     --shadow-near: calc(var(--density) * 0.2);
-    font-size: calc(var(--density) * var(--ratio));
+    font-size: var(--font-size-lg);
 }
 
 
 body [data-density-shift] {
-    --space-near: calc(var(--density) * var(--ratio));
-    --space-away: calc(var(--density) * var(--ratio) * 2);
-    --button-height: calc(var(--space-near) * 2);
+    --space-near: var(--density);
+    --space-away: calc(var(--density) * 2);
+    --button-height: calc(var(--space-near) * 2 + 2 * var(--space-small));
     --shadow-near: calc(var(--density) * 0.2);
-    font-size: var(--density);
+    font-size: var(--font-size-md);
 }
 
 body [data-density-shift] [data-density-shift] {
-    --space-near: calc(var(--density) * var(--ratio) * 0.5);
-    --space-away: calc(var(--density) * var(--ratio));
-    --button-height: calc(var(--space-near) * 2);
+    --space-near: calc(var(--density) * 0.5);
+    --space-away: var(--density);
+    --button-height: calc(var(--space-near) * 2 + 2 * var(--space-small));
     --shadow-near: calc(var(--density) * 0.2);
-    font-size: calc(var(--density) / var(--ratio));
+    font-size: var(--font-size-sm);
 }
 
 body [data-density-shift] [data-density-shift] [data-density-shift] {
-    --space-near: calc(var(--density) * var(--ratio) * 0.25);
-    --space-away: calc(var(--density) * var(--ratio) * 0.5);
-    --button-height: calc(var(--space-near) * 2);
+    --space-near: calc(var(--density) * 0.25);
+    --space-away: calc(var(--density) * 0.5);
+    --button-height: calc(var(--space-near) * 2 + 2 * var(--space-small));
     --shadow-near: calc(var(--density) * 0.2);
-    font-size: calc(var(--density) / var(--ratio) / var(--ratio));
+    font-size: var(--font-size-xs);
 }

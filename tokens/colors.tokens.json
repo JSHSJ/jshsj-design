@@ -1,77 +1,68 @@
 {
-  "config": {
-    "brand": {
-      "hue": {
-        "name": "hue",
-        "$value": "336",
-        "comment": "Base hue of the brand. Colors are calculated based on this value."
-      }
-    }
-  },
   "color": {
     "text": {
       "light": {
-        "1": {
-          "name": "light-1",
-          "$value": "oklch(13.82% 0.06 10.48)"
-        },
-        "2": {
-          "name": "light-2",
+        "subtle": {
+          "name": "light-subtle",
           "$value": "oklch(40.88% 0.013 10.48)"
+        },
+        "strong": {
+          "name": "light-strong",
+          "$value": "oklch(13.82% 0.06 10.48)"
         }
       },
       "dark": {
-        "1": {
-          "name": "dark-1",
-          "$value": "oklch(97.65% 0.013 10.48)"
+        "subtle": {
+          "name": "dark-subtle",
+          "$value": "oklch(88.06% 0.008 10.48)"
         },
-        "2": {
-          "name": "dark-2",
-          "$value": "oklch(90.06% 0.008 10.48)"
+        "strong": {
+          "name": "dark-strong",
+          "$value": "oklch(97.65% 0.013 10.48)"
         }
       }
     },
     "surface": {
       "light": {
-        "1": {
-          "name": "light-1",
+        "subtle": {
+          "name": "light-subtle",
           "$value": "oklch(98.0% 0.002 10.48)"
         },
-        "2": {
-          "name": "light-2",
+        "strong": {
+          "name": "light-strong",
           "$value": "oklch(100% 0.006 10.48)"
         }
       },
       "dark": {
-        "1": {
-          "name": "dark-1",
-          "$value": "oklch(12.00% 0.012 10.48)"
+        "subtle": {
+          "name": "dark-subtle",
+          "$value": "oklch(16.00% 0.012 10.48)"
         },
-        "2": {
-          "name": "dark-2",
-          "$value": "oklch(0% 0.006 10.48)"
+        "strong": {
+          "name": "dark-strong",
+          "$value": "oklch(1% 0.006 10.48)"
         }
       }
     },
     "brand": {
       "light": {
-        "1": {
-          "name": "light-1",
-          "$value": "oklch(60% 0.289 10.48)"
-        },
-        "2": {
-          "name": "light-2",
+        "subtle": {
+          "name": "light-subtle",
           "$value": "oklch(48% 0.289 10.48)"
+        },
+        "strong": {
+          "name": "light-strong",
+          "$value": "oklch(60% 0.289 10.48)"
         }
       },
       "dark": {
-        "1": {
-          "name": "dark-1",
-          "$value": "oklch(60% 0.289 10.48)"
-        },
-        "2": {
-          "name": "dark-2",
+        "subtle": {
+          "name": "dark-subtle",
           "$value": "oklch(72% 0.289 10.48)"
+        },
+        "strong": {
+          "name": "dark-strong",
+          "$value": "oklch(60% 0.289 10.48)"
         }
       }
     },
@@ -79,7 +70,7 @@
       "light": {
         "background": {
           "name": "light-background",
-          "$value": "var(--color-surface-light-2)"
+          "$value": "var(--color-surface-light-subtle)"
         },
         "keyword": {
           "name": "light-keyword",
@@ -91,7 +82,7 @@
         },
         "punctuation": {
           "name": "light-punctuation",
-          "$value": "var(--color-brand-light-1)"
+          "$value": "var(--color-brand-light-strong)"
         },
         "operator": {
           "name": "light-operator",
@@ -99,17 +90,17 @@
         },
         "tag": {
           "name": "light-tag",
-          "$value": "var(--color-brand-light-2)"
+          "$value": "var(--color-brand-light-strong)"
         },
         "plain": {
           "name": "light-plain",
-          "$value": "var(--color-text-light-1)"
+          "$value": "var(--color-text-light-subtle)"
         }
       },
       "dark": {
         "background": {
           "name": "dark-background",
-          "$value": "var(--color-surface-dark-2)"
+          "$value": "var(--color-surface-dark-strong)"
         },
         "keyword": {
           "name": "dark-keyword",
@@ -117,11 +108,11 @@
         },
         "string": {
           "name": "dark-string",
-          "$value": "klch(64% 0.289 10.48)"
+          "$value": "oklch(64% 0.289 10.48)"
         },
         "punctuation": {
           "name": "dark-punctuation",
-          "$value": "var(--color-brand-dark-1)"
+          "$value": "var(--color-brand-dark-subtle)"
         },
         "operator": {
           "name": "dark-operator",
@@ -129,11 +120,11 @@
         },
         "tag": {
           "name": "dark-tag",
-          "$value": "var(--color-brand-light-2)"
+          "$value": "var(--color-brand-light-strong)"
         },
         "plain": {
           "name": "dark-plain",
-          "$value": "var(--color-text-dark-1)"
+          "$value": "var(--color-text-dark-subtle)"
         }
       }
     },

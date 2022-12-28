@@ -2,7 +2,7 @@
 :after,
 :before {
   box-sizing: border-box;
-  accent-color: var(--color-brand-1);
+  accent-color: var(--color-brand-strong);
 }
 
 :where(:not(dialog)) {
@@ -25,7 +25,7 @@
   }
 }
 :where(:focus-visible, :focus) {
-  outline: var(--scale--5) solid var(--color-brand-1);
+  outline: var(--scale--5) solid var(--color-brand-strong);
   outline-offset: 0.64ch;
 }
 
@@ -51,8 +51,8 @@
 
   font-weight: var(--font-weight-regular);
 
-  color: var(--color-text-2);
-  background-color: var(--color-surface-1);
+  color: var(--color-text-subtle);
+  background-color: var(--color-surface-subtle);
 
   font-family: var(--font-family-sans);
   line-height: var(--line-height-base);
@@ -74,7 +74,17 @@
   place-items: center;
 }
 
-:where(a[href], area, button, input, label[for], select, summary, textarea, [tabindex]:not([tabindex*="-"])) {
+:where(
+    a[href],
+    area,
+    button,
+    input,
+    label[for],
+    select,
+    summary,
+    textarea,
+    [tabindex]:not([tabindex*="-"])
+  ) {
   cursor: pointer;
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
@@ -87,11 +97,14 @@
   letter-spacing: inherit;
 }
 
-:where(label:not(class) + input, label:not(class) + select, label:not(class) + textarea) {
+:where(
+    label:not(class) + input,
+    label:not(class) + select,
+    label:not(class) + textarea
+  ) {
   display: block;
   margin-top: var(--space-small);
 }
-
 
 :where(p, li, dd, dt, summary) {
   max-inline-size: var(--measure-base);
@@ -118,12 +131,12 @@
 
 :where(dt) {
   font-weight: var(--font-weight-regular);
-  color: var(--color-text-2);
+  color: var(--color-text-subtle);
 }
 
 :where(dd) {
   font-weight: var(--font-weight-medium);
-  color: var(--color-text-1);
+  color: var(--color-text-strong);
 }
 
 :where(dl) {
@@ -140,35 +153,30 @@
   margin-block-start: var(--space-near);
 }
 
-li:has(ul) + li, li:has(ol) + li {
-    margin-block-start: calc(var(--space-near) + var(--space-small));
+li:has(ul) + li,
+li:has(ol) + li {
+  margin-block-start: calc(var(--space-near) + var(--space-small));
 }
-
-
 
 :where(small) {
   font-size: var(--font-size-sm);
-}
-
-:where(sup, small) {
-  color: var(--color-text-2);
 }
 
 :where(figcaption) {
   display: block;
   font-family: var(--font-family-sans);
   font-weight: var(--font-weight-medium);
-  color: var(--color-surface-2);
-  background-color: var(--color-text-1);
+  color: var(--color-surface-subtle);
+  background-color: var(--color-text-strong);
   padding: var(--space-small) var(--space-near);
 }
 
 :where(details) {
   width: 100%;
-  background-color: var(--color-surface-2);
+  background-color: var(--color-surface-strong);
   padding: var(--space-near);
   border-radius: 0;
-  border: var(--border-thin) solid var(--color-text-1);
+  border: var(--border-thin) solid var(--color-text-strong);
 
   & > *:not(summary):first-of-type {
     margin-block-start: var(--space-away);
@@ -176,7 +184,7 @@ li:has(ul) + li, li:has(ol) + li {
 
   & > summary {
     cursor: pointer;
-    color: var(--color-text-1);
+    color: var(--color-text-strong);
     width: 100%;
   }
 }
@@ -186,21 +194,21 @@ li:has(ul) + li, li:has(ol) + li {
   gap: var(--space-near);
   margin-inline: 0;
   padding: var(--space-near);
-  background-color: var(--color-surface-2);
-  border: var(--border-thin) solid var(--color-text-1);
-  border-left: var(--space-near) solid var(--color-text-1);
+  background-color: var(--color-surface-strong);
+  border: var(--border-thin) solid var(--color-text-strong);
+  border-left: var(--space-near) solid var(--color-text-strong);
 }
 
 :where(hr) {
   width: 100%;
   height: var(--border-thick);
   border: none;
-  background-color: var(--color-text-2);
+  background-color: var(--color-text-strong);
 }
 
 :where(h1, h2, h3, h4, h5, h6) {
   line-height: var(--line-height-small);
-  color: var(--color-text-1);
+  color: var(--color-text-strong);
   overflow-wrap: break-word;
   max-width: 100%;
   hyphens: auto;
@@ -243,17 +251,17 @@ li:has(ul) + li, li:has(ol) + li {
 }
 
 ::marker {
-  color: var(--color-brand-1);
+  color: var(--color-brand-strong);
 }
 
 ::selection,
 mark {
-  background-color: var(--color-brand-1);
-  color: var(--color-surface-1);
+  background-color: var(--color-brand-strong);
+  color: var(--color-surface-strong);
 }
 
 :where(a, .link) {
-  color: var(--color-text-1);
+  color: inherit;
   font-family: var(--font-family-mono);
   text-decoration: underline;
   text-underline-offset: 0.15em;
@@ -264,11 +272,11 @@ mark {
   letter-spacing: var(--tracking-tight);
 
   &:visited {
-    color: var(--color-text-2);
+    color: var(--color-text-subtle);
   }
 
   &:hover {
-    text-decoration-color: var(--color-brand-1);
+    text-decoration-color: var(--color-brand-strong);
   }
 
   &[href^="https://"], &[href^="http://"], &[data-external]
@@ -279,7 +287,7 @@ mark {
       font-size: var(--font-size-sm);
       margin-left: var(--space-tiny);
       margin-right: var(--space-tiny);
-      transform: translateY(calc(-1em / 12));
+      transform: translateY(calc(var(--space-tiny) * -1));
       text-decoration: none;
       color: inherit;
       opacity: 0.8;
@@ -326,20 +334,20 @@ mark {
     -webkit-clip-path: none;
     clip-path: none;
     z-index: 999;
-    height: var(--size-relative-xl);
-    line-height: var(--size-relative-xl);
-    background: var(--color-surface-2);
+    height: var(--button-height);
+    line-height: var(--button-height);
+    background: var(--color-surface-strong);
     font-size: var(--font-size-md);
     text-decoration: none;
-    color: var(--color-text-1);
+    color: var(--color-text-strong);
     text-align: center;
     padding-inline: var(--space-near);
     font-weight: var(--font-weight-medium);
   }
 }
 #content-start:focus {
-  background: var(--color-surface-2);
-  color: var(--color-text-1);
+  background: var(--color-surface-strong);
+  color: var(--color-text-strong);
 }
 
 :where(code) {
@@ -354,10 +362,10 @@ mark {
   width: 100%;
   max-width: var(--measure-base);
   overflow-x: auto;
-  color: var(--color-text-2);
-  border: var(--border-thick) solid var(--color-text-2);
+  color: var(--color-text-strong);
+  border: var(--border-thick) solid var(--color-text-strong);
 }
 
 [data-footnote-ref] {
-  color: var(--color-brand-1);
+  color: var(--color-brand-strong);
 }

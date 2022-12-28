@@ -4,26 +4,32 @@
   background: none;
 }
 
-:where(button, button[type], input[type="button"], input[type="submit"], input[type="reset"]),
+:where(
+    button,
+    button[type],
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"]
+  ),
 :where(input[type="file"])::-webkit-file-upload-button,
 :where(input[type="file"])::file-selector-button,
 .CTA-button {
-  --button-background: var(--color-text-1);
-  --button-color: var(--color-surface-2);
-  --button-border-color: var(--color-text-1);
+  --button-background: var(--color-text-strong);
+  --button-color: var(--color-surface-subtle);
+  --button-border-color: var(--color-text-strong);
   --button-transform: none;
   --button-box-shadow: none;
   --transition-duration: 0.16s;
 
-  --button-background-hover: var(--color-brand-1);
-  --button-color-hover: var(--color-surface-1);
-  --button-border-color-hover: var(--color-text-1);
+  --button-background-hover: var(--color-brand-strong);
+  --button-color-hover: var(--color-surface-strong);
+  --button-border-color-hover: var(--color-text-strong);
   --button-hover-transform: translate(
     calc(-1 * var(--shadow-near)),
     calc(-1 * var(--shadow-near))
   );
   --button-hover-shadow: var(--shadow-near) var(--shadow-near) 0
-    var(--color-text-1);
+    var(--color-text-strong);
 
   --button-padding-inline: var(--space-near);
 
@@ -46,7 +52,8 @@
   justify-content: center;
   text-align: center;
   position: relative;
-  transition: box-shadow var(--transition-duration) var(--ease-2), transform var(--transition-duration) var(--ease-2);
+  transition: box-shadow var(--transition-duration) var(--ease-2),
+    transform var(--transition-duration) var(--ease-2);
   text-decoration: unset;
   box-shadow: var(--button-box-shadow);
   transform: var(--button-transform);
@@ -60,7 +67,14 @@
   }
 }
 
-:where(button, button[type], input[type="button"], input[type="submit"], input[type="reset"], .CTA-button) {
+:where(
+    button,
+    button[type],
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"],
+    .CTA-button
+  ) {
   &:after {
     content: "" !important;
   }
@@ -90,9 +104,9 @@
   &[disabled] {
     --button-background: none !important;
     --button-background-hover: none !important;
-    --button-color: var(--color-text-2) !important;
+    --button-color: var(--color-text-subtle) !important;
     --button-color-hover: var(--button-color) !important;
-    --button-border-color: var(--color-text-2) !important;
+    --button-border-color: var(--color-text-subtle) !important;
     --button-border-color-hover: var(--button-border-color);
 
     box-shadow: none !important;
@@ -100,7 +114,6 @@
     filter: contrast(0.64) opacity(0.64);
     cursor: not-allowed;
   }
-
 
   &.-active {
     background-color: var(--button-background-hover);
@@ -112,22 +125,22 @@
   }
 
   &.-secondary {
-    --button-background: var(--color-surface-2);
-    --button-color: var(--color-text-2);
-    --button-border-color: var(--color-text-1);
+    --button-background: var(--color-surface-subtle);
+    --button-color: var(--color-text-subtle);
+    --button-border-color: var(--color-text-strong);
 
-    --button-background-hover: var(--color-surface-2);
-    --button-color-hover: var(--color-text-1);
-    --button-border-color-hover: var(--color-text-1);
+    --button-background-hover: var(--color-surface-subtle);
+    --button-color-hover: var(--color-text-strong);
+    --button-border-color-hover: var(--color-text-strong);
   }
 
   &.-stealth {
     --button-background: transparent;
-    --button-color: var(--color-text-1);
+    --button-color: var(--color-text-strong);
     --button-border-color: transparent;
 
     --button-background-hover: transparent;
-    --button-color-hover: var(--color-brand-1);
+    --button-color-hover: var(--color-brand-strong);
     --button-border-color-hover: transparent;
 
     box-shadow: none !important;
@@ -136,9 +149,9 @@
 }
 
 :where(input[type="file"]) {
-  color: var(--color-text-1);
-  background-color: var(--color-surface-1);
-  border: var(--border-thin) solid var(--color-text-1);
+  color: var(--color-text-strong);
+  background-color: var(--color-surface-strong);
+  border: var(--border-thin) solid var(--color-text-strong);
   height: var(--button-height);
   padding-inline-end: var(--space-near);
 }
@@ -150,7 +163,7 @@
   box-shadow: none;
   min-block-size: calc(var(--button-height) - var(--border-thin));
   border: none;
-  border-inline-end: var(--border-thin) solid var(--color-text-1);
+  border-inline-end: var(--border-thin) solid var(--color-text-strong);
 }
 
 :where(button[type="reset"], .CTA-button.-destructive) {

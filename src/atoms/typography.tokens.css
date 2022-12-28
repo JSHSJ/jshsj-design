@@ -5,10 +5,10 @@
  	--font-weight-bold: 900;
  	--font-weight-medium: 600;
  	--font-weight-regular: 400;
- 	--line-height-base: 1.64;
- 	--line-height-small: 1.24;
- 	--measure-base: 64ch;
- 	--measure-small: 48ch;
+ 	--line-height-base: 1.728;
+ 	--line-height-small: 1.2;
+ 	--measure-base: 72ch;
+ 	--measure-small: 44ch;
  	--tracking-standard: normal;
  	--tracking-tight: -0.04em;
  	--tracking-wide: 0.06em;

@@ -107,3 +107,27 @@
         column-gap: var(--gap, var(--space-away));
     }
 }
+
+.-layout-away {
+    --gap: var(--space-away);
+}
+
+.-layout-near {
+    --gap: var(--space-near);
+}
+
+.layout-small {
+    --gap: var(--space-small);
+}
+
+.layout-tiny {
+    --gap: var(--space-tiny);
+}
+
+.-layout-none {
+    --gap: 0;
+}
+
+.layout-reset {
+    --gap: unset;
+}

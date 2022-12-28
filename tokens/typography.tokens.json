@@ -32,21 +32,21 @@
   "line-height": {
     "base": {
       "name": "base",
-      "$value": "1.64"
+      "$value": "1.728"
     },
     "small": {
       "name": "small",
-      "$value": "1.24"
+      "$value": "1.2"
     }
   },
   "measure": {
     "base": {
       "name": "base",
-      "$value": "64ch"
+      "$value": "72ch"
     },
     "small": {
       "name": "small",
-      "$value": "48ch"
+      "$value": "44ch"
     }
   },
   "tracking": {

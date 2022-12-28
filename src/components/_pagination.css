@@ -1,5 +1,5 @@
 .pagination {
-  border-top: var(--border-thin) solid var(--color-text-1);
+  border-top: var(--border-thin) solid var(--color-text-strong);
   padding-top: var(--space-away);
   display: flex;
   justify-content: center;
@@ -18,14 +18,14 @@
   padding: var(--space-tiny);
 
   &[aria-current="page"] {
-    color: var(--color-brand-1);
+    color: var(--color-brand-strong);
     --font-weight: var(--font-weight-bold);
   }
 }
 
 .pagination-icon {
   &:hover:not([aria-disabled]) {
-    color: var(--color-brand-1);
+    color: var(--color-brand-strong);
   }
 
   & > svg {
