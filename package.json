@@ -1,6 +1,6 @@
 {
   "name": "@jshsj/design",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Reusable design token and classes",
   "main": "index.js",
   "repository": {
