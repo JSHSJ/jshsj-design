@@ -44,7 +44,7 @@
   font-family: var(--font-family-mono);
   letter-spacing: var(--tracking-tight);
   font-weight: var(--font-weight-regular);
-  font-size: var(--font-size-md);
+  font-size: inherit;
   cursor: pointer;
   display: inline-flex;
   box-sizing: border-box;

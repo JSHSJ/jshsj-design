@@ -41,7 +41,6 @@ legend {
   grid-template-columns: minmax(0, 1fr);
   width: fit-content;
   place-items: start;
-  font-size: var(--font-size-md);
 
   & > label {
     --gap: var(--space-tiny);
@@ -55,7 +54,7 @@ legend {
   font-weight: var(--font-weight-regular);
   color: var(--color-text-strong);
   display: inline-flex;
-  font-size: var(--font-size-md);
+  font-size: inherit;
   cursor: pointer;
   gap: 0.5em;
   align-items: center;
@@ -227,7 +226,7 @@ legend {
   gap: var(--space-near);
   width: fit-content;
   place-items: start;
-  font-size: var(--font-size-md);
+  font-size: inherit;
 }
 
 :where(input[type="color"]) {
