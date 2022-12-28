@@ -116,11 +116,11 @@
     --gap: var(--space-near);
 }
 
-.layout-small {
+.-layout-small {
     --gap: var(--space-small);
 }
 
-.layout-tiny {
+.-layout-tiny {
     --gap: var(--space-tiny);
 }
 

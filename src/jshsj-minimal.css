@@ -6,5 +6,7 @@
 @import "./utils/_media.css";
 @import "./utils/_layouts.css";
 @import "./utils/_typo.css";
+@import "./utils/_density.css";
 
-@import "./components/_forms-minimal.css";
+@import "./components/_inputs.css";
+@import "./components/_buttons.css";

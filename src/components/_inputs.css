@@ -35,18 +35,6 @@ legend {
   box-shadow: var(--shadow-near) var(--shadow-near) 0 var(--color-text-strong);
 }
 
-.input-field {
-  display: grid;
-  gap: var(--space-small);
-  grid-template-columns: minmax(0, 1fr);
-  width: fit-content;
-  place-items: start;
-
-  & > label {
-    --gap: var(--space-tiny);
-  }
-}
-
 :where(label),
 .input-label {
   font-family: var(--font-family-mono);
@@ -58,15 +46,6 @@ legend {
   cursor: pointer;
   gap: 0.5em;
   align-items: center;
-}
-
-.input-hint {
-  --color-default: var(--color-text-subtle);
-  display: block;
-
-  &:before {
-    content: "?";
-  }
 }
 
 :where(
@@ -113,33 +92,6 @@ legend {
   min-height: calc(var(--button-height) * 2);
   max-inline-size: 100%;
   padding-block: var(--space-small);
-}
-
-.input-error {
-  --color-default: var(--color-status-error);
-  color: var(--color-default);
-
-  &:before {
-    content: "!";
-  }
-}
-
-.input-error,
-.input-hint {
-  &:before {
-    font-family: var(--font-family-mono);
-    letter-spacing: var(--tracking-tight);
-    font-weight: var(--font-weight-regular);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-default);
-    color: var(--color-surface-strong);
-    margin-right: 0.5em;
-    inline-size: 1em;
-    block-size: 1em;
-    aspect-ratio: 1;
-  }
 }
 
 :where(input[type="checkbox"], input[type="radio"]) {
@@ -220,99 +172,9 @@ legend {
   }
 }
 
-.checkbox-input {
-  display: flex;
-  flex-flow: row nowrap;
-  gap: var(--space-near);
-  width: fit-content;
-  place-items: start;
-  font-size: inherit;
-}
 
 :where(input[type="color"]) {
   aspect-ratio: 1;
   width: auto;
   padding: calc(var(--button-height) / 12);
-}
-
-input[type="checkbox"].switch {
-  --_switch-width: var(--switch-width, calc(1em * var(--line-height-base) * 2));
-  --_switch-height: var(--switch-height, calc(var(--_switch-width) / 2));
-  --_switch-color: var(--switch-color, var(--_input-background));
-  --_switch-color-checked: var(
-    --switch-color-checked,
-    var(--color-brand-strong)
-  );
-  --_thumb-margin: var(--thumb-margin, calc(var(--_switch-width) / 12));
-  --_thumb-color: var(--thumb-color, var(--_input-color));
-
-  vertical-align: var(--_thumb-margin);
-  inline-size: var(--_switch-width);
-  block-size: var(--_switch-height);
-  box-sizing: border-box;
-  border-radius: 0;
-  --current-background: var(--_switch-color);
-  justify-content: flex-start;
-
-  @media (--motionOK) {
-    transition-duration: 250ms;
-  }
-
-  &:before {
-    content: "";
-    display: block;
-    aspect-ratio: 1;
-    margin: var(--_thumb-margin);
-    block-size: calc(100% - 2 * var(--_thumb-margin));
-    background: var(--_thumb-color);
-    border-radius: 0;
-    transition: margin;
-    transition-duration: inherit;
-  }
-
-  &:checked {
-    --current-background: var(--_switch-color-checked);
-  }
-
-  &:checked:before {
-    margin-inline-start: calc(
-      var(--_switch-width) - var(--_switch-height) + var(--_thumb-margin)
-    );
-  }
-
-  &:focus {
-    outline: none;
-  }
-
-  &:focus:before {
-    outline: var(--_input-outline);
-    outline-offset: 0;
-  }
-}
-
-:where(select) {
-  appearance: none;
-}
-
-.select-wrapper {
-  display: grid;
-  grid-template: "select" 1fr / 1fr;
-  color: var(--_input-color);
-
-  &:after {
-    grid-area: select;
-    content: "V";
-    justify-self: end;
-    align-self: center;
-    width: 0.71em;
-    height: 0.48em;
-    background-color: var(--_input-color);
-    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
-    margin-inline-end: var(--space-near);
-  }
-}
-
-select.select {
-  grid-area: select;
-  padding-inline-end: var(--space-away);
 }
