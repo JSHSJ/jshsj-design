@@ -125,7 +125,6 @@
 
 :where(li, dd) {
   max-inline-size: var(--measure-small);
-  font-size: var(--font-size-md);
   margin-inline: var(--space-near);
 }
 
@@ -284,7 +283,7 @@ mark {
     &:after {
       content: "(External)";
       display: inline-block;
-      font-size: var(--font-size-sm);
+      font-size: 0.8em;
       margin-left: var(--space-tiny);
       margin-right: var(--space-tiny);
       transform: translateY(calc(var(--space-tiny) * -1));
@@ -357,7 +356,6 @@ mark {
 }
 
 :where(pre) {
-  font-size: var(--font-size-md);
   padding: var(--space-near);
   width: 100%;
   max-width: var(--measure-base);

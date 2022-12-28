@@ -1,7 +1,7 @@
 .note {
   padding: var(--space-near);
   width: 100%;
-  background-color: var(--color-surface-subtle);
+  background-color: var(--color-surface-strong);
   color: var(--color-text-subtle);
   position: relative;
   border: var(--border-thin) solid var(--color-text-strong);
