@@ -1,12 +1,12 @@
 {
   "border": {
-      "thin": {
-        "name": "thin",
-        "$value": "2px"
-      },
-      "thick": {
-        "name": "thick",
-        "$value": "4px"
-      }
+    "thin": {
+      "name": "think",
+      "$value": "1px"
+    },
+    "thick": {
+      "name": "thick",
+      "$value": "var(--space-small)"
     }
+  }
 }

@@ -25,7 +25,7 @@
   }
 }
 :where(:focus-visible, :focus) {
-  outline: var(--scale--5) solid var(--color-brand-strong);
+  outline: var(--border-thin) solid var(--color-brand-strong);
   outline-offset: 0.64ch;
 }
 
@@ -188,19 +188,49 @@ li:has(ol) + li {
   }
 }
 
-:where(blockquote) {
-  display: grid;
-  gap: var(--space-near);
-  margin-inline: 0;
+.note,
+blockquote {
   padding: var(--space-near);
+  width: 100%;
   background-color: var(--color-surface-strong);
+  color: var(--color-text-subtle);
+  position: relative;
   border: var(--border-thin) solid var(--color-text-strong);
-  border-left: var(--space-near) solid var(--color-text-strong);
+
+  &.-info:before {
+    content: "?";
+  }
+
+  &.-warning:before {
+    content: "!";
+  }
+}
+
+note.-info:before,
+note.-warning:before,
+blockquote:before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-40%, -40%);
+  background-color: var(--color-text-strong);
+  color: var(--color-surface-strong);
+  inline-size: 1.48em;
+  block-size: 1.48em;
+  line-height: 1;
+  font-size: var(--font-size-lg);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+blockquote:before {
+  content: "»";
 }
 
 :where(hr) {
   width: 100%;
-  height: var(--border-thick);
+  height: var(--space-small);
   border: none;
   background-color: var(--color-text-strong);
 }
@@ -263,8 +293,8 @@ mark {
   color: inherit;
   font-family: var(--font-family-mono);
   text-decoration: underline;
-  text-underline-offset: 0.15em;
-  text-decoration-thickness: 0.1em;
+  text-underline-offset: var(--space-small);
+  text-decoration-thickness: 1px;
   font-weight: var(--font-weight-regular);
   text-decoration-color: currentColor;
   cursor: pointer;

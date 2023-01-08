@@ -1,6 +1,6 @@
 :root {
- 	--border-thick: 4px;
- 	--border-thin: 2px;
+ 	--border-thick: var(--space-small);
+ 	--border-thin: 1px;
  	--color-brand-dark-strong: oklch(60% 0.289 10.48);
  	--color-brand-dark-subtle: oklch(72% 0.289 10.48);
  	--color-brand-light-strong: oklch(60% 0.289 10.48);

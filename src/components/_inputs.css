@@ -1,10 +1,11 @@
 :root {
-  --_input-background: var(--input-background, var(--color-surface-subtle));
+  --_input-background: var(--input-background, var(--color-surface-strong));
   --_input-color: var(--input-color, var(--color-text-strong));
   --_input-border: var(
     --input-border,
     var(--border-thin) solid var(--color-text-subtle)
   );
+
   --_input-outline: var(
     --input-outline,
     var(--border-thick) solid var(--color-brand-strong)
@@ -171,7 +172,6 @@ legend {
     }
   }
 }
-
 
 :where(input[type="color"]) {
   aspect-ratio: 1;

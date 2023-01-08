@@ -1,1 +1,1 @@
-:root{--border-thick:4px;--border-thin:2px}
+:root{--border-thick:var(--space-small);--border-thin:1px}

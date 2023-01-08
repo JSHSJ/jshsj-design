@@ -22,7 +22,7 @@
   --transition-duration: 0.16s;
 
   --button-background-hover: var(--color-brand-strong);
-  --button-color-hover: var(--color-surface-strong);
+  --button-color-hover: var(--color-text-strong);
   --button-border-color-hover: var(--color-text-strong);
   --button-hover-transform: translate(
     calc(-1 * var(--shadow-near)),

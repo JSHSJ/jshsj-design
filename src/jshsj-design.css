@@ -6,6 +6,7 @@
 @import "./utils/_media.css";
 @import "./utils/_layouts.css";
 @import "./utils/_typo.css";
+@import "./utils/_colors.css";
 @import "./utils/_density.css";
 
 @import "./components/_buttons.css";
@@ -15,6 +16,5 @@
 @import "./components/_inputs.css";
 @import "./components/_forms_extended.css";
 @import "./components/_links.css";
-@import "./components/_note.css";
 @import "./components/_pagination.css";
 @import "./components/_badges.css";
