@@ -294,7 +294,7 @@ mark {
   font-family: var(--font-family-mono);
   text-decoration: underline;
   text-underline-offset: var(--space-small);
-  text-decoration-thickness: 1px;
+  text-decoration-thickness: from-font;
   font-weight: var(--font-weight-regular);
   text-decoration-color: currentColor;
   cursor: pointer;
