@@ -206,8 +206,8 @@ blockquote {
   }
 }
 
-note.-info:before,
-note.-warning:before,
+.note.-info:before,
+.note.-warning:before,
 blockquote:before {
   display: flex;
   justify-content: center;
