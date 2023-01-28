@@ -7,6 +7,8 @@
   --color-text-subtle: var(--color-text-light-subtle);
   --color-surface-strong: var(--color-surface-light-strong);
   --color-surface-subtle: var(--color-surface-light-subtle);
+  --color-shadow-strong: var(--color-shadow-light-strong);
+  --color-shadow-subtle: var(--color-shadow-light-subtle);
 
   --color-code-background: var(--color-code-light-background);
   --color-code-keyword: var(--color-code-light-keyword);
@@ -30,6 +32,8 @@
     --color-text-subtle: var(--color-text-dark-subtle);
     --color-surface-strong: var(--color-surface-dark-strong);
     --color-surface-subtle: var(--color-surface-dark-subtle);
+    --color-shadow-strong: var(--color-shadow-dark-strong);
+    --color-shadow-subtle: var(--color-shadow-dark-subtle);
 
     --color-code-background: var(--color-code-dark-background);
     --color-code-keyword: var(--color-code-dark-keyword);
@@ -53,6 +57,8 @@
   --color-text-subtle: var(--color-text-light-subtle);
   --color-surface-strong: var(--color-surface-light-strong);
   --color-surface-subtle: var(--color-surface-light-subtle);
+  --color-shadow-strong: var(--color-shadow-light-strong);
+  --color-shadow-subtle: var(--color-shadow-light-subtle);
 
   --color-code-background: var(--color-code-light-background);
   --color-code-keyword: var(--color-code-light-keyword);
@@ -75,6 +81,8 @@
   --color-text-subtle: var(--color-text-dark-subtle);
   --color-surface-strong: var(--color-surface-dark-strong);
   --color-surface-subtle: var(--color-surface-dark-subtle);
+  --color-shadow-strong: var(--color-shadow-dark-strong);
+  --color-shadow-subtle: var(--color-shadow-dark-subtle);
 
   --color-code-background: var(--color-code-dark-background);
   --color-code-keyword: var(--color-code-dark-keyword);

@@ -17,6 +17,10 @@
  	--color-code-light-punctuation: var(--color-brand-light-strong);
  	--color-code-light-string: oklch(64% 0.289 10.48);
  	--color-code-light-tag: var(--color-brand-light-strong);
+ 	--color-shadow-dark-strong: oklch(80% 0.008 10.48 / 100%);
+ 	--color-shadow-dark-subtle: oklch(60% 0.008 10.48 / 48%);
+ 	--color-shadow-light-strong: oklch(40% 0.008 10.48 / 100%);
+ 	--color-shadow-light-subtle: oklch(60% 0.008 10.48 / 48%);
  	--color-status-error: oklch(62.67% 0.289 25.41);
  	--color-surface-dark-strong: oklch(1% 0.006 10.48);
  	--color-surface-dark-subtle: oklch(16.00% 0.012 10.48);

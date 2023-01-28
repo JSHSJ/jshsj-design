@@ -44,6 +44,28 @@
         }
       }
     },
+    "shadow": {
+      "light": {
+        "subtle": {
+          "name": "light-subtle",
+          "$value": "oklch(60% 0.008 10.48 / 48%)"
+        },
+        "strong": {
+          "name": "light-strong",
+          "$value": "oklch(40% 0.008 10.48 / 100%)"
+        }
+      },
+      "dark": {
+        "subtle": {
+          "name": "dark-subtle",
+          "$value": "oklch(60% 0.008 10.48 / 48%)"
+        },
+        "strong": {
+          "name": "dark-strong",
+          "$value": "oklch(80% 0.008 10.48 / 100%)"
+        }
+      }
+    },
     "brand": {
       "light": {
         "subtle": {

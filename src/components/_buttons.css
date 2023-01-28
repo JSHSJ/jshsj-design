@@ -17,19 +17,24 @@
   --button-background: var(--color-text-strong);
   --button-color: var(--color-surface-subtle);
   --button-border-color: var(--color-text-strong);
-  --button-transform: none;
-  --button-box-shadow: none;
+  --button-transform: translate(
+    calc(-3px),
+    calc(-3px)
+  );
+  --button-shadow-color: var(--color-shadow-strong);
+  --button-box-shadow: 1px 1px 0 0 var(--button-shadow-color), 2px 2px 0 0 var(--button-shadow-color), 3px 3px 0 0 var(--button-shadow-color), 3px 3px 6px 0 var(--color-shadow-subtle);
   --transition-duration: 0.16s;
 
   --button-background-hover: var(--color-brand-strong);
   --button-color-hover: var(--color-text-strong);
   --button-border-color-hover: var(--color-text-strong);
   --button-hover-transform: translate(
-    calc(-1 * var(--shadow-near)),
-    calc(-1 * var(--shadow-near))
+    calc(-2px),
+    calc(-2px)
   );
-  --button-hover-shadow: var(--shadow-near) var(--shadow-near) 0
-    var(--color-text-strong);
+
+  --button-hover-shadow: 1px 1px 0 0 var(--button-shadow-color),2px 2px 0 0 var(--button-shadow-color), 2px 2px 4px 0 var(--color-shadow-subtle);
+
 
   --button-padding-inline: var(--space-near);
 
@@ -99,6 +104,7 @@
 
   &:active {
     box-shadow: none;
+    transform: none;
   }
 
   &[disabled] {
@@ -164,6 +170,7 @@
   min-block-size: calc(var(--button-height) - var(--border-thin));
   border: none;
   border-inline-end: var(--border-thin) solid var(--color-text-strong);
+  transform: none;
 }
 
 :where(button[type="reset"], .CTA-button.-destructive) {

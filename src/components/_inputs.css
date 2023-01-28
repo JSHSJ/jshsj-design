@@ -33,7 +33,7 @@ legend {
   padding-block: 0;
   background-color: var(--color-surface-subtle);
   border: var(--border-thin) solid var(--color-text-strong);
-  box-shadow: var(--shadow-near) var(--shadow-near) 0 var(--color-text-strong);
+  box-shadow: 3px 3px 0 0 var(--color-shadow-strong), 3px 3px 6px 0 var(--color-shadow-subtle);
 }
 
 :where(label),
@@ -76,6 +76,8 @@ legend {
   border-radius: 0;
   block-size: var(--button-height);
   padding-inline: var(--space-near);
+  box-shadow: inset 2px 2px 0px 0 var(--color-shadow-subtle);
+
 
   &:focus {
     outline: var(--_input-outline);
@@ -112,6 +114,8 @@ legend {
   background: var(--current-background);
   cursor: pointer;
   transition: 0s background var(--ease-2);
+  box-shadow: inset 2px 2px 0px 0 var(--color-shadow-subtle);
+
 
   @media (--motionOK) {
     transition-duration: 250ms;
@@ -125,18 +129,20 @@ legend {
 
 :where(input[type="checkbox"]:not(.switch)) {
   &:before {
-    content: "X";
+    content: "";
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    inline-size: 100%;
-    block-size: 100%;
+    inline-size: 40%;
+    block-size: 60%;
+    background-color: var(--color-surface-strong);
     opacity: 0;
-    transform: scale(0.9) rotate(30deg);
+    transform: scale(0.9) translateX(100%);
     transition: opacity var(--ease-2) 0ms, transform var(--ease-2) 0ms;
     font-family: var(--font-family-sans);
     --font-weight: var(--font-weight-bold);
     line-height: 1;
+    color: var(--color-surface-strong);
 
     @media (--motionOK) {
       transition-duration: 50ms;
@@ -148,7 +154,7 @@ legend {
 
     &:before {
       opacity: 1;
-      transform: scale(1) rotate(0deg);
+      transform: scale(1) translateX(0%);
     }
   }
 }
