@@ -167,7 +167,7 @@ li:has(ol) + li {
   font-weight: var(--font-weight-medium);
   color: var(--color-surface-subtle);
   background-color: var(--color-text-strong);
-  padding: var(--space-small) var(--space-near);
+  padding: 0 var(--space-near);
 }
 
 :where(details) {
@@ -196,6 +196,8 @@ blockquote {
   color: var(--color-text-subtle);
   position: relative;
   border: var(--border-thin) solid var(--color-text-strong);
+  margin-block-start: var(--space-away);
+
 
   &.-info:before {
     content: "?";
@@ -212,17 +214,17 @@ blockquote:before {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translate(-40%, -40%);
+  transform: translate(-50%, -50%);
   background-color: var(--color-text-strong);
   color: var(--color-surface-strong);
-  inline-size: 1.48em;
-  block-size: 1.48em;
+  inline-size: 1em;
+  block-size: 1em;
   line-height: 1;
   font-size: var(--font-size-lg);
   position: absolute;
   box-shadow: 3px 3px 0 0 var(--color-shadow-strong), 3px 3px 6px 0 var(--color-shadow-subtle);
-  left: 0;
-  top: 0;
+  inset-inline-start: 0;
+  inset-block-start: 0;
 }
 
 blockquote:before {

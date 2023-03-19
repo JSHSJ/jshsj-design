@@ -1,0 +1,43 @@
+.notification-container {
+    position: fixed;
+    inset-block-end: 0;
+    inset-inline-end: 0;
+    inline-size: 100%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    padding: var(--space-near);
+    box-sizing: border-box;
+    height: 100%;
+    overflow: hidden;
+}
+
+.notification {
+    padding: var(--space-small);
+    background-color: var(--color-surface-strong);
+    position: relative;
+    border: var(--border-thin) solid var(--color-text-strong);
+    color: var(--color-default);
+    inline-size: var(--measure-small);
+    --color-default: var(--color-text-subtle);
+
+    .-info {
+        --color-default: var(--color-text-subtle);
+    }
+
+    &.-error {
+        --color-default: var(--color-status-error);
+    }
+
+
+    &.-info:before {
+        content: "?";
+    }
+
+    &.-error:before {
+        content: "!";
+    }
+}

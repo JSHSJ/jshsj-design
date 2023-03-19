@@ -79,6 +79,7 @@ legend {
   box-shadow: inset 2px 2px 0px 0 var(--color-shadow-subtle);
 
 
+
   &:focus {
     outline: var(--_input-outline);
     outline-offset: 0;

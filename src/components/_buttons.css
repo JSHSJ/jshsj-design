@@ -18,22 +18,22 @@
   --button-color: var(--color-surface-subtle);
   --button-border-color: var(--color-text-strong);
   --button-transform: translate(
-    calc(-3px),
-    calc(-3px)
+    calc(-2px),
+    calc(-2px)
   );
   --button-shadow-color: var(--color-shadow-strong);
-  --button-box-shadow: 1px 1px 0 0 var(--button-shadow-color), 2px 2px 0 0 var(--button-shadow-color), 3px 3px 0 0 var(--button-shadow-color), 3px 3px 6px 0 var(--color-shadow-subtle);
+  --button-box-shadow: 1px 1px 0 0 var(--button-shadow-color), 2px 2px 0 0 var(--button-shadow-color),  2px 2px 4px 0 var(--color-shadow-subtle);
   --transition-duration: 0.16s;
 
   --button-background-hover: var(--color-brand-strong);
   --button-color-hover: var(--color-text-strong);
   --button-border-color-hover: var(--color-text-strong);
   --button-hover-transform: translate(
-    calc(-2px),
-    calc(-2px)
+    calc(-1px),
+    calc(-1px)
   );
 
-  --button-hover-shadow: 1px 1px 0 0 var(--button-shadow-color),2px 2px 0 0 var(--button-shadow-color), 2px 2px 4px 0 var(--color-shadow-subtle);
+  --button-hover-shadow: 1px 1px 0 0 var(--button-shadow-color), 1px 1px 2px 0 var(--color-shadow-subtle);
 
 
   --button-padding-inline: var(--space-near);
@@ -66,6 +66,9 @@
   user-select: none;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
+  inset-block-start: 2px;
+  inset-inline-start: 2px;
+
 
   @media (prefers-reduced-motion: reduce) {
     transition: none;
@@ -97,8 +100,8 @@
     block-size: calc(100% + var(--space-near)) !important;
     z-index: -1 !important;
     position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
+    inset-block-start: 0 !important;
+    inset-inline-start: 0 !important;
     pointer-events: none !important;
   }
 
@@ -171,6 +174,8 @@
   border: none;
   border-inline-end: var(--border-thin) solid var(--color-text-strong);
   transform: none;
+  inset-block-start: 0;
+  inset-inline-start: 0;
 }
 
 :where(button[type="reset"], .CTA-button.-destructive) {
