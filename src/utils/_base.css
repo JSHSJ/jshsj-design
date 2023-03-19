@@ -105,7 +105,6 @@
     label:not(class) + textarea
   ) {
     display: block;
-    margin-top: var(--space-small);
 }
 
 :where(p, li, dd, dt, summary) {
@@ -409,7 +408,7 @@ mark {
     border-collapse: collapse;
     text-align: left;
     background-color: var(--color-surface-strong);
-    border: var(--border-thick) solid var(--color-text-subtle);
+    border: var(--border-thick) solid var(--color-text-strong);
 }
 
 :where(td,th) {
