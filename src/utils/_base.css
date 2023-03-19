@@ -1,77 +1,79 @@
 *,
 :after,
 :before {
-  box-sizing: border-box;
-  accent-color: var(--color-brand-strong);
+    box-sizing: border-box;
+    accent-color: var(--color-brand-strong);
 }
 
 :where(:not(dialog)) {
-  margin: 0;
+    margin: 0;
 }
 
 :where(:not(fieldset, progress, meter)) {
-  border-width: 0;
-  border-style: solid;
-  background-origin: border-box;
-  background-repeat: no-repeat;
+    border-width: 0;
+    border-style: solid;
+    background-origin: border-box;
+    background-repeat: no-repeat;
 }
 
 @media (--motionOK) {
-  :where(:focus-visible) {
-    transition: outline-offset 145ms var(--ease-2);
-  }
-  :where(:not(:active):focus-visible) {
-    transition-duration: 0.25s;
-  }
+    :where(:focus-visible) {
+        transition: outline-offset 145ms var(--ease-2);
+    }
+
+    :where(:not(:active):focus-visible) {
+        transition-duration: 0.25s;
+    }
 }
+
 :where(:focus-visible, :focus) {
-  outline: var(--border-thin) solid var(--color-brand-strong);
-  outline-offset: 0.64ch;
+    outline: var(--border-thin) solid var(--color-brand-strong);
+    outline-offset: 0.64ch;
 }
 
 :where(:focus:not(:focus-visible)) {
-  outline: none;
+    outline: none;
 }
 
 :where(html) {
-  block-size: 100%;
-  inline-size: 100%;
-  -webkit-text-size-adjust: none; /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
+    block-size: 100%;
+    inline-size: 100%;
+    -webkit-text-size-adjust: none; /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
 
-  @media (--motionOK) {
-    & {
-      scroll-behavior: smooth;
+    @media (--motionOK) {
+        & {
+            scroll-behavior: smooth;
+        }
     }
-  }
 }
 
 :where(body) {
-  min-block-size: 100%;
-  min-inline-size: 100%;
+    min-block-size: 100%;
+    min-inline-size: 100%;
 
-  font-weight: var(--font-weight-regular);
+    font-weight: var(--font-weight-regular);
 
-  color: var(--color-text-subtle);
-  background-color: var(--color-surface-subtle);
+    color: var(--color-text-subtle);
+    background-color: var(--color-surface-subtle);
 
-  font-family: var(--font-family-sans);
-  line-height: var(--line-height-base);
-  font-style: normal;
+    font-family: var(--font-family-sans);
+    line-height: var(--line-height-base);
+    font-style: normal;
 }
 
 :where(img, svg, video, canvas, audio, iframe, embed, object) {
-  display: block;
+    display: block;
 }
 
 :where(img, svg, video) {
-  max-inline-size: 100%;
-  block-size: auto;
+    max-inline-size: 100%;
+    block-size: auto;
 }
 
 :where(figure) {
-  display: grid;
-  gap: 0;
-  place-items: center;
+    display: grid;
+    gap: 0;
+    place-items: center;
 }
 
 :where(
@@ -85,16 +87,16 @@
     textarea,
     [tabindex]:not([tabindex*="-"])
   ) {
-  cursor: pointer;
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 :where(input, button, textarea, select),
 :where(input[type="file"])::-webkit-file-upload-button {
-  font: inherit;
-  color: inherit;
-  letter-spacing: inherit;
+    font: inherit;
+    color: inherit;
+    letter-spacing: inherit;
 }
 
 :where(
@@ -102,301 +104,316 @@
     label:not(class) + select,
     label:not(class) + textarea
   ) {
-  display: block;
-  margin-top: var(--space-small);
+    display: block;
+    margin-top: var(--space-small);
 }
 
 :where(p, li, dd, dt, summary) {
-  max-inline-size: var(--measure-base);
-  font-size: inherit;
-  line-height: var(--line-height-base);
+    max-inline-size: var(--measure-base);
+    font-size: inherit;
+    line-height: var(--line-height-base);
 }
 
 :where(ol, ul, dl) {
-  display: flex;
-  flex-direction: column;
-  max-inline-size: max-content;
-  padding-inline: 0;
+    display: flex;
+    flex-direction: column;
+    max-inline-size: max-content;
+    padding-inline: 0;
 }
 
 :where(ol, ul) {
-  gap: var(--space-near);
+    gap: var(--space-near);
 }
 
 :where(li, dd) {
-  max-inline-size: var(--measure-small);
-  margin-inline: var(--space-near);
+    max-inline-size: var(--measure-small);
+    margin-inline: var(--space-near);
 }
 
 :where(dt) {
-  font-weight: var(--font-weight-regular);
-  color: var(--color-text-subtle);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-subtle);
 }
 
 :where(dd) {
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text-strong);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-strong);
 }
 
 :where(dl) {
-  & * + * {
-    margin-block-start: var(--space-near);
-  }
+    & * + * {
+        margin-block-start: var(--space-near);
+    }
 
-  & * + dt {
-    margin-block-start: calc(var(--space-near) + var(--space-small));
-  }
+    & * + dt {
+        margin-block-start: calc(var(--space-near) + var(--space-small));
+    }
 }
 
 :where(li > ul, li > ol) {
-  margin-block-start: var(--space-near);
+    margin-block-start: var(--space-near);
 }
 
 li:has(ul) + li,
 li:has(ol) + li {
-  margin-block-start: calc(var(--space-near) + var(--space-small));
+    margin-block-start: calc(var(--space-near) + var(--space-small));
 }
 
 :where(small) {
-  font-size: var(--font-size-sm);
+    font-size: var(--font-size-sm);
 }
 
 :where(figcaption) {
-  display: block;
-  font-family: var(--font-family-sans);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-surface-subtle);
-  background-color: var(--color-text-strong);
-  padding: 0 var(--space-near);
+    display: block;
+    font-family: var(--font-family-sans);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-surface-subtle);
+    background-color: var(--color-text-strong);
+    padding: 0 var(--space-near);
 }
 
 :where(details) {
-  width: 100%;
-  background-color: var(--color-surface-strong);
-  padding: var(--space-near);
-  border-radius: 0;
-  border: var(--border-thin) solid var(--color-text-strong);
-
-  & > *:not(summary):first-of-type {
-    margin-block-start: var(--space-away);
-  }
-
-  & > summary {
-    cursor: pointer;
-    color: var(--color-text-strong);
     width: 100%;
-  }
+    background-color: var(--color-surface-strong);
+    padding: var(--space-near);
+    border-radius: 0;
+    border: var(--border-thin) solid var(--color-text-strong);
+
+    & > *:not(summary):first-of-type {
+        margin-block-start: var(--space-away);
+    }
+
+    & > summary {
+        cursor: pointer;
+        color: var(--color-text-strong);
+        width: 100%;
+    }
 }
 
 .note,
 blockquote {
-  padding: var(--space-near);
-  width: 100%;
-  background-color: var(--color-surface-strong);
-  color: var(--color-text-subtle);
-  position: relative;
-  border: var(--border-thin) solid var(--color-text-strong);
-  margin-block-start: var(--space-away);
+    padding: var(--space-near);
+    width: 100%;
+    background-color: var(--color-surface-strong);
+    color: var(--color-text-subtle);
+    position: relative;
+    border: var(--border-thin) solid var(--color-text-strong);
+    margin-block-start: var(--space-away);
 
 
-  &.-info:before {
-    content: "?";
-  }
+    &.-info:before {
+        content: "?";
+    }
 
-  &.-warning:before {
-    content: "!";
-  }
+    &.-warning:before {
+        content: "!";
+    }
 }
 
 .note.-info:before,
 .note.-warning:before,
 blockquote:before {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translate(-50%, -50%);
-  background-color: var(--color-text-strong);
-  color: var(--color-surface-strong);
-  inline-size: 1em;
-  block-size: 1em;
-  line-height: 1;
-  font-size: var(--font-size-lg);
-  position: absolute;
-  box-shadow: 3px 3px 0 0 var(--color-shadow-strong), 3px 3px 6px 0 var(--color-shadow-subtle);
-  inset-inline-start: 0;
-  inset-block-start: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-text-strong);
+    color: var(--color-surface-strong);
+    inline-size: 1em;
+    block-size: 1em;
+    line-height: 1;
+    font-size: var(--font-size-lg);
+    position: absolute;
+    box-shadow: 3px 3px 0 0 var(--color-shadow-strong), 3px 3px 6px 0 var(--color-shadow-subtle);
+    inset-inline-start: 0;
+    inset-block-start: 0;
 }
 
 blockquote:before {
-  content: "»";
+    content: "»";
 }
 
 :where(hr) {
-  width: 100%;
-  height: var(--space-small);
-  border: none;
-  background-color: var(--color-text-strong);
+    width: 100%;
+    height: var(--space-small);
+    border: none;
+    background-color: var(--color-text-strong);
 }
 
 :where(h1, h2, h3, h4, h5, h6) {
-  line-height: var(--line-height-small);
-  color: var(--color-text-strong);
-  overflow-wrap: break-word;
-  max-width: 100%;
-  hyphens: auto;
-
-  & > span {
+    line-height: var(--line-height-small);
+    color: var(--color-text-strong);
     overflow-wrap: break-word;
     max-width: 100%;
     hyphens: auto;
-  }
+
+    & > span {
+        overflow-wrap: break-word;
+        max-width: 100%;
+        hyphens: auto;
+    }
 }
 
 :where(h1) {
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
 }
 
 :where(h2) {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
 }
 
 :where(h3) {
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
 }
 
 :where(h4) {
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-bold);
 }
 
 :where(h5) {
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-medium);
 }
 
 :where(h6) {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
 }
 
 ::marker {
-  color: var(--color-brand-strong);
+    color: var(--color-brand-strong);
 }
 
 ::selection,
 mark {
-  background-color: var(--color-brand-strong);
-  color: var(--color-surface-strong);
+    background-color: var(--color-brand-strong);
+    color: var(--color-surface-strong);
 }
 
 :where(a, .link) {
-  color: inherit;
-  font-family: var(--font-family-mono);
-  text-decoration: underline;
-  text-underline-offset: var(--space-small);
-  text-decoration-thickness: from-font;
-  font-weight: var(--font-weight-regular);
-  text-decoration-color: currentColor;
-  cursor: pointer;
-  letter-spacing: var(--tracking-tight);
+    color: inherit;
+    font-family: var(--font-family-mono);
+    text-decoration: underline;
+    text-underline-offset: var(--space-small);
+    text-decoration-thickness: from-font;
+    font-weight: var(--font-weight-regular);
+    text-decoration-color: currentColor;
+    cursor: pointer;
+    letter-spacing: var(--tracking-tight);
 
-  &:visited {
-    color: var(--color-text-subtle);
-  }
-
-  &:hover {
-    text-decoration-color: var(--color-brand-strong);
-  }
-
-  &[href^="https://"], &[href^="http://"], &[data-external]
-  {
-    &:after {
-      content: "(External)";
-      display: inline-block;
-      font-size: 0.8em;
-      margin-left: var(--space-tiny);
-      margin-right: var(--space-tiny);
-      transform: translateY(calc(var(--space-tiny) * -1));
-      text-decoration: none;
-      color: inherit;
-      opacity: 0.8;
+    &:visited {
+        color: var(--color-text-subtle);
     }
-  }
+
+    &:hover {
+        text-decoration-color: var(--color-brand-strong);
+    }
+
+    &[href^="https://"], &[href^="http://"], &[data-external] {
+        &:after {
+            content: "(External)";
+            display: inline-block;
+            font-size: 0.8em;
+            margin-left: var(--space-tiny);
+            margin-right: var(--space-tiny);
+            transform: translateY(calc(var(--space-tiny) * -1));
+            text-decoration: none;
+            color: inherit;
+            opacity: 0.8;
+        }
+    }
 }
 
 .list-reset {
-  list-style: none;
-  max-inline-size: 100%;
-
-  & li {
-    margin-inline: 0;
+    list-style: none;
     max-inline-size: 100%;
-  }
+
+    & li {
+        margin-inline: 0;
+        max-inline-size: 100%;
+    }
 }
 
 :where(strong, b) {
-  font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
 }
 
 :where(dfn, var) {
-  font-family: var(--font-family-mono);
-  letter-spacing: var(--tracking-tight);
-  font-weight: var(--font-weight-regular);
+    font-family: var(--font-family-mono);
+    letter-spacing: var(--tracking-tight);
+    font-weight: var(--font-weight-regular);
 }
 
 :where([aria-disabled="true"], .disabled, :disabled) {
-  color: inherit;
-  opacity: 1;
-  cursor: not-allowed;
-  filter: contrast(0.64) opacity(0.64);
+    color: inherit;
+    opacity: 1;
+    cursor: not-allowed;
+    filter: contrast(0.64) opacity(0.64);
 }
 
 .text-assistive {
-  -webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0);
-  clip-path: polygon(0 0, 0 0, 0 0, 0 0);
-  box-sizing: border-box;
-  position: absolute;
-  margin: 0;
-  padding: 0;
+    -webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    box-sizing: border-box;
+    position: absolute;
+    margin: 0;
+    padding: 0;
 
-  &:focus {
-    -webkit-clip-path: none;
-    clip-path: none;
-    z-index: 999;
-    height: var(--button-height);
-    line-height: var(--button-height);
-    background: var(--color-surface-strong);
-    font-size: var(--font-size-md);
-    text-decoration: none;
-    color: var(--color-text-strong);
-    text-align: center;
-    padding-inline: var(--space-near);
-    font-weight: var(--font-weight-medium);
-  }
+    &:focus {
+        -webkit-clip-path: none;
+        clip-path: none;
+        z-index: 999;
+        height: var(--button-height);
+        line-height: var(--button-height);
+        background: var(--color-surface-strong);
+        font-size: var(--font-size-md);
+        text-decoration: none;
+        color: var(--color-text-strong);
+        text-align: center;
+        padding-inline: var(--space-near);
+        font-weight: var(--font-weight-medium);
+    }
 }
+
 #content-start:focus {
-  background: var(--color-surface-strong);
-  color: var(--color-text-strong);
+    background: var(--color-surface-strong);
+    color: var(--color-text-strong);
 }
 
 :where(code) {
-  font-family: var(--font-family-mono);
-  letter-spacing: var(--tracking-tight);
-  font-weight: var(--font-weight-regular);
+    font-family: var(--font-family-mono);
+    letter-spacing: var(--tracking-tight);
+    font-weight: var(--font-weight-regular);
 }
 
 :where(pre) {
-  padding: var(--space-near);
-  width: 100%;
-  max-width: var(--measure-base);
-  overflow-x: auto;
-  color: var(--color-text-strong);
-  border: var(--border-thick) solid var(--color-text-strong);
+    padding: var(--space-near);
+    width: 100%;
+    max-width: var(--measure-base);
+    overflow-x: auto;
+    color: var(--color-text-strong);
+    border: var(--border-thick) solid var(--color-text-strong);
 }
 
 [data-footnote-ref] {
-  color: var(--color-brand-strong);
+    color: var(--color-brand-strong);
+}
+
+:where(table) {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: var(--color-surface-strong);
+    border: var(--border-thick) solid var(--color-text-subtle);
+}
+
+:where(td,th) {
+    padding: var(--space-small);
+    border: var(--border-thin) solid var(--color-text-subtle);
+
 }

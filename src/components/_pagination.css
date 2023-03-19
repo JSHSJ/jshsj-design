@@ -10,12 +10,12 @@
 }
 
 .pagination-element {
-  font-size: var(--font-size-lg);
+  font-size: 1em;
   display: grid;
   place-content: center;
-  inline-size: var(--font-size-xl);
-  block-size: var(--font-size-xl);
-  padding: var(--space-tiny);
+  line-height: 1;
+  inline-size: 1em;
+  block-size: 1em;
 
   &[aria-current="page"] {
     color: var(--color-brand-strong);
