@@ -21,8 +21,7 @@
     calc(-2px),
     calc(-2px)
   );
-  --button-shadow-color: var(--color-shadow-strong);
-  --button-box-shadow: 1px 1px 0 0 var(--button-shadow-color), 2px 2px 0 0 var(--button-shadow-color),  2px 2px 4px 0 var(--color-shadow-subtle);
+  --button-box-shadow: var(--shadow-near);
   --transition-duration: 0.16s;
 
   --button-background-hover: var(--color-brand-strong);
@@ -33,7 +32,7 @@
     calc(-1px)
   );
 
-  --button-hover-shadow: 1px 1px 0 0 var(--button-shadow-color), 1px 1px 2px 0 var(--color-shadow-subtle);
+  --button-hover-shadow: var(--shadow-nearest);
 
 
   --button-padding-inline: var(--space-near);

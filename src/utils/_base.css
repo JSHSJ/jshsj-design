@@ -126,7 +126,6 @@
 
 :where(li, dd) {
     max-inline-size: var(--measure-small);
-    margin-inline: var(--space-near);
 }
 
 :where(dt) {
@@ -151,11 +150,13 @@
 
 :where(li > ul, li > ol) {
     margin-block-start: var(--space-near);
+    margin-inline-start: var(--space-near);
 }
 
 li:has(ul) + li,
 li:has(ol) + li {
     margin-block-start: calc(var(--space-near) + var(--space-small));
+    margin-inline-start: var(--space-near);
 }
 
 :where(small) {
@@ -223,13 +224,18 @@ blockquote:before {
     line-height: 1;
     font-size: var(--font-size-lg);
     position: absolute;
-    box-shadow: 3px 3px 0 0 var(--color-shadow-strong), 3px 3px 6px 0 var(--color-shadow-subtle);
+    box-shadow: var(--shadow-away);
     inset-inline-start: 0;
     inset-block-start: 0;
 }
 
 blockquote:before {
     content: "»";
+}
+
+cite {
+    font-family: var(--font-family-serif);
+    font-style: normal;
 }
 
 :where(hr) {

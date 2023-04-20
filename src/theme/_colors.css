@@ -1,29 +1,102 @@
 :root {
-  color-scheme: light;
+    color-scheme: light;
 
-  --color-brand-strong: var(--color-brand-light-strong);
-  --color-brand-subtle: var(--color-brand-light-subtle);
-  --color-text-strong: var(--color-text-light-strong);
-  --color-text-subtle: var(--color-text-light-subtle);
-  --color-surface-strong: var(--color-surface-light-strong);
-  --color-surface-subtle: var(--color-surface-light-subtle);
-  --color-shadow-strong: var(--color-shadow-light-strong);
-  --color-shadow-subtle: var(--color-shadow-light-subtle);
+    --color-brand-strong: var(--color-brand-light-strong);
+    --color-brand-subtle: var(--color-brand-light-subtle);
+    --color-text-strong: var(--color-text-light-strong);
+    --color-text-subtle: var(--color-text-light-subtle);
+    --color-surface-strong: var(--color-surface-light-strong);
+    --color-surface-subtle: var(--color-surface-light-subtle);
+    --color-shadow-strong: var(--color-shadow-light-strong);
+    --color-shadow-subtle: var(--color-shadow-light-subtle);
 
-  --color-code-background: var(--color-code-light-background);
-  --color-code-keyword: var(--color-code-light-keyword);
-  --color-code-string: var(--color-code-light-string);
-  --color-code-punctuation: var(--color-code-light-punctuation);
-  --color-code-operator: var(--color-code-light-operator);
-  --color-code-tag: var(--color-code-light-tag);
-  --color-code-text: var(--color-code-light-plain);
+    --color-code-background: var(--color-code-light-background);
+    --color-code-keyword: var(--color-code-light-keyword);
+    --color-code-string: var(--color-code-light-string);
+    --color-code-punctuation: var(--color-code-light-punctuation);
+    --color-code-operator: var(--color-code-light-operator);
+    --color-code-tag: var(--color-code-light-tag);
+    --color-code-text: var(--color-code-light-plain);
 
-  --shadow-default: var(--size-relative-xs) var(--size-relative-xs) 0
-    var(--color-brand-strong);
+    --color-text-strong-hex: #1a0004;
+
+    --triangle-down-url: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 84L12.7609 19.5L87.2391 19.5L50 84Z' fill='%231a0004'/%3E%3C/svg%3E");
+    --triangle-up-url: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 16L87.2391 80.5H12.7609L50 16Z' fill='%231a0004'/%3E%3C/svg%3E%0A");
+
+    --shadow-inset: inset 2px 2px 0px 0 var(--color-shadow-subtle);
+    --shadow-away: 3px 3px 0 0 var(--color-shadow-strong), 3px 3px 6px 0 var(--color-shadow-subtle);
+    --shadow-near: 1px 1px 0 0 var(--color-shadow-strong), 2px 2px 0 0 var(--color-shadow-strong), 2px 2px 4px 0 var(--color-shadow-subtle);
+    --shadow-nearest: 1px 1px 0 0 var(--color-shadow-strong), 1px 1px 2px 0 var(--color-shadow-subtle);
+
 }
 
 @media (--OSdark) {
-  :root {
+    :root {
+        color-scheme: dark;
+
+        --color-brand-strong: var(--color-brand-dark-strong);
+        --color-brand-subtle: var(--color-brand-dark-subtle);
+        --color-text-strong: var(--color-text-dark-strong);
+        --color-text-subtle: var(--color-text-dark-subtle);
+        --color-surface-strong: var(--color-surface-dark-strong);
+        --color-surface-subtle: var(--color-surface-dark-subtle);
+        --color-shadow-strong: var(--color-shadow-dark-strong);
+        --color-shadow-subtle: var(--color-shadow-dark-subtle);
+
+        --color-code-background: var(--color-code-dark-background);
+        --color-code-keyword: var(--color-code-dark-keyword);
+        --color-code-string: var(--color-code-dark-string);
+        --color-code-punctuation: var(--color-code-dark-punctuation);
+        --color-code-operator: var(--color-code-dark-operator);
+        --color-code-tag: var(--color-code-dark-tag);
+        --color-code-text: var(--color-code-dark-plain);
+
+        --color-text-strong-hex: #fff4f5;
+
+        --triangle-down-url: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 84L12.7609 19.5L87.2391 19.5L50 84Z' fill='%23fff4f5'/%3E%3C/svg%3E");
+        --triangle-up-url: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 16L87.2391 80.5H12.7609L50 16Z' fill='%23fff4f5'/%3E%3C/svg%3E%0A");
+
+        --shadow-inset: inset 2px 2px 0px 0 var(--color-shadow-subtle);
+        --shadow-away: 3px 3px 0 0 var(--color-shadow-strong), 3px 3px 6px 0 var(--color-shadow-subtle);
+        --shadow-near: 1px 1px 0 0 var(--color-shadow-strong), 2px 2px 0 0 var(--color-shadow-strong), 2px 2px 4px 0 var(--color-shadow-subtle);
+        --shadow-nearest: 1px 1px 0 0 var(--color-shadow-strong), 1px 1px 2px 0 var(--color-shadow-subtle);
+
+    }
+}
+
+[color-scheme="light"] {
+    color-scheme: light;
+
+    --color-brand-strong: var(--color-brand-light-strong);
+    --color-brand-subtle: var(--color-brand-light-subtle);
+    --color-text-strong: var(--color-text-light-strong);
+    --color-text-subtle: var(--color-text-light-subtle);
+    --color-surface-strong: var(--color-surface-light-strong);
+    --color-surface-subtle: var(--color-surface-light-subtle);
+    --color-shadow-strong: var(--color-shadow-light-strong);
+    --color-shadow-subtle: var(--color-shadow-light-subtle);
+
+    --color-code-background: var(--color-code-light-background);
+    --color-code-keyword: var(--color-code-light-keyword);
+    --color-code-string: var(--color-code-light-string);
+    --color-code-punctuation: var(--color-code-light-punctuation);
+    --color-code-operator: var(--color-code-light-operator);
+    --color-code-tag: var(--color-code-light-tag);
+    --color-code-text: var(--color-code-light-plain);
+
+    --color-text-strong-hex: #1a0004;
+
+    --triangle-down-url: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 84L12.7609 19.5L87.2391 19.5L50 84Z' fill='%231a0004'/%3E%3C/svg%3E");
+    --triangle-up-url: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 16L87.2391 80.5H12.7609L50 16Z' fill='%231a0004'/%3E%3C/svg%3E%0A");
+
+    --shadow-inset: inset 0.13em 0.13em 0 0 var(--color-shadow-subtle);
+    --shadow-away: 0.195em 0.195em 0 0 var(--color-shadow-strong), 0.195em 0.195em 0.39em 0 var(--color-shadow-subtle);
+    --shadow-near: 0.065em 0.065em 0 0 var(--color-shadow-strong), 0.13em 0.13em 0 0 var(--color-shadow-strong), 0.15em 0.15em 0.3em 0 var(--color-shadow-subtle);
+    --shadow-nearest: 0.065em 0.065em 0 0 var(--color-shadow-strong), 0.065em 0.065em 0.13em 0 var(--color-shadow-subtle);
+
+}
+
+[color-scheme="dark"] {
     color-scheme: dark;
 
     --color-brand-strong: var(--color-brand-dark-strong);
@@ -43,55 +116,14 @@
     --color-code-tag: var(--color-code-dark-tag);
     --color-code-text: var(--color-code-dark-plain);
 
-    --shadow-default: var(--size-relative-xs) var(--size-relative-xs) 0
-      var(--color-brand-strong);
-  }
-}
+    --color-text-strong-hex: #fff4f5;
 
-[color-scheme="light"] {
-  color-scheme: light;
+    --triangle-down-url: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 84L12.7609 19.5L87.2391 19.5L50 84Z' fill='%23fff4f5'/%3E%3C/svg%3E");
+    --triangle-up-url: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 16L87.2391 80.5H12.7609L50 16Z' fill='%23fff4f5'/%3E%3C/svg%3E%0A");
 
-  --color-brand-strong: var(--color-brand-light-strong);
-  --color-brand-subtle: var(--color-brand-light-subtle);
-  --color-text-strong: var(--color-text-light-strong);
-  --color-text-subtle: var(--color-text-light-subtle);
-  --color-surface-strong: var(--color-surface-light-strong);
-  --color-surface-subtle: var(--color-surface-light-subtle);
-  --color-shadow-strong: var(--color-shadow-light-strong);
-  --color-shadow-subtle: var(--color-shadow-light-subtle);
+    --shadow-inset: inset 2px 2px 0px 0 var(--color-shadow-subtle);
+    --shadow-away: 3px 3px 0 0 var(--color-shadow-strong), 3px 3px 6px 0 var(--color-shadow-subtle);
+    --shadow-near: 1px 1px 0 0 var(--color-shadow-strong), 2px 2px 0 0 var(--color-shadow-strong), 2px 2px 4px 0 var(--color-shadow-subtle);
+    --shadow-nearest: 1px 1px 0 0 var(--color-shadow-strong), 1px 1px 2px 0 var(--color-shadow-subtle);
 
-  --color-code-background: var(--color-code-light-background);
-  --color-code-keyword: var(--color-code-light-keyword);
-  --color-code-string: var(--color-code-light-string);
-  --color-code-punctuation: var(--color-code-light-punctuation);
-  --color-code-operator: var(--color-code-light-operator);
-  --color-code-tag: var(--color-code-light-tag);
-  --color-code-text: var(--color-code-light-plain);
-
-  --shadow-default: var(--size-relative-xs) var(--size-relative-xs) 0
-    var(--color-brand-strong);
-}
-
-[color-scheme="dark"] {
-  color-scheme: dark;
-
-  --color-brand-strong: var(--color-brand-dark-strong);
-  --color-brand-subtle: var(--color-brand-dark-subtle);
-  --color-text-strong: var(--color-text-dark-strong);
-  --color-text-subtle: var(--color-text-dark-subtle);
-  --color-surface-strong: var(--color-surface-dark-strong);
-  --color-surface-subtle: var(--color-surface-dark-subtle);
-  --color-shadow-strong: var(--color-shadow-dark-strong);
-  --color-shadow-subtle: var(--color-shadow-dark-subtle);
-
-  --color-code-background: var(--color-code-dark-background);
-  --color-code-keyword: var(--color-code-dark-keyword);
-  --color-code-string: var(--color-code-dark-string);
-  --color-code-punctuation: var(--color-code-dark-punctuation);
-  --color-code-operator: var(--color-code-dark-operator);
-  --color-code-tag: var(--color-code-dark-tag);
-  --color-code-text: var(--color-code-dark-plain);
-
-  --shadow-default: var(--size-relative-xs) var(--size-relative-xs) 0
-    var(--color-brand-strong);
 }

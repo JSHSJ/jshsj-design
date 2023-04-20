@@ -31,6 +31,10 @@
     --gap: var(--space-away);
 }
 
+.flow > *:is(h1,h2,h3,h4,h5,h6) + p {
+    --gap: var(--space-small);
+}
+
 .flow > p + p {
     --gap: var(--space-near);
 }
@@ -51,7 +55,7 @@
     margin-inline: auto;
     width: 100%;
     max-width: var(--size-max-container);
-    padding-inline: var(--space-near);
+    padding-inline: var(--space-away);
     display: grid;
     grid-template-columns: minmax(10rem, var(--size-max-main)) minmax(0, 1fr);
     justify-items: start;

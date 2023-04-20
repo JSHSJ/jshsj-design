@@ -26,7 +26,6 @@
 body {
     --space-near: calc(var(--density) * 1.2);
     --space-away: calc(var(--density) * 2.0);
-    --shadow-near: calc(var(--density) * 0.2);
     font-size: var(--font-size-lg);
 }
 
@@ -34,20 +33,17 @@ body {
 body [data-density-shift] {
     --space-near: calc(var(--density) * 0.8);
     --space-away: calc(var(--density) * 1.6);
-    --shadow-near: calc(var(--density) * 0.2);
     font-size: var(--font-size-md);
 }
 
 body [data-density-shift] [data-density-shift] {
     --space-near: calc(var(--density) * 0.4);
     --space-away: calc(var(--density) * 0.8);
-    --shadow-near: calc(var(--density) * 0.2);
     font-size: var(--font-size-sm);
 }
 
 body [data-density-shift] [data-density-shift] [data-density-shift] {
     --space-near: calc(var(--density) * 0.2);
     --space-away: calc(var(--density) * 0.4);
-    --shadow-near: calc(var(--density) * 0.2);
     font-size: var(--font-size-xs);
 }
