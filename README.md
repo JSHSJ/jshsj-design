@@ -1,5 +1,10 @@
 # JSHSJ Design
 
+> [!NOTE]
+>
+> This repository is now deprecated in favor of https://github.com/nordcode-agency/nordcode/tree/main/packages/ui
+> You can also download it on npm: https://www.npmjs.com/package/@nordcode/ui
+
 My own branding used across projects.
 Made for better reusability accross my projects. Contains my commonly used things.
 
